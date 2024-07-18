@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>{{ $title }} | Mouctechy </title>
+<title>{{ $title }} | BitZenon </title>
 @section('content')
     <section class="content-layout">
         <div class="landing">
@@ -12,24 +12,44 @@
                 </button>
             </div>
             <div class="right sidebar">
-					<div class="box">
-						<div class="tags">
-							<a href="#"><span>PowerApps</span></a> <a href="#"><span>Copilot</span></a>
-						</div>
-						<a href="#">
-							<div class="side-articles side-slider">
-									<h3>The Future of AI: How Artificial Intelligence is Shaping Our World</h3>
-									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nam sapiente tenetur
-										odio...</p>
-									<img src="https://img.freepik.com/free-photo/portrait-relaxed-man-sitting-desk-table-living-room-working-remote-from-home-financial-project-using-laptop-computer-online-webinar-freelancer-guy-having-business-lesson_482257-37964.jpg?t=st=1721156626~exp=1721160226~hmac=a6fa32340b894e40f802d79b9ef73f611ba3c85dbdad5e1e426e4abbb576e293&w=900"
-										alt="Mouctar">
+					<div class="slider">
+						<div class="slide">
+							<div class="box">
+								<div class="tags">
+									<a href="#"><span>PowerApps</span></a> <a href="#"><span>Copilot</span></a>
+								</div>
+								<a href="#">
+									<div class="side-articles side-slider">
+											<h3>The Future of AI: How Artificial Intelligence is Shaping Our World</h3>
+											<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nam sapiente tenetur
+												odio...</p>
+											<img src="https://img.freepik.com/free-photo/portrait-relaxed-man-sitting-desk-table-living-room-working-remote-from-home-financial-project-using-laptop-computer-online-webinar-freelancer-guy-having-business-lesson_482257-37964.jpg?t=st=1721156626~exp=1721160226~hmac=a6fa32340b894e40f802d79b9ef73f611ba3c85dbdad5e1e426e4abbb576e293&w=900"
+												alt="Mouctar">
+									</div>
+								</a>
 							</div>
-						</a>
-					</div>
-					<div class="sliderdots">
-						<div></div>
-						<div></div>
-						<div></div>
+						</div>
+						<div class="slide">
+							<div class="box">
+								<div class="tags">
+									<a href="#"><span>PowerApps</span></a> <a href="#"><span>Copilot</span></a>
+								</div>
+								<a href="#">
+									<div class="side-articles side-slider">
+											<h3>The Future of AI: How Artificial Intelligence is Shaping Our World</h3>
+											<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nam sapiente tenetur
+												odio...</p>
+											<img src="https://img.freepik.com/free-photo/portrait-relaxed-man-sitting-desk-table-living-room-working-remote-from-home-financial-project-using-laptop-computer-online-webinar-freelancer-guy-having-business-lesson_482257-37964.jpg?t=st=1721156626~exp=1721160226~hmac=a6fa32340b894e40f802d79b9ef73f611ba3c85dbdad5e1e426e4abbb576e293&w=900"
+												alt="Mouctar">
+									</div>
+								</a>
+							</div>
+						</div>
+							<!-- silder  buttons and dots -->
+						<button aria-label="none" class="slider__btn slider__btn--left">&larr;</button>
+						<button aria-label="none" class="slider__btn slider__btn--right">&rarr;</button>
+
+						<div class="dots"></div>
 					</div>
             </div>
         </div>
@@ -37,7 +57,7 @@
 
     <section class="section-container content-layout">
         <div class="title">
-            <h2>About <span>me</span></h2>
+            <h2>About <span>BitZenon</span></h2>
         </div>
         <div class="raw">
         </div>

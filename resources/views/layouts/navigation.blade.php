@@ -20,10 +20,10 @@
     <div class="nav-container">
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            {{-- <li><a href="/about">About</a></li> --}}
             <li><a href="/services">Services</a></li>
-            <li><a href="/podcasts">Podcasts</a></li>
             <li><a href="/articles">Articles</a></li>
+            <li><a href="/podcasts">Podcasts</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </div>

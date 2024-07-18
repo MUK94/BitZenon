@@ -7,7 +7,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\AdminPanelController;
-use App\Http\Controllers\ServiceListingsController;
+use App\Http\Controllers\ArticleListingsController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
 
@@ -35,12 +35,12 @@ Route::get('/services/search', SearchController::class);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(['auth', 'verified']);
 
 
-Route::get('/articles', [ServiceListingsController::class, 'index'])->name('serviceListings.index');
-Route::get('/articles/{slug}', [ServiceListingsController::class, 'show'])->name('serviceListings.detail');
-Route::post('/articles', [ServiceListingsController::class, 'store'])->middleware(['auth', 'verified']);
-Route::get('/add-service',[ServiceListingsController::class, 'create'])->name('serviceListings.create')->middleware(['auth', 'verified']);
+Route::get('/articles', [ArticleListingsController::class, 'index'])->name('ArticleListings.index');
+Route::get('/articles/{slug}', [ArticleListingsController::class, 'show'])->name('ArticleListings.detail');
+Route::post('/articles', [ArticleListingsController::class, 'store'])->middleware(['auth', 'verified']);
+Route::get('/add-service',[ArticleListingsController::class, 'create'])->name('ArticleListings.create')->middleware(['auth', 'verified']);
 
-Route::resource('articles',ServiceListingsController::class)
+Route::resource('articles',ArticleListingsController::class)
 	->only(['update', 'edit', 'destroy'])
 	->middleware(['auth', 'verified']);
 
@@ -53,7 +53,7 @@ Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact
 
 // Category routes
 Route::get('/categories/{category:slug}', function(Category $category) {
-	return view('serviceListings.index', [
+	return view('articles.index', [
 		'services'=> $category->services,
 		'title' => $category->name,
 		'categories' =>Category::all(),

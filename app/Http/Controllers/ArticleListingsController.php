@@ -11,7 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 
 
-class ServiceListingsController extends Controller
+class ArticleListingsController extends Controller
 {
 	/**
 	 * Display a listing of the resource.
@@ -30,7 +30,7 @@ class ServiceListingsController extends Controller
 		// 	->orderBy('services.id', 'DESC');
 		// })->get();
 
-		return view('articles.articles')->with(['services' => $services,'title' => $title, 'categories' => $categories]);
+		return view('articles.index')->with(['services' => $services,'title' => $title, 'categories' => $categories]);
 
 	}
 
