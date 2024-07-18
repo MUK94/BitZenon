@@ -1,0 +1,91 @@
+.landing {
+	display: flex;
+	margin-top: 2rem;
+	justify-content: space-between;
+	gap: 3.7rem;
+}
+
+.landing .left h1 {
+	font-size: 1.75rem;
+	margin-bottom: 1rem;
+	color: var(--color1);
+}
+
+.landing .left {
+	flex: 7.2;
+}
+
+.landing .right {
+	flex: 4.8;
+}
+
+.landing  img {
+	margin-bottom: 0.75rem;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.landing .left button {
+	background-color: var(--color3);
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.5rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.landing .left button:hover {
+	background-color: var(--color1);
+}
+.landing .left button:hover i {
+	color: var(--color3);
+}
+.landing .left i{
+	font-size: 1.85rem;
+	color: var(--color1);
+}
+
+
+.landing .right .tags {
+	padding: 0.5rem 0;
+	display: flex;
+	gap: 1rem;
+}
+
+.landing .right .tags span {
+	background-color: var(--color3);
+	color: var(--color1);
+	font-size: 0.75rem;
+	padding: 0.15rem 0.5rem;
+	border-radius: 0.25rem;
+}
+
+.landing .right .tags span:hover{
+	background-color: var(--color1);
+	color: var(--color3);
+}
+
+.landing .right .side-articles h3 {
+	font-size: 1.2rem;
+}
+
+.landing .right .side-articles p {
+	margin: 0.5rem 0;
+}
+
+.landing .sliderdots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f7f3f32c;
+	border-radius: 0.25rem;
+	padding: 0.1rem;
+}
+.landing .sliderdots div {
+	width: 15px;
+	height: 15px;
+	margin: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--color2);
+}
+
+.landing .sliderdots div:first-child {
+	background-color: var(--color1);
+}
