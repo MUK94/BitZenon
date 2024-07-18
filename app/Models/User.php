@@ -46,7 +46,7 @@ class User extends Authenticatable
 
 		public function services(): HasMany
 		{
-			return $this->hasMany(Service::class);
+			return $this->hasMany(Article::class);
 		}
 
 		public function reviews(): HasMany

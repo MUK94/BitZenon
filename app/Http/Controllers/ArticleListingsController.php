@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
+use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -19,18 +19,17 @@ class ArticleListingsController extends Controller
 	public function index(Request $request): View
 	{
 		$title = "Articles";
-		$services = Service::with('user')->latest()->get();
+		$articles = Article::with('user')->latest()->get();
 		$categories = Category::all();
 
-
 		// Searching
-		// $searching_services = Service::search(trim($request->get('search')) ?? '')->query(function ($query) {
-		// 	$query->join('categories', 'services.category_id', 'categories.id')
-		// 	->select(['services.id', 'services.title', 'services.description', 'categories.name as category'])
-		// 	->orderBy('services.id', 'DESC');
+		// $searching_articles = Service::search(trim($request->get('search')) ?? '')->query(function ($query) {
+		// 	$query->join('categories', 'articles.category_id', 'categories.id')
+		// 	->select(['articles.id', 'articles.title', 'articles.description', 'categories.name as category'])
+		// 	->orderBy('articles.id', 'DESC');
 		// })->get();
 
-		return view('articles.index')->with(['services' => $services,'title' => $title, 'categories' => $categories]);
+		return view('articles.index')->with(['latest_articles' => $articles,'title' => $title, 'categories' => $categories]);
 
 	}
 
@@ -54,41 +53,33 @@ class ArticleListingsController extends Controller
 		$validatedData = $request->validate([
 			'title' => 'required|string|max:100',
 			'description' => 'required',
-			'price' => 'required',
-			'author_bio' => 'required',
-			'address' => 'required',
-			'phone_number' => 'required',
 			'category_id' => 'required',
 			'cover_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
 		]);
 
 
-		$service = new Service;
-		$service->user_id = auth()->user()->id;
-		$service->title = $validatedData['title'];
-		$service->slug = Str::slug($validatedData['title'], '-');
-		$service->description = $validatedData['description'];
-		$service->price = $validatedData['price'];
-		$service->author_bio = $validatedData['author_bio'];
-		$service->address = $validatedData['address'];
-		$service->phone_number = $validatedData['phone_number'];
-		$service->category_id = $validatedData['category_id'];
+		$article = new Article;
+		$article->user_id = auth()->user()->id;
+		$article->title = $validatedData['title'];
+		$article->slug = Str::slug($validatedData['title'], '-');
+		$article->description = $validatedData['description'];
+		$article->category_id = $validatedData['category_id'];
 
-		$service->save();
+		$article->save();
 
 		if ($request->hasFile('cover_image')) {
 			$file = $request->file('cover_image');
-			$imageName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '_' . 'service' . time() . '.' . $file->getClientOriginalExtension();
+			$imageName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '_' . 'article' . time() . '.' . $file->getClientOriginalExtension();
 
 			Storage::disk('public')->put(
 				$imageName,
 				file_get_contents($request->file('cover_image')->getRealPath())
 			);
-			$service->cover_image = $imageName;
-			$service->save();
+			$article->cover_image = $imageName;
+			$article->save();
 		}
 
-		return redirect('/services')->with('success', 'Service ajouté avec succès');
+		return redirect('/articles')->with('success', 'article ajouté avec succès');
 	}
 
 	/**
@@ -98,11 +89,11 @@ class ArticleListingsController extends Controller
 	public function show($slug)
 	{
 
-		$service = Service::where('slug', $slug)->first();
-		$similar_services = Service::where('category_id', $service->category_id)->where('id', '!=', $service->id)->limit(5)->get();
-		$title = $service->title;
+		$article = Article::where('slug', $slug)->first();
+		$similar_articles = Article::where('category_id', $article->category_id)->where('id', '!=', $article->id)->limit(5)->get();
+		$title = $article->title;
 		$categories = Category::all();
-		return view('articles.detail')->with(['service' => $service, 'similar_services' => $similar_services, 'categories' => $categories, 'title' => $title]);
+		return view('articles.detail')->with(['article' => $article, 'similar_articles' => $similar_articles, 'categories' => $categories, 'title' => $title]);
 	}
 
 	/**
@@ -110,8 +101,8 @@ class ArticleListingsController extends Controller
 	 */
 	public function edit($id): View
 	{
-		$title = 'Modifier Le Service';
-		$service = Service::findOrFail($id);
+		$title = 'Update Article';
+		$service = Article::findOrFail($id);
 		$categories = Category::all();
 		return view('articles.edit')->with(['service' => $service, 'categories' => $categories, 'title' => $title]);
 	}
@@ -126,39 +117,35 @@ class ArticleListingsController extends Controller
 		$validatedData = $request->validate([
 			'title' => 'required|string|max:100',
 			'description' => 'required',
-			'price' => 'required',
-			'author_bio' => 'required',
-			'address' => 'required',
-			'phone_number' => 'required',
 			'category_id' => 'required',
 			'cover_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
 		]);
 
 		// $service->update($validatedData);
 
-		$service = Service::findOrFail($id);
-		$service->user_id = auth()->user()->id;
-		$service->title = $validatedData['title'];
-		$service->slug = Str::slug($validatedData['title'], '-');
-		$service->description = $validatedData['description'];
-		$service->price = $validatedData['price'];
-		$service->author_bio = $validatedData['author_bio'];
-		$service->address = $validatedData['address'];
-		$service->phone_number = $validatedData['phone_number'];
-		$service->category_id = $validatedData['category_id'];
+		$article = Article::findOrFail($id);
+		$article->user_id = auth()->user()->id;
+		$article->title = $validatedData['title'];
+		$article->slug = Str::slug($validatedData['title'], '-');
+		$article->description = $validatedData['description'];
+		$article->price = $validatedData['price'];
+		$article->author_bio = $validatedData['author_bio'];
+		$article->address = $validatedData['address'];
+		$article->phone_number = $validatedData['phone_number'];
+		$article->category_id = $validatedData['category_id'];
 
-		$service->save();
+		$article->save();
 
 		if ($request->hasFile('cover_image')) {
 			$file = $request->file('cover_image');
-			$imageName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '_' . 'service' . time() . '.' . $file->getClientOriginalExtension();
+			$imageName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '_' . 'article' . time() . '.' . $file->getClientOriginalExtension();
 
 			Storage::disk('public')->put(
 				$imageName,
 				file_get_contents($request->file('cover_image')->getRealPath())
 			);
-			$service->cover_image = $imageName;
-			$service->save();
+			$article->cover_image = $imageName;
+			$article->save();
 		}
 
 		return redirect('/articles')->with('success', 'Service ajouté avec succès');
@@ -169,13 +156,13 @@ class ArticleListingsController extends Controller
 	/**
 	 * Remove the specified resource from storage.
 	 */
-	public function destroy(Service $service)
+	public function destroy(Article $article)
 	{
-		$this->authorize('delete', $service);
+		$this->authorize('delete', $article);
 
-		$service->delete();
+		$article->delete();
 
-		return redirect('/dashboard')->with('success', 'Service supprimé avec succès');
+		return redirect('/dashboard')->with('success', 'article supprimé avec succès');
 
 	}
 }

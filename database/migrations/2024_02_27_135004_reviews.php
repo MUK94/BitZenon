@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
 				$table->foreignId('user_id')->unsigned();
-				$table->foreignId('service_id')->unsigned();
+				$table->foreignId('article_id')->unsigned();
             $table->mediumText('body');
             $table->timestamps();
         });

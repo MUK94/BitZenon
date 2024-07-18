@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
 
-class Service extends Model
+class Article extends Model
 {
   use HasFactory;
   use Searchable;
@@ -17,8 +17,6 @@ class Service extends Model
 		'title',
 		'description',
 		'author_bio',
-		'price',
-		'address',
 		'phone_number',
 		'cover_image',
 	];
