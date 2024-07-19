@@ -11,7 +11,7 @@
 					<h2>{{ explode(" ", auth()->user()->name)[0] }}</h2>
 				</div>
 				<ul class="lists">
-					<li><a href="#"><i class="fa-solid fa-suitcase"></i> Services</a></li>
+					<li><a href="#"><i class="fa-solid fa-suitcase"></i> articles</a></li>
 					<li><a href="#"><i class="fa-solid fa-user"></i> Clients</a></li>
 					<li><a href="/profile"><i class="fa-solid fa-gear"></i> Paramètres</a></li>
 					<li><a href="#"><i class="fa-solid fa-bell"></i> Notifications</a></li>
@@ -24,9 +24,9 @@
 					<div class="box">
 						<div>
 							<i class="fa-solid fa-suitcase"></i>
-							<p>Services</p>
+							<p>Articles</p>
 						</div>
-						<h3>{{ $services->count() }}</h3>
+						<h3>{{ $articles->count() }}</h3>
 					</div>
 					<div class="box">
 						<div>
@@ -53,7 +53,7 @@
 
 				{{-- Table --}}
 				<div class="table-container">
-					<h2>Services <span>Admin</span></h2>
+					<h2>articles <span>Admin</span></h2>
 					<table class="min-w-full bg-white rounded-lg">
 						<thead class="bg-gray-800 text-white">
 							<tr >
@@ -64,16 +64,16 @@
 							</tr>
 						</thead>
 						<tbody>
-							@if ($services->count() > 0)
-								@foreach ($services as $service)
+							@if ($articles->count() > 0)
+								@foreach ($articles as $article)
 								<tr>
-									<td class="border px-4 py-2">{{ $service->id }}</td>
-									<td class="border px-4 py-2">{{ $service->title }}</td>
+									<td class="border px-4 py-2">{{ $article->id }}</td>
+									<td class="border px-4 py-2">{{ $article->title }}</td>
 									<td class="border px-4 py-2">
-											<a href="{{ route('services.edit', $service) }}" class="text-blue-600 hover:text-blue-900">Edit</a>
+											<a href="{{ route('articles.edit', $article) }}" class="text-blue-600 hover:text-blue-900">Edit</a>
 									</td>
 									<td class="border px-4 py-2">
-										<form action="{{ route('services.destroy', $service) }}" method="POST">
+										<form action="{{ route('articles.destroy', $article) }}" method="POST">
 												@csrf
 												@method('DELETE')
 												<button type="submit" class="text-red-600 hover:text-red-900">Delete</button>
@@ -83,7 +83,7 @@
 								@endforeach
 
 							@else
-								<p class="mb-4">Vous n'avez pas encore publié de service.</p>
+								<p class="mb-4">No Article</p>
 							@endif
 						</tbody>
         			</table>

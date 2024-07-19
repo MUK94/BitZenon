@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>{{ $title }} | Mouctechy </title>
+<title>{{ $title }} | BitZenon </title>
 @section('content')
 	<div class="content-layout">
 		<div class="contact">

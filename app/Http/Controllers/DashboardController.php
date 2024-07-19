@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Models\Service;
+use App\Models\Article;
 use App\Models\Category;
 
 class DashboardController extends Controller
@@ -15,9 +15,9 @@ class DashboardController extends Controller
     public function index():View
     {
 			$title = 'Dashboard';
-			$services = Service::where('user_id', auth()->id())->get();;
+			$articles = Article::where('user_id', auth()->id())->get();;
 			$categories = Category::all();
-      	return view('dashboard.index')->with(['title'=>$title, 'services'=>$services, 'categories'=>$categories]);
+      	return view('dashboard.index')->with(['title'=>$title, 'articles'=>$articles, 'categories'=>$categories]);
     }
 
     /**

@@ -38,7 +38,7 @@ class ArticleListingsController extends Controller
 	 */
 	public function create(): View
 	{
-		$title = 'Postez un Service';
+		$title = 'Postez un article';
 		$categories = Category::all();
 
 		return view('articles.create')->with(['title' => $title, 'categories' => $categories]);
@@ -102,9 +102,9 @@ class ArticleListingsController extends Controller
 	public function edit($id): View
 	{
 		$title = 'Update Article';
-		$service = Article::findOrFail($id);
+		$article = Article::findOrFail($id);
 		$categories = Category::all();
-		return view('articles.edit')->with(['service' => $service, 'categories' => $categories, 'title' => $title]);
+		return view('articles.edit')->with(['article' => $article, 'categories' => $categories, 'title' => $title]);
 	}
 
 	/**
@@ -128,10 +128,6 @@ class ArticleListingsController extends Controller
 		$article->title = $validatedData['title'];
 		$article->slug = Str::slug($validatedData['title'], '-');
 		$article->description = $validatedData['description'];
-		$article->price = $validatedData['price'];
-		$article->author_bio = $validatedData['author_bio'];
-		$article->address = $validatedData['address'];
-		$article->phone_number = $validatedData['phone_number'];
 		$article->category_id = $validatedData['category_id'];
 
 		$article->save();
@@ -162,7 +158,7 @@ class ArticleListingsController extends Controller
 
 		$article->delete();
 
-		return redirect('/dashboard')->with('success', 'article supprimé avec succès');
+		return redirect('/dashboard')->with('success', 'article deleted successfully');
 
 	}
 }

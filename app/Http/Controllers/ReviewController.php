@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Review;
-use App\Models\Service;
+use App\Models\Article;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -17,10 +17,10 @@ class ReviewController extends Controller
      */
     public function index(): View
     {
-		$services = Service::with('user')->latest()->get();
+		$articles = Article::with('user')->latest()->get();
 		$categories = Category::all();
 
-      return View('reviews.index', compact('services', 'categories'));
+      return View('reviews.index', compact('articles', 'categories'));
     }
 
     /**
@@ -62,9 +62,9 @@ class ReviewController extends Controller
      */
 	 public function edit(Review $review): View
     {
-		$services = Service::with('user')->latest()->get();
+		$articles = Article::with('user')->latest()->get();
 		$categories = Category::all();
-		return View('reviews.edit', compact('services', 'categories', 'review'));
+		return View('reviews.edit', compact('articles', 'categories', 'review'));
     }
 
     // Update method to handle the update request

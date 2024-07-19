@@ -1,57 +1,10 @@
-# 1. Display listings on listings.index
-		# Add images to the model✅
-		# Add Category relationship✅
-		# Finish Card Design Dynamically✅
-		# Design Search bar and later implement search features✅
-		# Finish design of services page✅
-		# Finish About page design		✅
-		# Fix dropdown menu           ✅
-
-
-# . Build Detail Page
-		Add review form on detail page (Like comments)
-		Add slider images/carousal to visualize more images ✅
-		(Model to be updated)
-		Form for reviews
-		similar services / Category or Author
-
-# . Logout link ✅
-
-# . User Dashboard Design✅
-		list services✅
-		user profile ✅
-		settings ✅
-		Add edit/Delete✅
-
-		Statistics
-
-
-
-# . Add chat option to exchange with vendor/owner/author/publisher on detal page
-
-# . List items belonging to that user on Dashboard ✅
-		Implement Delete and Update ✅
-		Display draft post, approved & similar stuff
-		Add profile settings on Dashboard ✅
-		CRUD on user profile ✅
-
-
-# . Filtering/routing Per Category ✅
-		CRUD on Category
-
-
-
-# . Search functions
-
-# . Admin Panel for Admins
-
-# . Error handling
-# . Refactoring
-
-# . Responsiveness
-# . Testing
-# . documenting
-
-
-
-
+#  1- Logo Design
+	2- Most Popular Post
+	3- Article Detail Page
+	4- Services Page and Section Design
+	5- Podcast resource Design
+	6- Contact Page
+	7- Newsletter Subscription
+	6- Booking System
+	8- Users admin and role
+	9- Dashboard design for admin and visitors

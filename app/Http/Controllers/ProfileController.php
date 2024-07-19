@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use App\Models\Service;
+use App\Models\Article;
 use App\Models\Category;
 
 class ProfileController extends Controller
@@ -19,11 +19,11 @@ class ProfileController extends Controller
     public function edit(Request $request): View
     {
 			$title = 'Profile';
-			$services = Service::with('user')->latest()->get();
+			$articles = Article::with('user')->latest()->get();
 			$categories = Category::all();
         return view('profile.edit', [
             'user' => $request->user(),
-        ])->with(['title'=>$title, 'services'=>$services, 'categories'=>$categories]);
+        ])->with(['title'=>$title, 'articles'=>$articles, 'categories'=>$categories]);
     }
 
     /**

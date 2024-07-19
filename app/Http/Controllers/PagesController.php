@@ -16,8 +16,9 @@ class PagesController extends Controller
     {
         $title = 'Home';
 		  $latestArticles = Article::orderBy('created_at', 'desc')->take(4)->get();
+		  $sidebarArticles = Article::orderBy('created_at', 'asc')->take(3)->get();
         $categories = Category::all();
-        return view('home')->with(['title' => $title, 'latestArticles' => $latestArticles, 'categories' => $categories]);
+        return view('home', compact('title', 'latestArticles', 'sidebarArticles', 'categories'));
     }
 
     public function about(): View
@@ -28,12 +29,12 @@ class PagesController extends Controller
         return view('pages.about')->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
     }
 
-	 public function articles(): View
+	 public function services(): View
     {
-        $title = 'Podcasts';
+        $title = 'Services';
         $articles = Article::all();
         $categories = Category::all();
-        return view('pages.articles')->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
+        return view('pages.services')->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
     }
     public function podcasts(): View
     {

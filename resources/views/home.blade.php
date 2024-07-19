@@ -13,40 +13,24 @@
             </div>
             <div class="right sidebar">
                 <div class="slider">
-                    <div class="slide">
-                        <div class="box">
-                            <div class="tags">
-                                <a href="#"><span>PowerApps</span></a> <a href="#"><span>Copilot</span></a>
-                            </div>
-                            <a href="#">
-                                <div class="side-articles side-slider">
-                                    <h3>The Future of AI: How Artificial Intelligence is Shaping Our World</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nam sapiente
-                                        tenetur
-                                        odio...</p>
-                                    <img src="https://img.freepik.com/free-photo/portrait-relaxed-man-sitting-desk-table-living-room-working-remote-from-home-financial-project-using-laptop-computer-online-webinar-freelancer-guy-having-business-lesson_482257-37964.jpg?t=st=1721156626~exp=1721160226~hmac=a6fa32340b894e40f802d79b9ef73f611ba3c85dbdad5e1e426e4abbb576e293&w=900"
-                                        alt="Mouctar">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="box">
-                            <div class="tags">
-                                <a href="#"><span>PowerApps</span></a> <a href="#"><span>Copilot</span></a>
-                            </div>
-                            <a href="#">
-                                <div class="side-articles side-slider">
-                                    <h3>The Future of AI: How Artificial Intelligence is Shaping Our World</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nam sapiente
-                                        tenetur
-                                        odio...</p>
-                                    <img src="https://img.freepik.com/free-photo/portrait-relaxed-man-sitting-desk-table-living-room-working-remote-from-home-financial-project-using-laptop-computer-online-webinar-freelancer-guy-having-business-lesson_482257-37964.jpg?t=st=1721156626~exp=1721160226~hmac=a6fa32340b894e40f802d79b9ef73f611ba3c85dbdad5e1e426e4abbb576e293&w=900"
-                                        alt="Mouctar">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+						@foreach ($sidebarArticles as $article)
+							<div class="slide">
+								<div class="box">
+									<div class="tags">
+											<a href="#"><span>{{ $article->category->name }}</span></a>
+									</div>
+									<a href="#">
+											<div class="side-articles side-slider">
+												<h3>{{ $article->title }}</h3>
+												<p>
+													{!! strlen($article->description) > 100 ? substr($article->description, 0, 100) . '...' : $article->description !!}
+												</p>
+												<img src="{{ asset('storage/' . $article->cover_image ) }}" alt="{{ $article->title }}">
+											</div>
+									</a>
+								</div>
+							</div>
+						@endforeach
                     <!-- silder  buttons and dots -->
                     <button aria-label="none" class="slider__btn slider__btn--left"><i
                             class="fa-solid fa-angle-left"></i></button>
@@ -118,15 +102,17 @@
         <div class="container posts">
             @foreach ($latestArticles as $article)
                 <div class="post">
-                    <img src="https://img.freepik.com/free-photo/businesspeople-working-finance-accounting-analyze-financi_74952-1411.jpg?t=st=1721339672~exp=1721343272~hmac=aa99130f3ecde2a7f5403745a7238ddee14f6e3d12048ce63458cb7407f6294a&w=900"
-                        alt="">
+                    <a href="/articles/". {{ $article->slug }} ><img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{$article->title}}"></a>
                     <div class="description">
                         <div class="tags">
-                            <a href="#"><span>PowerApps</span></a> <a href="#"><span>Copilot</span></a>
+                            <a href="#"><span>{{ $article->category->name}}</span></a>
                         </div>
                         <div class="text">
                             <a href="#"><h2>{{ $article->title }}</h2></a>
-									 <p>{{ $article->description }}</p>
+									 <a href="#">
+										<p>
+										{!! strlen($article->description) > 160 ? substr($article->description, 0, 160) . '...' : $article->description !!}
+									</p></a>
                             <span>{{ $article->created_at->diffForHumans() }}</span>
                         </div>
                     </div>

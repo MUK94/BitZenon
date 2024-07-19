@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\Service;
+use App\Models\Article;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Redirect;
+use Illuminate\Http\cc;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
@@ -19,7 +20,7 @@ class CategoryController extends Controller
     public function index():View
     {
 		$title = "Créez des Catégories";
-		$services = Service::with('user')->latest()->get();
+		$services = Article::with('user')->latest()->get();
 		$categories = Category::all();
 
 		return view('admin.category.index', compact('title', 'services', 'categories'));
@@ -29,15 +30,15 @@ class CategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): RedirectResponse
-    {
+   //  public function create(): RedirectResponse
+   //  {
 
-    }
+   //  }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
       $request->validate([
 			'name' => 'required|string|max:20|unique:categories',
@@ -66,16 +67,16 @@ class CategoryController extends Controller
     public function edit(Category $category): View
     {
 		$title = "Modifiez Catégorie";
-		$services = Service::with('user')->latest()->get();
+		$articles = Article::with('user')->latest()->get();
 		$categories = Category::all();
 
-		return view('admin.category.edit', ['category' => $category], compact('title', 'services', 'categories'));
+		return view('admin.category.edit', ['category' => $category], compact('title', 'articles', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Category $category):View
     {
         // Validate the incoming request data
 		$validator = Validator::make($request->all(), [
@@ -83,9 +84,9 @@ class CategoryController extends Controller
 		]);
 
 		if ($validator->fails()) {
-		return Redirect::back()
-				->withErrors($validator)
-				->withInput();
+			return Redirect::back()
+					->withErrors($validator)
+					->withInput();
 		}
 
 		// Update the category attributes
@@ -103,6 +104,6 @@ class CategoryController extends Controller
     public function destroy(Category $category):RedirectResponse
     {
 		$category->delete();
-		return redirect()->route('category.index')->with('success', 'Category updated successfully.');
+		redirect()->route('category.index')->with('success', 'Category updated successfully.');
     }
 }

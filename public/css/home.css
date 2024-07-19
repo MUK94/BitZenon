@@ -183,9 +183,9 @@
 	border-radius: 1.5rem;
 }
 
-.content-layout .posts img{
-	width: 25rem;
-	height: 260px;
+.content-layout .posts a img{
+	width: 500px;
+	height: 230px;
 	object-fit: cover;
 }
 
@@ -194,7 +194,7 @@
 }
 
 .content-layout .posts .description h2 {
-	font-size: 1.9rem;
+	font-size: 1.7rem;
 }
 
 .content-layout .posts .description p {

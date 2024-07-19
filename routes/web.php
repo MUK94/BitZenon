@@ -29,27 +29,27 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/services/search', SearchController::class);
+Route::get('/articles/search', SearchController::class);
 
 // Backend routes to dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(['auth', 'verified']);
 
-
 Route::get('/articles', [ArticleListingsController::class, 'index'])->name('ArticleListings.index');
 Route::get('/articles/{slug}', [ArticleListingsController::class, 'show'])->name('ArticleListings.detail');
 Route::post('/articles', [ArticleListingsController::class, 'store'])->middleware(['auth', 'verified']);
-Route::get('/add-service',[ArticleListingsController::class, 'create'])->name('ArticleListings.create')->middleware(['auth', 'verified']);
-
-Route::resource('articles',ArticleListingsController::class)
-	->only(['update', 'edit', 'destroy'])
-	->middleware(['auth', 'verified']);
-
+Route::get('/add-article',[ArticleListingsController::class, 'create'])->name('ArticleListings.create')->middleware(['auth', 'verified']);
 
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('pages.services');
 Route::get('/podcasts', [PagesController::class, 'podcasts'])->name('pages.podcasts');
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
+
+
+Route::resource('articles',ArticleListingsController::class)
+	->only(['update', 'edit', 'destroy'])
+	->middleware(['auth', 'verified']);
+
 
 // Category routes
 Route::get('/categories/{category:slug}', function(Category $category) {

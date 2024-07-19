@@ -4,7 +4,7 @@
 	<div class="content-layout">
 		<div class="contact">
 			<div class="raw">
-				<h1 class="title">Contact</h1>
+				<h1 class="title">PodCasts</h1>
 				<div class="slogan">
 				</div>
 			</div>

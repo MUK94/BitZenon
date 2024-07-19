@@ -13,32 +13,21 @@
 			</div>
 			<div class="raw">
 				<div class="detail-col">
-					<h2>{{ $service->title }}</h2>
+					<h2>{{ $article->title }}</h2>
 					<div class="info">
 						<div class="price btn">
-							<a href="#" class="">A partir de {{ $service->price }} FG</a>
+							<a href="#" class="">A partir de {{ $article->price }} FG</a>
 						</div>
-						<div class="review">
+						{{-- <div class="review">
 							<i class="fa-solid fa-star"></i><span> 5.0 (9 reviews)</span>
-						</div>
+						</div> --}}
 					</div>
 					<div class="image-box">
-						<img src="{{ asset('storage/'.$service->cover_image)  }}" alt="{{ $service->title }}">
+						<img src="{{ asset('storage/'.$article->cover_image)  }}" alt="{{ $article->title }}">
 					</div>
-					<div class="slider-image">
-						<div class="slide slide-image">
-							<img src="{{ asset('storage/'.$service->cover_image)  }}" alt="{{ $service->title }}">
-						</div>
-						<div class="slide slide-image">
-							<img src="{{ asset('storage/'.$service->cover_image)  }}" alt="{{ $service->title }}">
-						</div>
-							<!-- silder  buttons and dots -->
-							<button aria-label="none" class="slider__btn slider__btn--left">&larr;</button>
-							<button aria-label="none" class="slider__btn slider__btn--right">&rarr;</button>
-							<div class="dots"></div>
-					</div>
+
 					<article>
-						{!! $service->description  !!}
+						{!! $article->description  !!}
 					</article>
 
 					{{-- Reviews --}}
@@ -46,7 +35,7 @@
 					<div class="review-container mt-24">
 						<div class="mx-auto mt-24">
 							<h3 class="text-xl font-semibold mb-4 mt-8">Reviews</h3>
-							@foreach ($service->reviews as $review)
+							@foreach ($article->reviews as $review)
 							<div class="bg-white rounded-lg shadow-md p-2 mb-12">
 								<div class="relative flex items-center">
 									 <div class="text-lg review">
@@ -98,51 +87,51 @@
 								<label for="review" class="block text-gray-700">Votre Review:</label>
 								<textarea id="review" name="body" rows="4" class="form-textarea mt-1 px-2 pt-2 block w-full border-gray-300 rounded-md border focus:border-blue-500"></textarea>
 							</div>
-							<input type="hidden" name="service_id" value="{{ $service->id }}">
+							<input type="hidden" name="article_id" value="{{ $article->id }}">
 							<button type="submit" class="btn bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Envoyez</button>
 						</form>
 
 {{--
-						<form action="{{ route('reviews.update', $service->review) }}" method="POST" enctype="multipart/form-data">
+						<form action="{{ route('reviews.update', $article->review) }}" method="POST" enctype="multipart/form-data">
 							@csrf
 							@method('PATCH')
 							<div class="mb-4">
 								<label for="review" class="block text-gray-700">Votre Review:</label>
 								<textarea id="review" name="body" rows="4" class="form-textarea mt-1 px-2 pt-2 block w-full border-gray-300 rounded-md border focus:border-blue-500"></textarea>
 							</div>
-							<input type="hidden" name="service_id" value="{{ $service->id }}">
+							<input type="hidden" name="article_id" value="{{ $article->id }}">
 							<button type="submit" class="btn bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Envoyez</button>
 						</form> --}}
 
 				  </div>
 
 					</div>
-					<div class="similar-services recommended-container">
-						<h3 class="text-xl font-semibold mb-4 mt-4">Services Similaires</h3>
+					<div class="similar-articles recommended-container">
+						<h3 class="text-xl font-semibold mb-4 mt-4">articles Similaires</h3>
 						<div class="container">
-							@if ($similar_services->isEmpty())
-								 <p>No service</p>
+							@if ($similar_articles->isEmpty())
+								 <p>No article</p>
 							@else
-								 @foreach ($similar_services as $service)
+								 @foreach ($similar_articles as $article)
 									  <div class="card">
 											<div>
 												 <div class="image">
-													  <img src="{{ asset('storage/'.$service->cover_image) }}" alt="" srcset="">
+													  <img src="{{ asset('storage/'.$article->cover_image) }}" alt="" srcset="">
 												 </div>
 												 <div class="detail">
-													  <a href="/categories/{{ $service->category->slug }}"><span class="cat"> {{ $service->category->name }}</span></a>
-													  <h3 class="mt-4 mb-4"><a href="{{ route('serviceListings.detail', ['slug'=>$service->slug]) }}">{{ $service->title }}</a></h3>
+													  <a href="/categories/{{ $article->category->slug }}"><span class="cat"> {{ $article->category->name }}</span></a>
+													  <h3 class="mt-4 mb-4"><a href="{{ route('articleListings.detail', ['slug'=>$article->slug]) }}">{{ $article->title }}</a></h3>
 													  <div class="raw">
 															<div class="owner">
 																 <img src="{{ asset('img/user.png') }}" alt="">
-																 <span>{{ explode(" ", $service->user->name)[0] }}</span>
+																 <span>{{ explode(" ", $article->user->name)[0] }}</span>
 															</div>
 															<div class="review">
 																 <i class="fa-solid fa-star"></i><span> 5.0 (9 reviews)</span>
 															</div>
 													  </div>
 													  <div class="price">
-															<button href="#">A partir de <span>{{ $service->price }} FG</span></button>
+															<button href="#">A partir de <span>{{ $article->price }} FG</span></button>
 													  </div>
 												 </div>
 											</div>
@@ -156,8 +145,8 @@
 					<div class="owner">
 						<img src="{{ asset('img/user.png') }}" alt="">
 						<div>
-							<h2>{{ $service->user->name }}</h2>
-							<a href="#"><i class="fa-solid fa-location"></i>{{ $service->address }}</a>
+							<h2>{{ $article->user->name }}</h2>
+							<a href="#"><i class="fa-solid fa-location"></i>{{ $article->address }}</a>
 						</div>
 					</div>
 					<p>{{ $service->author_bio }}</p>
