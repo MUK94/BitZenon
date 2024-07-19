@@ -17,9 +17,9 @@
 							<div class="slide">
 								<div class="box">
 									<div class="tags">
-											<a href="#"><span>{{ $article->category->name }}</span></a>
+											<a href="/categories/{{$article->category->slug}}"><span>{{ $article->category->name }}</span></a>
 									</div>
-									<a href="#">
+									<a href="/articles/{{$article->slug}}">
 											<div class="side-articles side-slider">
 												<h3>{{ $article->title }}</h3>
 												<p>
@@ -102,14 +102,14 @@
         <div class="container posts">
             @foreach ($latestArticles as $article)
                 <div class="post">
-                    <a href="/articles/". {{ $article->slug }} ><img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{$article->title}}"></a>
+                    <a href="/articles/{{ $article->slug }}" ><img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{$article->title}}"></a>
                     <div class="description">
                         <div class="tags">
-                            <a href="#"><span>{{ $article->category->name}}</span></a>
+                            <a href="/categories/{{$article->category->slug}}"><span>{{ $article->category->name}}</span></a>
                         </div>
                         <div class="text">
-                            <a href="#"><h2>{{ $article->title }}</h2></a>
-									 <a href="#">
+                            <a href="/articles/{{ $article->slug }}"><h2>{{ $article->title }}</h2></a>
+									 <a href="/articles/{{ $article->slug }}">
 										<p>
 										{!! strlen($article->description) > 160 ? substr($article->description, 0, 160) . '...' : $article->description !!}
 									</p></a>

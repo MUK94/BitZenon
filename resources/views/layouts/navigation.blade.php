@@ -1,7 +1,8 @@
 <nav class="navbar content-layout">
     <div class="nav-logo">
         <a href="/" class="logo">
-            <h1>BitZenon</h1>
+            {{-- <h1>BitZenon</h1> --}}
+				<img src="{{asset("logo-blue-max.png")}}" alt="BitZenon Logo">
         </a>
     </div>
     <div class="nav-cat-dropdown">

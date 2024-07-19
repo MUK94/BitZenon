@@ -1,5 +1,5 @@
 #  1- Logo Design
-	2- Most Popular Post
+	2- Most Popular Post/ views counts
 	3- Article Detail Page
 	4- Services Page and Section Design
 	5- Podcast resource Design
@@ -8,3 +8,7 @@
 	6- Booking System
 	8- Users admin and role
 	9- Dashboard design for admin and visitors
+	10- Replace Reviews by comments
+	12- Refactor as much as you can along side
+
+	13- Build responsive along the way

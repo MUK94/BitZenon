@@ -1,8 +1,8 @@
 .landing {
 	display: flex;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	justify-content: space-between;
-	gap: 3.7rem;
+	gap: 3.5rem;
 }
 
 .landing .left h1 {
@@ -81,7 +81,7 @@
 .sidebar .slider__btn {
 	position: absolute;
 	top: 50%;
-	z-index: 10;
+	z-index: 1;
 	border: none;
 	font-family: inherit;
 	border-radius: 50%;
@@ -195,6 +195,10 @@
 
 .content-layout .posts .description h2 {
 	font-size: 1.7rem;
+}
+
+.content-layout .posts .description h2:hover {
+	color: var(--color1);
 }
 
 .content-layout .posts .description p {

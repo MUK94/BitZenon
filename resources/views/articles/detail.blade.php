@@ -1,5 +1,5 @@
 @extends('layouts.app')
-	<title>{{ $title }} | Bonnafaire </title>
+	<title>{{ $title }} | BitZenon </title>
 @section('content')
 {{-- {{dd($similar_services)}} --}}
 	<div class="listings-container content-layout">
@@ -15,9 +15,6 @@
 				<div class="detail-col">
 					<h2>{{ $article->title }}</h2>
 					<div class="info">
-						<div class="price btn">
-							<a href="#" class="">A partir de {{ $article->price }} FG</a>
-						</div>
 						{{-- <div class="review">
 							<i class="fa-solid fa-star"></i><span> 5.0 (9 reviews)</span>
 						</div> --}}
@@ -141,7 +138,7 @@
 					  </div>
 					</div>
 				</div>
-				<div class="detail-sidebar">
+				{{-- <div class="detail-sidebar">
 					<div class="owner">
 						<img src="{{ asset('img/user.png') }}" alt="">
 						<div>
@@ -154,7 +151,7 @@
 						<a href="{{ 'tel:'.$service->phone_number }}"><i class="fa-solid fa-phone"></i>Appelez</a>
 						<a href="#" class="btn"><i class="fa-solid fa-comment-dots"></i>Contactez</a>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 
 			</div>

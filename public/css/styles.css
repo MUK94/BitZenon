@@ -50,7 +50,10 @@ header a:hover {
 	color: var(--color1);
 	border-bottom: 2px solid var(--color1);
 }
-
+.navbar .nav-logo img {
+	height: 40px;
+	width: 40px;
+}
 .content-layout .container {
 	padding: 2rem 0 6rem;
 }
@@ -148,18 +151,18 @@ ul {
 	top: calc(100% + 17px);
 	background-color: #f1f1f1;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	left: -200px;
+	z-index: 100;
+	left: -20px;
 	border-radius: .25rem;
 }
 
 .nav-cat-dropdown .dropdown-content .cat-drop {
-	width: 800px;
+	width: 700px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: start;
 	align-self: center;
-	padding: 1rem;
+	padding: 1rem 1rem 3rem;
 }
 
 .nav-cat-dropdown .dropdown-content .drop-user {
