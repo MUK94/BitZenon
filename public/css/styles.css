@@ -11,6 +11,15 @@ h2,
 h3,
 h4,
 h5,
+h6 {
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 .tags span {
 	font-family: 'Lexend Deca', sans-serif;
@@ -35,10 +44,32 @@ h2 span {
 
 img {
 	border-radius: 1.5rem;
+
+}
+button {
+	border: none;
 }
 
 a {
 	text-decoration: none;
+}
+
+
+.logo-guest {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-guest img {
+	width: 40px;
+	height: 40px;
+	margin-right: 0.25rem;
+}
+.logo-guest h1 {
+	color: var(--color1);
+	font-size: 1.1rem;
+	font-weight: 600;
 }
 
 header a {
@@ -54,6 +85,10 @@ header a:hover {
 	height: 40px;
 	width: 40px;
 }
+.navbar .nav-logo a:hover {
+	border-bottom: none;
+}
+
 .content-layout .container {
 	padding: 2rem 0 6rem;
 }

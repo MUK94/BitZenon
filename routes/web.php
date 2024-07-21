@@ -34,10 +34,10 @@ Route::get('/articles/search', SearchController::class);
 // Backend routes to dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(['auth', 'verified']);
 
-Route::get('/articles', [ArticleListingsController::class, 'index'])->name('ArticleListings.index');
-Route::get('/articles/{slug}', [ArticleListingsController::class, 'show'])->name('ArticleListings.detail');
+Route::get('/articles', [ArticleListingsController::class, 'index'])->name('articles.index');
+Route::get('/articles/{slug}', [ArticleListingsController::class, 'show'])->name('articles.detail');
 Route::post('/articles', [ArticleListingsController::class, 'store'])->middleware(['auth', 'verified']);
-Route::get('/add-article',[ArticleListingsController::class, 'create'])->name('ArticleListings.create')->middleware(['auth', 'verified']);
+Route::get('/add-article',[ArticleListingsController::class, 'create'])->name('articles.create')->middleware(['auth', 'verified']);
 
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('pages.services');

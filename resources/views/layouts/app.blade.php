@@ -8,7 +8,7 @@
 			<title>Home | {{ config('app.name', 'BitZenon') }}</title>
 
 			{{-- Tailwind --}}
-			<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+			{{-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> --}}
 
 			<link rel="icon" type="image/x-icon" href="{{ asset('favicon-pro.png') }}">
 
@@ -50,7 +50,7 @@
 			<div class="raw">
 				<div class="col">
 					<div class="box">
-						<h3>Mouctechy</h3>
+						<h3>BitZenon</h3>
 						<ul class="box">
 							<li class="mb-6">Your Source for Tech Knowledge and Digital Solutions</li>
 							<li><i class="fa-solid fa-phone"></i>+224 621149477</li>
@@ -82,7 +82,7 @@
 		<div class="container content-layout">
 			<div class="copyright">
 				<div class="text">
-					© 2024 Mouctechy All Rights Reserved
+					© 2024 BitZenon All Rights Reserved
 				</div>
 				<div class="social">
 					<a href="#"><i class="fa-brands fa-facebook"></i></a>

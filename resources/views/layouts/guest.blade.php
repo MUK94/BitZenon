@@ -14,14 +14,17 @@
 		  <link rel="icon" type="image/x-icon" href="{{ asset('favicon-pro.png') }}">
 
         <!-- Scripts -->
+			<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/_variables.css') }}">
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
+            <div >
 					{{-- TO BE REPLACED BY THE LOGO --}}
-                <a href="/">
-                    <h1 class="mb-4 font-bold text-blue-800 text-xl">BitZenon</h1>
+                <a href="/" class="logo-guest">
+						<img src="{{asset("logo-blue-max.png")}}" alt="BitZenon Logo" class="logo"> <h1>BitZenon</h1>
                 </a>
             </div>
 

@@ -1,6 +1,6 @@
 .landing {
 	display: flex;
-	margin-top: 3rem;
+	margin-top: 3.5rem;
 	justify-content: space-between;
 	gap: 3.5rem;
 }
@@ -21,6 +21,7 @@
 
 .landing  img {
 	margin-bottom: 0.75rem;
+	max-width: 100%;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -183,8 +184,8 @@
 	border-radius: 1.5rem;
 }
 
-.content-layout .posts a img{
-	width: 500px;
+.content-layout .posts img{
+	width: 400px;
 	height: 230px;
 	object-fit: cover;
 }
@@ -195,16 +196,18 @@
 
 .content-layout .posts .description h2 {
 	font-size: 1.7rem;
+	margin: 1rem 0;
 }
 
 .content-layout .posts .description h2:hover {
 	color: var(--color1);
 }
 
-.content-layout .posts .description p {
-	margin-bottom: 0.75rem;
-}
-
 .content-layout .posts .description .text span {
 	color: var(--color1);
+}
+
+
+.content-layout .posts .description .meta-data span{
+	margin-right: 0.25rem;
 }

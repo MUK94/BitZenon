@@ -15,7 +15,8 @@ class DashboardController extends Controller
     public function index():View
     {
 			$title = 'Dashboard';
-			$articles = Article::where('user_id', auth()->id())->get();;
+			// $articles = Article::where('user_id', auth()->id())->get();
+			$articles = Article::with('user')->get();
 			$categories = Category::all();
       	return view('dashboard.index')->with(['title'=>$title, 'articles'=>$articles, 'categories'=>$categories]);
     }

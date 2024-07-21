@@ -13,24 +13,26 @@
             </div>
             <div class="right sidebar">
                 <div class="slider">
-						@foreach ($sidebarArticles as $article)
-							<div class="slide">
-								<div class="box">
-									<div class="tags">
-											<a href="/categories/{{$article->category->slug}}"><span>{{ $article->category->name }}</span></a>
-									</div>
-									<a href="/articles/{{$article->slug}}">
-											<div class="side-articles side-slider">
-												<h3>{{ $article->title }}</h3>
-												<p>
-													{!! strlen($article->description) > 100 ? substr($article->description, 0, 100) . '...' : $article->description !!}
-												</p>
-												<img src="{{ asset('storage/' . $article->cover_image ) }}" alt="{{ $article->title }}">
-											</div>
-									</a>
-								</div>
-							</div>
-						@endforeach
+                    @foreach ($sidebarArticles as $article)
+                        <div class="slide">
+                            <div class="box">
+                                <div class="tags">
+                                    <a
+                                        href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
+                                </div>
+                                <a href="/articles/{{ $article->slug }}">
+                                    <div class="side-articles side-slider">
+                                        <h3>{{ $article->title }}</h3>
+                                        <p>
+                                            {!! strlen($article->description) > 100 ? substr($article->description, 0, 100) . '...' : $article->description !!}
+                                        </p>
+                                        <img src="{{ asset('storage/' . $article->cover_image) }}"
+                                            alt="{{ $article->title }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
                     <!-- silder  buttons and dots -->
                     <button aria-label="none" class="slider__btn slider__btn--left"><i
                             class="fa-solid fa-angle-left"></i></button>
@@ -77,7 +79,8 @@
                 <p>
                     We specialize in diverse technological services, including business app development and process
                     automation with Microsoft Power Platform to enhance productivity. Additionally, we excel in full stack
-                    web development using Laravel to create dynamic, scalable web solutions tailored to our clients' unique
+                    web development using Laravel and Django to create dynamic, scalable web solutions tailored to our
+                    clients' unique
                     needs.
                 </p>
             </div>
@@ -102,18 +105,24 @@
         <div class="container posts">
             @foreach ($latestArticles as $article)
                 <div class="post">
-                    <a href="/articles/{{ $article->slug }}" ><img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{$article->title}}"></a>
+                    <a href="/articles/{{ $article->slug }}">
+                        <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}">
+                    </a>
                     <div class="description">
                         <div class="tags">
-                            <a href="/categories/{{$article->category->slug}}"><span>{{ $article->category->name}}</span></a>
+                            <a
+                                href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
                         </div>
-                        <div class="text">
-                            <a href="/articles/{{ $article->slug }}"><h2>{{ $article->title }}</h2></a>
-									 <a href="/articles/{{ $article->slug }}">
-										<p>
-										{!! strlen($article->description) > 160 ? substr($article->description, 0, 160) . '...' : $article->description !!}
-									</p></a>
-                            <span>{{ $article->created_at->diffForHumans() }}</span>
+                        <div class="text mb-4">
+                            <a href="/articles/{{ $article->slug }}">
+                                <h2>{{ $article->title }}</h2>
+                            </a>
+                        </div>
+                        <div class="meta-data">
+									<span class="">{{ $article->created_at->diffForHumans() }}</span>
+									<span>3 min <i class="fa-brands fa-readme"></i></span>
+                            <span>1044 <i class="fa-regular fa-eye"></i></span>
+                            <span>45 <i class="fa-regular fa-comment"></i></span>
                         </div>
                     </div>
                 </div>

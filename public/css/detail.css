@@ -1,5 +1,6 @@
-.listings-container .detail-container {
+.detail-container {
 	margin-top: 2rem;
+	padding: 0.75rem;
 }
 
 .detail-container .info {
@@ -9,11 +10,33 @@
 	margin: 1.5rem 0;
 }
 
-.detail-container .categories {
+.detail-container .breadcumb {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.detail-container .breadcumb a {
+	font-size: 1rem;
+	color: var(--color1);
+
+}
+
+.detail-container .breadcumb  i {
+	margin: 0.25rem;
+	font-size: 0.8rem;
+	color: var(--color1);
+}
+
+
+.detail-container .headlines {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 3rem;
 }
+
+
+
+
 
 .detail-container .categories .cat-box {
 	padding: 0.75rem 1rem;
@@ -30,14 +53,13 @@
 }
 .detail-container .raw {
 	display: flex;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
+	border-radius: 0.5rem;
 }
 .detail-container .raw .detail-col {
 	flex: 9;
 	padding: 1rem;
-	border-radius: 0.5rem;
 	margin-right: 0.5rem;
-	/* background-color: var(--color6); */
-	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
 }
 
 .detail-container .raw .detail-col article {
@@ -52,7 +74,7 @@
 }
 .detail-container .detail-col .image-box img{
 	width: 100%;
-	height: 500px;
+	height: 400px;
 	object-fit: cover;
 	margin-bottom: 1rem;
 }
