@@ -23,7 +23,7 @@
 
                         </div>
                         <div class="share-btns">
-
+									
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
 
                     {{-- Reviews --}}
 
-                    <div class="review-container mt-24">
+                    {{-- <div class="review-container mt-24">
                         <div class="mx-auto mt-24">
                             <h3 class="text-xl font-semibold mb-4 mt-8">Reviews</h3>
                             @foreach ($article->reviews as $review)
@@ -90,12 +90,12 @@
                                 }
                             </script>
 
-                            {{-- <p class="text-gray-700">No reviews posted yet.</p> --}}
+                            <p class="text-gray-700">No reviews posted yet.</p>
                         </div>
 
                         <div class="mx-auto mt-16">
                             <h3 class="text-xl font-semibold mb-4 mt-4">Soumettre une Review</h3>
-                            {{-- @if (request()->isMethod('post')) --}}
+                            @if (request()->isMethod('post'))
 
                             <form action="{{ route('reviews.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
@@ -109,55 +109,47 @@
                                     class="btn bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Envoyez</button>
                             </form>
 
-                            {{--
-						<form action="{{ route('reviews.update', $article->review) }}" method="POST" enctype="multipart/form-data">
-							@csrf
-							@method('PATCH')
-							<div class="mb-4">
-								<label for="review" class="block text-gray-700">Votre Review:</label>
-								<textarea id="review" name="body" rows="4" class="form-textarea mt-1 px-2 pt-2 block w-full border-gray-300 rounded-md border focus:border-blue-500"></textarea>
-							</div>
-							<input type="hidden" name="article_id" value="{{ $article->id }}">
-							<button type="submit" class="btn bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Envoyez</button>
-						</form> --}}
+
+                            <form action="{{ route('reviews.update', $article->review) }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
+                                @method('PATCH')
+                                <div class="mb-4">
+                                    <label for="review" class="block text-gray-700">Votre Review:</label>
+                                    <textarea id="review" name="body" rows="4"
+                                        class="form-textarea mt-1 px-2 pt-2 block w-full border-gray-300 rounded-md border focus:border-blue-500"></textarea>
+                                </div>
+                                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                <button type="submit"
+                                    class="btn bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Envoyez</button>
+                            </form>
 
                         </div>
 
-                    </div>
+                    </div> --}}
+
+						  {{-- Similar Articles --}}
                     <div class="similar-articles recommended-container">
-                        <h3 class="text-xl font-semibold mb-4 mt-4">articles Similaires</h3>
+                        <h2 class="text-xl font-semibold mb-4 mt-4">Similar Articles</h2>
                         <div class="container">
                             @if ($similar_articles->isEmpty())
                                 <p>No article</p>
                             @else
                                 @foreach ($similar_articles as $article)
                                     <div class="card">
-                                        <div>
-                                            <div class="image">
-                                                <img src="{{ asset('storage/' . $article->cover_image) }}" alt=""
-                                                    srcset="">
-                                            </div>
-                                            <div class="detail">
-                                                <a href="/categories/{{ $article->category->slug }}"><span class="cat">
-                                                        {{ $article->category->name }}</span></a>
-                                                <h3 class="mt-4 mb-4"><a
-                                                        href="{{ route('articles.detail', ['slug' => $article->slug]) }}">{{ $article->title }}</a>
-                                                </h3>
-                                                <div class="raw">
-                                                    <div class="owner">
-                                                        <img src="{{ asset('img/user.png') }}" alt="">
-                                                        <span>{{ explode(' ', $article->user->name)[0] }}</span>
-                                                    </div>
-                                                    <div class="review">
-                                                        <i class="fa-solid fa-star"></i><span> 5.0 (9 reviews)</span>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <button href="#">A partir de <span>{{ $article->price }}
-                                                            FG</span></button>
-                                                </div>
-                                            </div>
+
+                                        <div class="">
+                                            <img src="{{ asset('storage/' . $article->cover_image) }}" alt=""
+                                                srcset="">
                                         </div>
+                                        <div class="detail">
+
+                                            <h3 class="mt-4 mb-4"><a
+                                                    href="{{ route('articles.detail', ['slug' => $article->slug]) }}">{{ $article->title }}</a>
+                                            </h3>
+
+                                        </div>
+
                                     </div>
                                 @endforeach
                             @endif

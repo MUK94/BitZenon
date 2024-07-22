@@ -4,7 +4,7 @@
     <section class="content-layout">
         <div class="landing">
             <div class="left">
-                <h1>Your Source for Tech Knowledge and Digital Solutions</h1>
+                <h1>BitZenon - Your Source for Tech Knowledge and Digital Solutions</h1>
                 <img src="https://img.freepik.com/free-photo/futuristic-portrait-young-girl-with-high-tech_23-2151133520.jpg?t=st=1721157300~exp=1721160900~hmac=1922307cb1889e9aad6b771683a99e0f16c8380df68f5c9490caa6a3bf24aba2&w=1060"
                     alt="article title">
                 <button class="btn-angle-down">
@@ -119,10 +119,10 @@
                             </a>
                         </div>
                         <div class="meta-data">
-									<span class="">{{ $article->created_at->diffForHumans() }}</span>
-									<span>3 min <i class="fa-brands fa-readme"></i></span>
-                            <span>1044 <i class="fa-regular fa-eye"></i></span>
-                            <span>45 <i class="fa-regular fa-comment"></i></span>
+                            <span class="">{{ $article->created_at->diffForHumans() }}</span>
+                            <span><i class="fa-regular fa-clock"></i> 3 min read</span>
+                            <span> <i class="fa-regular fa-eye"></i> {{ $article->view_count }}</span>
+                            <span> <i class="fa-regular fa-comment"></i> 45</span>
                         </div>
                     </div>
                 </div>
@@ -132,9 +132,110 @@
 
     <section class="section-container content-layout">
         <div class="title">
-            <h2>My <span>Services</span></h2>
+            <h2>Our <span>Services</span></h2>
         </div>
         <div class="container">
+            <div class="services-wrapper">
+
+                <!-- Business App Development -->
+                <div class="service-card">
+                    <h3 class="service-title">Business Apps</h3>
+                    <p class="service-description">Designed for projects of any scope and complexity.</p>
+                    <ul class="pricing-options">
+                        <li><strong>Fixed Price:</strong> Based on project scope.</li>
+                        <li><strong>Hourly Rate:</strong> Ongoing or less-defined work.</li>
+                        <li><strong>Value-Based Pricing:</strong> Based on project impact.</li>
+                    </ul>
+                    <div class="card-detail">
+                        <h4 class="included-title">What's Included:</h4>
+                        <ul class="included-list">
+                            <li><i class="fa-regular fa-circle-check"></i> Requirements gathering</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Design and development</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Testing</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Deployment</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Post-launch support & Training</li>
+                        </ul>
+                        <div class="service-btn">
+                            <a href="/contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card">
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Build and enhance your web presence with tailored solutions.</p>
+                    <ul class="pricing-options">
+                        <li><strong>Fixed Price:</strong> Complete project builds.</li>
+                        <li><strong>Hourly Rate:</strong> Additional features or integration.</li>
+                        <li><strong>Package Deals:</strong> Various levels of support.</li>
+                    </ul>
+                    <div class="card-detail">
+                        <h4 class="included-title">What's Included:</h4>
+                        <ul class="included-list">
+                            <li><i class="fa-regular fa-circle-check"></i> Custom design/ Laravel/Diango</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Responsive development</li>
+                            <li><i class="fa-regular fa-circle-check"></i> CMS integration (WordPress)</li>
+                            <li><i class="fa-regular fa-circle-check"></i> SEO basics</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Initial content upload</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Basic support (3 Months Free)</li>
+                        </ul>
+                        <div class="service-btn">
+                            <a href="/contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process and Business Automation -->
+                <div class="service-card">
+                    <h3 class="service-title">Process Automation</h3>
+                    <p class="service-description">Automate your business processes for efficiency.</p>
+                    <ul class="pricing-options">
+                        <li><strong>Fixed Price:</strong> Predefined projects et well detailed.</li>
+                        <li><strong>Hourly Rate:</strong> Consultation and implementation.</li>
+                        <li><strong>Subscription:</strong> Ongoing support & Training.</li>
+                    </ul>
+                    <div class="card-detail">
+                        <h4 class="included-title">What's Included:</h4>
+                        <ul class="included-list">
+                            <li><i class="fa-regular fa-circle-check"></i> Process analysis</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Solution design</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Implementation</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Testing</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Training and documentation</li>
+                        </ul>
+                        <div class="service-btn">
+                            <a href="/contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics and Visualization -->
+                <div class="service-card">
+                    <h3 class="service-title">Analytics & Visualization</h3>
+                    <p class="service-description">Turn your data into actionable insights.</p>
+                    <ul class="pricing-options">
+                        <li><strong>Fixed Price:</strong> Specific projects and well defined.</li>
+                        <li><strong>Hourly Rate:</strong> Analysis and consulting.</li>
+                        <li><strong>Retainer:</strong> Ongoing support & Training.</li>
+                    </ul>
+                    <div class="card-detail">
+                        <h4 class="included-title">What's Included:</h4>
+                        <ul class="included-list">
+                            <li><i class="fa-regular fa-circle-check"></i> Data collection and cleaning</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Analysis and insights</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Custom visualizations</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Dashboard creation</li>
+                            <li><i class="fa-regular fa-circle-check"></i> Report generation</li>
+                        </ul>
+                        <div class="service-btn">
+                            <a href="/contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 @endsection

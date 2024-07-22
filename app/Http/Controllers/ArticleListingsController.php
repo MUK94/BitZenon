@@ -93,6 +93,14 @@ class ArticleListingsController extends Controller
 		$similar_articles = Article::where('category_id', $article->category_id)->where('id', '!=', $article->id)->limit(5)->get();
 		$title = $article->title;
 		$categories = Category::all();
+
+		// Use Session to avoid counting multiple time the same article for the same user session
+		$sessionKey = 'article_viewed_' .$slug;
+		if (!session()->has($sessionKey)) {
+			$article->increment('view_count');
+			session()->put($sessionKey, true);
+		}
+
 		return view('articles.detail')->with(['article' => $article, 'similar_articles' => $similar_articles, 'categories' => $categories, 'title' => $title]);
 	}
 

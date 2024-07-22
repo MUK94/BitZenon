@@ -71,10 +71,10 @@
 				<div class="col ">
 					<h3>Services</h3>
 					<ul class="box">
-						<li class="footer-link"><a href="#">Business App Development</a></li>
+						<li class="footer-link"><a href="#">Business Apps</a></li>
 						<li class="footer-link"><a href="#">Web Development</a></li>
-						<li class="footer-link"><a href="#">Process and Business Automation</a></li>
-						<li class="footer-link"><a href="#">Data Analytics and Dataviz</a></li>
+						<li class="footer-link"><a href="#">Process Automation</a></li>
+						<li class="footer-link"><a href="#">Analytics & Vizualization</a></li>
 					</ul>
 				</div>
 			</div>

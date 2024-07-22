@@ -16,9 +16,8 @@ class Article extends Model
 	protected $fillable = [
 		'title',
 		'description',
-		'author_bio',
-		'phone_number',
 		'cover_image',
+		'view_count'
 	];
 
 
