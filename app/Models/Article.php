@@ -44,12 +44,18 @@ class Article extends Model
 			'title' => '',
 			'description' => '',
 			'categories.name' => '',
-			'categories.slug' => '',
-			'author_bio' => '',
-			'price' => '',
-			'address' => '',
-			'phone_number' => '',
 			'cover_image' => '',
 		];
 	}
+
+	public function getReadTimeAttribute()
+	{
+		$wordCount = str_word_count(strip_tags($this->description));
+		$wordsPerMinute = 200;
+
+		$readTime = ceil($wordCount/$wordsPerMinute);
+
+		return $readTime;
+	}
+
 }

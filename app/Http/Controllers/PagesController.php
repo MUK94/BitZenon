@@ -16,9 +16,9 @@ class PagesController extends Controller
     {
         $title = 'Home';
 		  $latestArticles = Article::orderBy('created_at', 'desc')->take(4)->get();
-		  $sidebarArticles = Article::orderBy('created_at', 'asc')->take(3)->get();
+		  $mostPopular = Article::orderBy('view_count', 'desc')->take(3)->get();
         $categories = Category::all();
-        return view('home', compact('title', 'latestArticles', 'sidebarArticles', 'categories'));
+        return view('home', compact('title', 'latestArticles', 'mostPopular', 'categories'));
     }
 
     public function about(): View

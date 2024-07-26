@@ -53,10 +53,13 @@ Route::resource('articles',ArticleListingsController::class)
 
 // Category routes
 Route::get('/categories/{category:slug}', function(Category $category) {
+	// Paginate the articles associated with the category
+	$articles = $category->articles()->paginate(1);
+
 	return view('articles.index', [
-		'services'=> $category->services,
-		'title' => $category->name,
-		'categories' =>Category::all(),
+		 'articles' => $articles,
+		 'title' => $category->name,
+		 'categories' => Category::all(),
 	]);
 });
 

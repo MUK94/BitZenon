@@ -19,7 +19,7 @@ class ArticleListingsController extends Controller
 	public function index(Request $request): View
 	{
 		$title = "Articles";
-		$articles = Article::with('user')->latest()->get();
+		$articles = Article::with('user')->latest()->paginate(10);
 		$categories = Category::all();
 
 		// Searching
@@ -29,7 +29,7 @@ class ArticleListingsController extends Controller
 		// 	->orderBy('articles.id', 'DESC');
 		// })->get();
 
-		return view('articles.index')->with(['latest_articles' => $articles,'title' => $title, 'categories' => $categories]);
+		return view('articles.index')->with(['articles' => $articles,'title' => $title, 'categories' => $categories]);
 
 	}
 

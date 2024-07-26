@@ -13,7 +13,7 @@
             </div>
             <div class="right sidebar">
                 <div class="slider">
-                    @foreach ($sidebarArticles as $article)
+                    @foreach ($mostPopular as $article)
                         <div class="slide">
                             <div class="box">
                                 <div class="tags">
@@ -120,7 +120,7 @@
                         </div>
                         <div class="meta-data">
                             <span class="">{{ $article->created_at->diffForHumans() }}</span>
-                            <span><i class="fa-regular fa-clock"></i> 3 min read</span>
+                            <span><i class="fa-regular fa-clock"></i> {{$article->read_time}} min read</span>
                             <span> <i class="fa-regular fa-eye"></i> {{ $article->view_count }}</span>
                             <span> <i class="fa-regular fa-comment"></i> 45</span>
                         </div>
@@ -133,14 +133,18 @@
     <section class="section-container content-layout">
         <div class="title">
             <h2>Our <span>Services</span></h2>
-        </div>
+
+			</div>
+			<div class="slogan">
+				Designed for projects of any scope and complexity, Build and enhance your web presence with tailored
+				solutions. Automate your business processes for efficiency, Turn your data into actionable insights.
+		  </div>
         <div class="container">
             <div class="services-wrapper">
 
                 <!-- Business App Development -->
                 <div class="service-card">
                     <h3 class="service-title">Business Apps</h3>
-                    <p class="service-description">Designed for projects of any scope and complexity.</p>
                     <ul class="pricing-options">
                         <li><strong>Fixed Price:</strong> Based on project scope.</li>
                         <li><strong>Hourly Rate:</strong> Ongoing or less-defined work.</li>
@@ -164,7 +168,6 @@
                 <!-- Web Development -->
                 <div class="service-card">
                     <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">Build and enhance your web presence with tailored solutions.</p>
                     <ul class="pricing-options">
                         <li><strong>Fixed Price:</strong> Complete project builds.</li>
                         <li><strong>Hourly Rate:</strong> Additional features or integration.</li>
@@ -189,7 +192,6 @@
                 <!-- Process and Business Automation -->
                 <div class="service-card">
                     <h3 class="service-title">Process Automation</h3>
-                    <p class="service-description">Automate your business processes for efficiency.</p>
                     <ul class="pricing-options">
                         <li><strong>Fixed Price:</strong> Predefined projects et well detailed.</li>
                         <li><strong>Hourly Rate:</strong> Consultation and implementation.</li>
@@ -213,11 +215,10 @@
                 <!-- Data Analytics and Visualization -->
                 <div class="service-card">
                     <h3 class="service-title">Analytics & Visualization</h3>
-                    <p class="service-description">Turn your data into actionable insights.</p>
                     <ul class="pricing-options">
                         <li><strong>Fixed Price:</strong> Specific projects and well defined.</li>
-                        <li><strong>Hourly Rate:</strong> Analysis and consulting.</li>
-                        <li><strong>Retainer:</strong> Ongoing support & Training.</li>
+                        <li><strong>Hourly Rate:</strong> Analysis, Debugging and consulting.</li>
+                        <li><strong>Package:</strong> Ongoing support, Training & Documentation.</li>
                     </ul>
                     <div class="card-detail">
                         <h4 class="included-title">What's Included:</h4>
