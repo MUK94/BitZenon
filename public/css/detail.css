@@ -1,6 +1,6 @@
 .detail-container {
-	margin: 2rem 5rem;
-	padding: 0.75rem,
+	margin: 1rem 0rem;
+	padding: 0.75rem;
 }
 
 .detail-container .info {
@@ -17,23 +17,20 @@
 }
 
 .detail-container .breadcumb a {
-	font-size: 1rem;
 	color: var(--color1);
 
 }
 
 .detail-container .breadcumb i {
-	margin: 0.25rem;
-	font-size: 0.8rem;
+	margin: 0.35rem;
+	font-size: 0.7rem;
 	color: var(--color1);
 }
 
-
 .detail-container .headlines {
 	display: flex;
-	justify-content: space-between;
-}
 
+}
 
 .detail-container .categories .cat-box {
 	padding: 0.75rem 1rem;
@@ -49,32 +46,34 @@
 	color: var(--color3);
 }
 
-.detail-container .raw {
-	/* display: flex; */
-	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
-	border-radius: 0.5rem;
+.detail-container .row {
+	display: flex;
+	gap: 2.5rem;
+
 }
 
-.detail-container .raw .detail-col {
+.detail-container .row .detail-col {
 	flex: 9;
-	padding: 1rem;
-	margin-right: 0.5rem;
 }
 
-.detail-container .raw .detail-col article {
-	font-weight: 300;
+
+.detail-container .row .detail-col h2 {
+	font-size: 1.7rem;
+	color: var(--color1);
 }
 
-.detail-container .raw .detail-col h2 {
-	font-size: 1.8rem;
+.detail-container h3 {
+	font-size: 1.4rem;
+	color: var(--color1);
 }
 
-.detail-container .raw .detail-col .review {
+
+.detail-container .row .detail-col .review {
 	margin: 1rem 0;
 }
 
 .detail-container .detail-col .image-box img {
-	max-width: 100%;
+	width: 100%;
 	height: 400px;
 	object-fit: cover;
 	margin-bottom: 1rem;
@@ -88,28 +87,43 @@
 }
 
 .detail-container .detail-sidebar {
-	padding: .5rem;
+	border-radius: 0.75rem;
+	padding: 1rem 0.5rem;
 	flex: 3;
 	justify-content: center;
-	/* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+
 }
 
-.detail-sidebar .owner {
+.detail-sidebar .popular {
 	display: flex;
 	align-items: center;
+	flex-direction: column;
+	margin-top:1rem;
 }
 
-.detail-sidebar .owner img {
-	width: 85px;
-	height: 75px;
-	border-radius: 50%;
+.detail-sidebar .popular img {
+	width: 100%;
+	height: 130px;
+	border-radius: 1rem;
+	object-fit: cover;
+}
+
+.detail-sidebar .popular .card {
+	border-radius: 1rem;
 	margin-bottom: 0.75rem;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+	/* border-bottom: 1px solid var(--color1); */
 }
 
-.detail-sidebar .owner i {
-	color: var(--color1);
-	margin-right: 0.25rem;
+.detail-sidebar .popular .card h4 {
+	margin-top: 0.25rem;
 }
+
+.detail-sidebar .popular .card h4:hover {
+	color: var(--color1);
+}
+
 
 .detail-sidebar p {
 	padding: 0.5rem;

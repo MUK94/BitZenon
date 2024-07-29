@@ -50,6 +50,14 @@ button {
 	border: none;
 }
 
+.btn {
+	height: 45px;
+}
+
+input {
+	height: 45px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -392,7 +400,7 @@ footer {
 	padding-bottom: 2rem;
 }
 
-footer .container .raw {
+footer .container .row {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -407,6 +415,17 @@ footer .container h3 {
 footer .container .box {
 	padding-bottom: 2rem;
 }
+
+footer .container .row .col:first-child {
+	flex: 5;
+}
+
+footer .container .row .col:not(:first-child) {
+	flex: 3.5;
+	display: flex;
+	justify-content: end;
+}
+
 
 footer .container .box i {
 	font-size: 1rem;

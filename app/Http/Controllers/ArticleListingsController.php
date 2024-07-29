@@ -40,7 +40,6 @@ class ArticleListingsController extends Controller
 	{
 		$title = 'Postez un article';
 		$categories = Category::all();
-
 		return view('articles.create')->with(['title' => $title, 'categories' => $categories]);
 	}
 
@@ -90,7 +89,8 @@ class ArticleListingsController extends Controller
 	{
 
 		$article = Article::where('slug', $slug)->first();
-		$similar_articles = Article::where('category_id', $article->category_id)->where('id', '!=', $article->id)->limit(5)->get();
+		$mostPopular = Article::orderBy('view_count', 'desc')->take(3)->get();
+		$similar_articles = Article::where('category_id', $article->category_id)->where('id', '!=', $article->id)->limit(3)->get();
 		$title = $article->title;
 		$categories = Category::all();
 
@@ -101,7 +101,7 @@ class ArticleListingsController extends Controller
 			session()->put($sessionKey, true);
 		}
 
-		return view('articles.detail')->with(['article' => $article, 'similar_articles' => $similar_articles, 'categories' => $categories, 'title' => $title]);
+		return view('articles.detail')->with(['article' => $article, 'mostPopular'=>$mostPopular,'similar_articles' => $similar_articles, 'categories' => $categories, 'title' => $title]);
 	}
 
 	/**
