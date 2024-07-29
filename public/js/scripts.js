@@ -101,5 +101,12 @@ dotContainer.addEventListener('click', function (e) {
     }
 });
 
+// Category & Topic Dropdown
+document.getElementById('topic').addEventListener('change', function() {
+	window.location.href = this.value;
+});
 
+document.getElementById('category').addEventListener('change', function() {
+	window.location.href = this.value;
+});
 // Admin Category

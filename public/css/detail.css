@@ -18,7 +18,6 @@
 
 .detail-container .breadcumb a {
 	color: var(--color1);
-
 }
 
 .detail-container .breadcumb i {
@@ -29,7 +28,6 @@
 
 .detail-container .headlines {
 	display: flex;
-
 }
 
 .detail-container .categories .cat-box {
@@ -49,13 +47,11 @@
 .detail-container .row {
 	display: flex;
 	gap: 2.5rem;
-
 }
 
 .detail-container .row .detail-col {
 	flex: 9;
 }
-
 
 .detail-container .row .detail-col h2 {
 	font-size: 1.7rem;
@@ -66,7 +62,6 @@
 	font-size: 1.4rem;
 	color: var(--color1);
 }
-
 
 .detail-container .row .detail-col .review {
 	margin: 1rem 0;
@@ -79,7 +74,6 @@
 	margin-bottom: 1rem;
 }
 
-
 .detail-container .detail-col article {
 	font-size: var(--article-font);
 	line-height: 2rem;
@@ -91,14 +85,13 @@
 	padding: 1rem 0.5rem;
 	flex: 3;
 	justify-content: center;
-
 }
 
 .detail-sidebar .popular {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top:1rem;
+	margin-top: 1rem;
 }
 
 .detail-sidebar .popular img {
@@ -124,11 +117,10 @@
 	color: var(--color1);
 }
 
-
 .detail-sidebar p {
 	padding: 0.5rem;
 	text-align: center;
-	margin-bottom: .75rem;
+	margin-bottom: 0.75rem;
 }
 
 .detail-sidebar .contact {
@@ -138,7 +130,7 @@
 }
 
 .detail-sidebar .contact a {
-	margin: .5rem;
+	margin: 0.5rem;
 	display: flex;
 	align-items: center;
 	padding: 0.75rem 1rem;
@@ -153,9 +145,8 @@
 .detail-sidebar .contact i {
 	font-size: var(--font_icon);
 	color: var(--color5);
-	margin-right: .5rem;
+	margin-right: 0.5rem;
 }
-
 
 /* User Review */
 
@@ -164,7 +155,6 @@
 	align-items: center;
 }
 
-
 .review-container .review {
 	display: flex;
 	justify-content: space-between;
@@ -172,7 +162,7 @@
 }
 
 .review-container .user {
-	margin-right: .5rem;
+	margin-right: 0.5rem;
 }
 
 .review-container .user img {

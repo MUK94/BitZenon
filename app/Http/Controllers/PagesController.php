@@ -36,13 +36,7 @@ class PagesController extends Controller
         $categories = Category::all();
         return view('pages.services')->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
     }
-    public function podcasts(): View
-    {
-        $title = 'Podcasts';
-        $articles = Article::all();
-        $categories = Category::all();
-        return view('pages.podcasts')->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
-    }
+
     public function contact(): View
     {
         $title = 'Contact';

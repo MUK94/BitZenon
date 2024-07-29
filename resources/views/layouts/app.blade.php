@@ -56,12 +56,12 @@
                     <div class="box">
                         <h3>Subscribe to our Newsletter</h3>
                         <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-									<h4 class="mb-6 text-blue-700">Get the latest articles in your inbox.</h4>
+									<h4 class="mb-6 text-blue-800">Get the latest articles in your inbox.</h4>
                             <form action="#" method="POST" class="flex justify-between">
                                 <input type="email" id="email" placeholder="Email Address" name="email" required
-                                    class="mb-4 p-3 border w-full border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    class="mb-4 p-3 border w-full border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700">
                                 <button type="submit"
-                                    class="text-sm text-white mx-2 px-2 bg-blue-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 btn">
+                                    class="text-sm text-white mx-2 px-2 bg-blue-800 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 btn">
                                     {{ __('Subscribe') }}
                                 </button>
 

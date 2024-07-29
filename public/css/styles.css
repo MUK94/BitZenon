@@ -80,6 +80,24 @@ a {
 	font-weight: 600;
 }
 
+.headings {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.headings select {
+	padding: 0.2rem 1.5rem;
+	border-radius: 0.3rem;
+	font-family: "Lexend Deca", sans-serif;
+	color: var(--color1);
+}
+
+.headings select option {
+	color: var(--color1);
+}
+
+
 header a {
 	font-weight: 300;
 	padding-bottom: 18px;
@@ -151,7 +169,7 @@ ul {
 .tags span {
 	background-color: #ebeaea85;
 	color: var(--color1);
-	font-size: 0.75rem;
+	font-size: 0.85rem;
 	padding: 0.25rem 0.5rem;
 	border-radius: 0.5rem;
 }
@@ -340,7 +358,6 @@ ul {
 .article-post .filter-per-cat {
 	display: flex;
 	align-items: center;
-	margin-top: 1rem;
 }
 
 .article-post .filter-per-cat a {
@@ -348,8 +365,10 @@ ul {
 }
 
 .article-post .post-container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
 }
 
 .article-post h2 {

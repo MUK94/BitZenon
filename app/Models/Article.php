@@ -20,8 +20,6 @@ class Article extends Model
 		'view_count'
 	];
 
-
-
 	public function user(): BelongsTo
 	{
 		return $this->belongsTo(User::class);
@@ -33,9 +31,9 @@ class Article extends Model
 		return $this->belongsTo(Category::class);
 	}
 
-	public function reviews(): HasMany
+	public function comments(): HasMany
 	{
-		 return $this->hasMany(Review::class);
+		 return $this->hasMany(Comment::class);
 	}
 
 	public function toSearchableArray()

@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\Review;
+use App\Models\Comment;
 use App\Models\Article;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
-class ReviewController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,7 +44,7 @@ class ReviewController extends Controller
 
 		$input['user_id'] = auth()->user()->id;
 
-		Review::create($input);
+		Comment::create($input);
 
 		return back();
     }
@@ -52,7 +52,7 @@ class ReviewController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Review $review)
+    public function show(Comment $comment)
     {
         //
     }
@@ -60,29 +60,29 @@ class ReviewController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-	 public function edit(Review $review): View
+	 public function edit(Comment $comment): View
     {
 		$articles = Article::with('user')->latest()->get();
 		$categories = Category::all();
-		return View('reviews.edit', compact('articles', 'categories', 'review'));
+		return View('comments.edit', compact('articles', 'categories', 'review'));
     }
 
     // Update method to handle the update request
-    public function update(Request $request, Review $review): RedirectResponse
+    public function update(Request $request, Comment $comment): RedirectResponse
     {
 		$validated = $request->validate([
 			'body'=> 'required',
 		]);
 
-		$review->update($validated);
+		$comment->update($validated);
 
-		return redirect()->route('serviceListings.detail', ['slug' => $review->service->slug]);
+		return redirect()->route('articles.detail', ['slug' => $comment->service->slug]);
     }
 
     // Delete method to handle the delete request
-    public function destroy(Review $review): RedirectResponse
+    public function destroy(Comment $comment): RedirectResponse
     {
-        $review->delete();
+        $comment->delete();
 
         return back();
     }
