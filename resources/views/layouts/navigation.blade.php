@@ -2,47 +2,51 @@
     <div class="nav-logo">
         <a href="/" class="logo">
             {{-- <h1>BitZenon</h1> --}}
-				<img src="{{asset("logo-blue-max.png")}}" alt="BitZenon Logo">
+            <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
         </a>
     </div>
     <div class="nav-cat-dropdown">
-        <a href="" class="dropdown-link" onclick="event.preventDefault();">
-            Categories <i class="fa-solid fa-caret-down"></i>
-        </a>
-        <ul class="dropdown-content">
-            <div class="cat-drop">
-                <li><a href="/articles">All</a></li>
-                @foreach ($categories as $category)
-                    <li><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></li>
-                @endforeach
-            </div>
-        </ul>
+
     </div>
     <div class="nav-container">
         <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            {{-- <li><a href="/about">About</a></li> --}}
-            <li><a href="/articles">Articles</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/podcasts">Podcasts</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/"
+                    class="{{ request()->is('/') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Home</a>
+            </li>
+            <li><a href="/articles"
+                    class="{{ request()->is('articles') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Articles</a>
+            </li>
+            <li><a href="/services"
+                    class="{{ request()->is('services') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Services</a>
+            </li>
+            <li><a href="/podcasts"
+                    class="{{ request()->is('podcasts') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Podcasts</a>
+            </li>
+            <li><a href="/contact"
+                    class="{{ request()->is('contact') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Contact</a>
+            </li>
         </ul>
     </div>
     <div class="nav-user">
         @auth
             <div class="nav-user-auth nav-cat-dropdown">
-                <a href="" class="dropdown-link" onclick="event.preventDefault();"><i
-                        class="fa-solid fa-user-circle"></i> {{ explode(' ', auth()->user()->name)[0] }}<i
-                        class="fa-solid fa-caret-down"></i></a>
+                <button class="dropdown-link" onclick="event.preventDefault();">
+                    <span class="font-light">{{ auth()->user()->name }}</span> <i class="fa-solid fa-angle-down"></i>
+                </button>
                 <ul class="dropdown-content">
                     <div class="drop-user">
-                        <li><a href="/profile">Profile</a></li>
-                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/profile"
+                                class="mt-3 {{ request()->is('profile') ? ' custom-blue-color font-semibold' : '' }} ">Profile</a>
+                        </li>
+                        <li><a href="/dashboard"
+                                class="{{ request()->is('dashboard') ? ' custom-blue-color font-semibold' : '' }} ">Dashboard</a>
+                        </li>
                         <li>
                             <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                    class="font-light">
                                     {{ __('Logout') }}
                                 </button>
                             </form>

@@ -1,17 +1,17 @@
 :root {
 	/* --color1: #0d5ac5; */
-	--color1: #1800D4;
+	--color1: #110ec8;
 	--color2: #9fcaff;
-	--color3: #ecedf9;
+	--color3: #f9fefc;
 	--color4: #17171a;
-	--color5: #dedede;
+	--color5: #f5f4f4;
 	--color6: #fffaff;
 	--color7: #0a1362;
 
 
 
-	--font_body: 0.95rem;
-	--article-font: 1.05rem;
+	--font_body: 0.9rem;
+	--article-font: 1rem;
 
 	--font_icon: 1.3rem;
 	--font-heading-1: 2.4rem;

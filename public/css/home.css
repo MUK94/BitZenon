@@ -22,7 +22,6 @@
 .landing  img {
 	margin-bottom: 0.75rem;
 	max-width: 100%;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .landing .left button {
@@ -160,7 +159,7 @@
 	align-items: center;
 	margin-bottom: 1rem;
 	font-size: large;
-	background-color: #f5f5f5;
+	background-color: var(--color5);
 	padding: 0 1rem;
 }
 

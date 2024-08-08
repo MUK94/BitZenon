@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
@@ -20,6 +21,7 @@ class ArticleListingsController extends Controller
 	{
 		$title = "Articles";
 		$articles = Article::with('user')->latest()->paginate(10);
+		$topics = Topic::all();
 		$categories = Category::all();
 
 		// Searching
@@ -29,7 +31,7 @@ class ArticleListingsController extends Controller
 		// 	->orderBy('articles.id', 'DESC');
 		// })->get();
 
-		return view('articles.index')->with(['articles' => $articles,'title' => $title, 'categories' => $categories]);
+		return view('articles.index', compact('title', 'articles', 'topics', 'categories'));
 
 	}
 
@@ -40,7 +42,8 @@ class ArticleListingsController extends Controller
 	{
 		$title = 'Postez un article';
 		$categories = Category::all();
-		return view('articles.create')->with(['title' => $title, 'categories' => $categories]);
+		$topics = Topic::all();
+		return view('articles.create', compact('title', 'articles', 'topics', 'categories'));
 	}
 
 	/**
@@ -89,10 +92,11 @@ class ArticleListingsController extends Controller
 	{
 
 		$article = Article::where('slug', $slug)->first();
-		$mostPopular = Article::orderBy('view_count', 'desc')->take(3)->get();
-		$similar_articles = Article::where('category_id', $article->category_id)->where('id', '!=', $article->id)->limit(3)->get();
 		$title = $article->title;
+		$mostPopular = Article::orderBy('view_count', 'desc')->take(3)->get();
+		$similarArticles = Article::where('category_id', $article->category_id)->where('id', '!=', $article->id)->limit(3)->get();
 		$categories = Category::all();
+		$topics = Topic::all();
 
 		// Use Session to avoid counting multiple time the same article for the same user session
 		$sessionKey = 'article_viewed_' .$slug;
@@ -101,7 +105,7 @@ class ArticleListingsController extends Controller
 			session()->put($sessionKey, true);
 		}
 
-		return view('articles.detail')->with(['article' => $article, 'mostPopular'=>$mostPopular,'similar_articles' => $similar_articles, 'categories' => $categories, 'title' => $title]);
+		return view('articles.detail', compact('article', 'title', 'mostPopular', 'similarArticles', 'categories', 'topics'));
 	}
 
 	/**
@@ -112,7 +116,8 @@ class ArticleListingsController extends Controller
 		$title = 'Update Article';
 		$article = Article::findOrFail($id);
 		$categories = Category::all();
-		return view('articles.edit')->with(['article' => $article, 'categories' => $categories, 'title' => $title]);
+		$topics = Topic::all();
+		return view('articles.edit', compact('title', 'article', 'categories', 'topics'))->with(['article' => $article, 'categories' => $categories, 'title' => $title]);
 	}
 
 	/**

@@ -4,7 +4,9 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
-use App\Models\Service;
+use App\Models\Article;
+use App\Models\Podcast;
+use App\Models\Topic;
 use App\Models\Category;
 
 class AppLayout extends Component
@@ -15,8 +17,10 @@ class AppLayout extends Component
     public function render(): View
     {
 			$title = 'Profile';
-			$services = Service::with('user')->latest()->get();
+			$articles = Article::all();
+			$podcasts = Podcast::all();
+			$topics = Topic::all();
 			$categories = Category::all();
-      	return view('layouts.app')->with(['title'=>$title, 'services'=>$services, 'categories'=>$categories]);
+      	return view('layouts.app', compact('title', 'articles', 'podcasts', 'topics', 'categories'));
     }
 }

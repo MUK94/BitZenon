@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Article;
+use App\Models\Topic;
+use App\Models\Podcast;
 use App\Models\Category;
 
 class ProfileController extends Controller
@@ -21,9 +23,11 @@ class ProfileController extends Controller
 			$title = 'Profile';
 			$articles = Article::with('user')->latest()->get();
 			$categories = Category::all();
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ])->with(['title'=>$title, 'articles'=>$articles, 'categories'=>$categories]);
+			$topics = Topic::all();
+			$podcasts = Podcast::all();
+			return view('profile.edit', [
+					'user' => $request->user(),
+			], compact('title', 'articles', 'categories', 'topics', 'podcasts'));
     }
 
     /**

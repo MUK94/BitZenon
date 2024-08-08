@@ -60,12 +60,12 @@
 				<div class="similar-articles">
 					{{-- Similar Articles --}}
 					<div class="similar-articles">
-						<h3 class="text-xl font-semibold mb-4 mt-4">Continue Reading the Same Topic</h3>
+						<h3 class="text-xl font-semibold mb-4 mt-4">Recommended Artilces</h3>
 						<div class="container">
-							 @if ($similar_articles->isEmpty())
+							 @if ($similarArticles->isEmpty())
 								  <p>No article</p>
 							 @else
-								  @foreach ($similar_articles as $article)
+								  @foreach ($similarArticles as $article)
 										<div class="card">
 											 <div class="">
 												  <img src="{{ asset('storage/' . $article->cover_image) }}" alt=""

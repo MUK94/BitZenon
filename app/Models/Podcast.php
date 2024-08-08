@@ -13,9 +13,7 @@ class Podcast extends Model
 	 use Searchable;
 
 	 protected $fillable = [
-		'title',
 		'cover_image',
-		'audio',
 		'description'
 	 ];
 

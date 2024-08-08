@@ -16,9 +16,8 @@
                     @foreach ($mostPopular as $article)
                         <div class="slide">
                             <div class="box">
-                                <div class="tags">
-                                    <a
-                                        href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
+                                <div class="tags pb-2">
+                                    <a href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
                                 </div>
                                 <a href="/articles/{{ $article->slug }}">
                                     <div class="side-articles side-slider">
@@ -120,7 +119,7 @@
                         </div>
                         <div class="meta-data">
                             <span class="">{{ $article->created_at->diffForHumans() }}</span>
-                            <span><i class="fa-regular fa-clock"></i> {{$article->read_time}} min read</span>
+                            <span><i class="fa-regular fa-clock"></i> {{ $article->read_time }} min read</span>
                             <span> <i class="fa-regular fa-eye"></i> {{ $article->view_count }}</span>
                             <span> <i class="fa-regular fa-comment"></i> 45</span>
                         </div>
@@ -133,12 +132,13 @@
     <section class="section-container content-layout">
         <div class="title">
             <h2>Our <span>Services</span></h2>
-
-			</div>
-			<div class="slogan">
-				Designed for projects of any scope and complexity, Build and enhance your web presence with tailored
-				solutions. Automate your business processes for efficiency, Turn your data into actionable insights.
-		  </div>
+        </div>
+        <div class="service-desc py-4 text-center">
+            <p class="pl-4 italic text-xl text-gray-700">
+                "Designed for projects of any scope and complexity, Build and enhance your web presence with tailored
+                solutions. Automate your business processes for efficiency, Turn your data into actionable insights."
+            </p>
+        </div>
         <div class="container">
             <div class="services-wrapper">
 
@@ -160,7 +160,7 @@
                             <li><i class="fa-regular fa-circle-check"></i> Post-launch support & Training</li>
                         </ul>
                         <div class="service-btn">
-                            <a href="/contact">Contact Us</a>
+                            <a href="/contact">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                             <li><i class="fa-regular fa-circle-check"></i> Basic support (3 Months Free)</li>
                         </ul>
                         <div class="service-btn">
-                            <a href="/contact">Contact Us</a>
+                            <a href="/contact">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                             <li><i class="fa-regular fa-circle-check"></i> Training and documentation</li>
                         </ul>
                         <div class="service-btn">
-                            <a href="/contact">Contact Us</a>
+                            <a href="/contact">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
                             <li><i class="fa-regular fa-circle-check"></i> Report generation</li>
                         </ul>
                         <div class="service-btn">
-                            <a href="/contact">Contact Us</a>
+                            <a href="/contact">Get a Quote</a>
                         </div>
                     </div>
                 </div>
@@ -239,4 +239,6 @@
 
         </div>
     </section>
+
+	 
 @endsection

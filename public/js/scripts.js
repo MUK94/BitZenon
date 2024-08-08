@@ -100,6 +100,8 @@ dotContainer.addEventListener('click', function (e) {
         activateDot(slide);
     }
 });
+// Auto move slider
+setInterval(rightSlide, 4000);
 
 // Category & Topic Dropdown
 document.getElementById('topic').addEventListener('change', function() {
@@ -109,4 +111,8 @@ document.getElementById('topic').addEventListener('change', function() {
 document.getElementById('category').addEventListener('change', function() {
 	window.location.href = this.value;
 });
+
+
+
+
 // Admin Category

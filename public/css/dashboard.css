@@ -1,3 +1,14 @@
+/* ----- Navbar ------ */
+.nav-user button {
+	display: flex;
+	align-items: center;
+}
+
+.nav-user button img{
+	height: 45px;
+	width: 45px;
+}
+
 .dashboard-container {
 	padding: 1rem 0;
 }
@@ -17,19 +28,19 @@
 	border-radius: 1rem 0 0 1rem;
 }
 
-.dashboard-container .raw .sidemenu .user {
+/* .dashboard-container .raw .sidemenu .user {
 	display: flex;
 	align-items: center;
 	margin-bottom: .5rem;
 	padding: 1rem .5rem;
-
 }
+
 .dashboard-container .raw .sidemenu .user img {
 	width: 55px;
 	height: 50px;
 	border-radius: 50%;
 	margin-right: .25rem;
-}
+} */
 
 .dashboard-container .raw .sidemenu .lists li i{
 	color: var(--color1);
