@@ -5,7 +5,6 @@
     @include('inc.head')
     <title>Home | {{ config('app.name', 'BitZenon') }}</title>
 
-
 </head>
 
 <body>
@@ -17,7 +16,6 @@
     </main>
     <!-- Footer -->
     @include('inc.footer')
-    <script src="{{ asset('js/scripts.js') }}"></script>
 </body>
 
 </html>

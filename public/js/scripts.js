@@ -52,6 +52,7 @@ const activateDot = function (slide) {
 };
 activateDot(0)
 
+
 // Go to Slide
 const goToSlide = function (slide) {
     slides.forEach(

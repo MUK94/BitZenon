@@ -1,7 +1,8 @@
-<nav class="navbar content-layout">
-    <div class="nav-logo">
-        <a href="/" class="logo">
+<nav class="navbar admin-layout bg-white shadow-sm">
+    <div class="nav-logo pt-3">
+        <a href="/" class="logo flex justify-center items-center">
             <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
+				<h1>Dashboard</h1>
         </a>
     </div>
     <div class="nav-user">
@@ -27,7 +28,7 @@
                     <div class="drop-user">
                         <li>
                             <a href="/profile"
-                                class="{{ request()->is('profile') ? ' custom-blue-color font-semibold' : '' }} ">Profile</a>
+                                class="mt-3 {{ request()->is('profile') ? ' custom-blue-color font-semibold' : '' }} ">Profile</a>
                         </li>
                         <li><a href="/dashboard"
                                 class="{{ request()->is('dashboard') ? ' custom-blue-color font-semibold' : '' }} ">Dashboard</a>

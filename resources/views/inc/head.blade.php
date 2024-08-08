@@ -7,12 +7,11 @@
 
 <link rel="icon" type="image/x-icon" href="{{ asset('favicon-pro.png') }}">
 
+
 {{-- Text Editor --}}
 <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
 {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -30,3 +29,4 @@
 <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
 <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+

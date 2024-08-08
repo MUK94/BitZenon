@@ -9,6 +9,19 @@
 	width: 45px;
 }
 
+.svg-admin {
+	fill: var(--color1);
+	height: 35px;
+	width: 35px;
+	text-align: left;
+	background-color: var(--color5);
+	padding: 0.25rem;
+	border-radius: 50%;
+}
+.fill-arrow {
+	fill: var(--color1);
+}
+
 .dashboard-container {
 	padding: 1rem 0;
 }

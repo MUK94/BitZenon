@@ -1,8 +1,8 @@
 <nav class="navbar content-layout">
     <div class="nav-logo">
         <a href="/" class="logo">
-            {{-- <h1>BitZenon</h1> --}}
-            <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
+			<img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
+			{{-- <h1>BitZenon</h1> --}}
         </a>
     </div>
     <div class="nav-cat-dropdown">
@@ -29,7 +29,7 @@
     </div>
     <div class="nav-user">
         @auth
-            <div class="nav-user-auth nav-cat-dropdown">
+            <div class="nav-user-auth mr-3 nav-cat-dropdown">
                 <button class="dropdown-link" onclick="event.preventDefault();">
                     <span class="font-light">{{ auth()->user()->name }}</span> <i class="fa-solid fa-angle-down"></i>
                 </button>
