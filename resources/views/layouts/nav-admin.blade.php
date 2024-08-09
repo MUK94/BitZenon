@@ -1,4 +1,4 @@
-<nav class="navbar admin-layout bg-white shadow-sm">
+<nav class="navbar nav-admin admin-layout bg-white shadow-sm">
     <div class="nav-logo pt-3">
         <a href="/" class="logo flex justify-center items-center">
             <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">

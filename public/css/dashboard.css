@@ -1,4 +1,8 @@
 /* ----- Navbar ------ */
+.nav-admin {
+	position: fixed;
+	width: 100%;
+}
 .nav-user button {
 	display: flex;
 	align-items: center;
@@ -11,41 +15,56 @@
 
 .svg-admin {
 	fill: var(--color1);
-	height: 35px;
-	width: 35px;
+	height: 33px;
+	width: 33px;
 	text-align: left;
 	background-color: var(--color5);
-	padding: 0.25rem;
+	padding: 0.5rem;
 	border-radius: 50%;
 }
 .fill-arrow {
 	fill: var(--color1);
 }
 
-.dashboard-container {
-	padding: 1rem 0;
+.fill-sidebar-svg {
+	fill: var(--color5);
+	height: 18px;
+	width: 18px;
 }
-.dashboard-container .raw{
+
+.admin-sidebar li:hover {
+	background-color: #0c0258;
+	border-radius: 0.2rem;
+}
+
+.dashboard-container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 3.5rem;
+
+}
+
+
+/* .dashboard-container .raw{
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--color5);
-	border-radius: 1rem;
 	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
+} */
 
-.dashboard-container .raw .sidemenu {
+.dashboard-container .admin-sidebar {
 	height: 100vh;
-	flex: 2.5;
-	background-color: var(--color6);
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	border-radius: 1rem 0 0 1rem;
+	flex: 2;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 3rem 1rem;
+	background-color: #090148;
+	color: var(--color6);
+	/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
 
-/* .dashboard-container .raw .sidemenu .user {
-	display: flex;
-	align-items: center;
-	margin-bottom: .5rem;
-	padding: 1rem .5rem;
+.dashboard-container .admin-content {
+	flex: 10;
 }
 
 .dashboard-container .raw .sidemenu .user img {
@@ -53,7 +72,7 @@
 	height: 50px;
 	border-radius: 50%;
 	margin-right: .25rem;
-} */
+}
 
 .dashboard-container .raw .sidemenu .lists li i{
 	color: var(--color1);
