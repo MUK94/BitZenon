@@ -7,6 +7,8 @@
 
 <link rel="icon" type="image/x-icon" href="{{ asset('favicon-pro.png') }}">
 
+{{-- JS CHART LIBRARY --}}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {{-- Text Editor --}}
 <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>

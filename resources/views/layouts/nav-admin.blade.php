@@ -25,7 +25,7 @@
                         alt="{{ auth()->user()->name }}"><i class="fa-solid fa-angle-down"></i>
                 </button>
                 <ul class="dropdown-content">
-                    <div class="drop-user">
+                    <div class="drop-user bg-white pb-4">
                         <li>
                             <a href="/profile"
                                 class="mt-3 {{ request()->is('profile') ? ' custom-blue-color font-semibold' : '' }} ">Profile</a>

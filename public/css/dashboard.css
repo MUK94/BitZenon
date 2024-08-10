@@ -43,7 +43,16 @@
 	padding-top: 3.5rem;
 
 }
-
+/* ---- Bar Chart ---- */
+.charts {
+	margin-top: 2rem;
+}
+.charts canvas {
+	background-color: #fff;
+}
+.charts .canvas-box {
+	width: 100%;
+}
 
 /* .dashboard-container .raw{
 	display: flex;

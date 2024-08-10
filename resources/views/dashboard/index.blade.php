@@ -103,7 +103,7 @@
                                     d="M10.8283 9.05627H7.17207C4.16269 9.05627 1.71582 11.5313 1.71582 14.5406V16.875C1.71582 17.2125 1.99707 17.5219 2.3627 17.5219C2.72832 17.5219 3.00957 17.2407 3.00957 16.875V14.5406C3.00957 12.2344 4.89394 10.3219 7.22832 10.3219H10.8564C13.1627 10.3219 15.0752 12.2063 15.0752 14.5406V16.875C15.0752 17.2125 15.3564 17.5219 15.7221 17.5219C16.0877 17.5219 16.3689 17.2407 16.3689 16.875V14.5406C16.2846 11.5313 13.8377 9.05627 10.8283 9.05627Z"
                                     fill="" />
                             </svg>
-                            Profile
+                            Account Settings
                         </a>
                     </li>
                     <li class="text-white px-3 py-3">
@@ -163,7 +163,7 @@
                         </div>
 
                         <div
-                            class="rounded-sm border border-stroke bg-white px-8 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            class="rounded-sm border border-stroke bg-white px-4 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
                             <div class="flex h-11.5 w-11.5 items-center rounded-full bg-meta-2 dark:bg-meta-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-admin" viewBox="0 0 512 512">
                                     <path
@@ -192,7 +192,7 @@
                         </div>
 
                         <div
-                            class="rounded-sm border border-stroke bg-white px-8 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            class="rounded-sm border border-stroke bg-white px-4 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
                             <div class="flex h-11.5 w-11.5 items-center rounded-full bg-meta-2 dark:bg-meta-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-admin" viewBox="0 0 384 512">
                                     <path
@@ -221,7 +221,7 @@
                         </div>
 
                         <div
-                            class="rounded-sm border border-stroke bg-white px-8 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            class="rounded-sm border border-stroke bg-white px-4 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
                             <div class="flex h-11.5 w-11.5 items-center rounded-full bg-meta-2 dark:bg-meta-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-admin" viewBox="0 0 640 512">
                                     <path
@@ -249,13 +249,57 @@
                             </div>
                         </div>
                     </div>
-
                     {{-- Start Chart --}}
 
+
+                  <div class="charts ">
+							<div class="flex justify-between mt-4 py-2">
+                        <div class="relative">
+                            <input type="date"
+                                class="datepicker w-[120%] rounded border border-stroke bg-white py-2 pl-10 pr-4 text-sm font-medium shadow-card-2 focus-visible:outline-none dark:border-strokedark dark:bg-boxdark"
+                                placeholder="Select dates" data-class="flatpickr-right" />
+                            <div class="pointer-events-none absolute inset-0 left-4 right-auto flex items-center">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.75 3.75C3.33579 3.75 3 4.08579 3 4.5V15C3 15.4142 3.33579 15.75 3.75 15.75H14.25C14.6642 15.75 15 15.4142 15 15V4.5C15 4.08579 14.6642 3.75 14.25 3.75H3.75ZM1.5 4.5C1.5 3.25736 2.50736 2.25 3.75 2.25H14.25C15.4926 2.25 16.5 3.25736 16.5 4.5V15C16.5 16.2426 15.4926 17.25 14.25 17.25H3.75C2.50736 17.25 1.5 16.2426 1.5 15V4.5Z"
+                                        fill="#64748B" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 0.75C12.4142 0.75 12.75 1.08579 12.75 1.5V4.5C12.75 4.91421 12.4142 5.25 12 5.25C11.5858 5.25 11.25 4.91421 11.25 4.5V1.5C11.25 1.08579 11.5858 0.75 12 0.75Z"
+                                        fill="#64748B" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6 0.75C6.41421 0.75 6.75 1.08579 6.75 1.5V4.5C6.75 4.91421 6.41421 5.25 6 5.25C5.58579 5.25 5.25 4.91421 5.25 4.5V1.5C5.25 1.08579 5.58579 0.75 6 0.75Z"
+                                        fill="#64748B" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.5 7.5C1.5 7.08579 1.83579 6.75 2.25 6.75H15.75C16.1642 6.75 16.5 7.08579 16.5 7.5C16.5 7.91422 16.1642 8.25 15.75 8.25H2.25C1.83579 8.25 1.5 7.91422 1.5 7.5Z"
+                                        fill="#64748B" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="relative z-20 inline-block rounded bg-white shadow-card-2 dark:bg-boxdark">
+                            <select name="" id=""
+                                class="relative z-20 inline-flex  rounded border border-stroke bg-transparent py-3 pl-4 pr-9 text-sm outline-none dark:border-strokedark">
+                                <option value="">Yearly</option>
+                                <option value="">Monthly</option>
+                            </select>
+
+                        </div>
+                    </div>
+                        <div class="flex justify-between gap-6">
+                            <div class="canvas-box">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                            <div class="canvas-box">
+                                <canvas id="barChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
                     {{-- End Chart --}}
 
+                    {{-- Chart  --}}
                 </div>
             </div>
         </div>
     </div>
+    <script></script>
 @endsection
