@@ -3,18 +3,26 @@
 
 <head>
     @include('inc.head')
-    <title>Admin | {{ config('app.name', 'Bonnafaire') }}</title>
+    <title>Admin |  BitZenon</title>
 
 </head>
 
 <body>
-    <header class="header-section">
-        @include('layouts.nav-admin')
-    </header>
-    <main class="main-content">
-        @yield('content')
-    </main>
-    <!-- Footer -->
+	<div class="admin-layout">
+		<div class="dashboard-container mb-8">
+			 {{-- Sidebar Menu --}}
+			 @include('inc.admin-sidebar')
+			 {{-- Content --}}
+			 <main class="admin-content">
+				<div class="admin-navbar">
+					@include('layouts.nav-admin')
+				</div>
+				<div class="main-content">
+					@yield('content')
+				</div>
+			 </main>
+		</div>
+	</div>
     @include('inc.footer')
 </body>
 

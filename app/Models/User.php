@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Support\Str;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -44,18 +44,33 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-		public function articles(): HasMany
-		{
-			return $this->hasMany(Article::class);
-		}
+    public function articles(): HasMany
+    {
+        return $this->hasMany(Article::class);
+    }
 
-		public function podcasts():HasMany
-		{
-			return $this->hasMany(Podcast::class);
-		}
+    public function podcasts(): HasMany
+    {
+        return $this->hasMany(Podcast::class);
+    }
 
-		public function comments(): HasMany
-		{
-			return $this->hasMany(Comment::class);
-		}
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function getInitials()
+    {
+        $nameParts = explode(' ', $this->name);
+
+        // If the user has more than 2 names, we take only the first two
+        if (count($nameParts) >= 2) {
+            $firstInitial = Str::substr($nameParts[0], 0, 1);
+            $secondInitial = Str::substr($nameParts[1], 0, 1);
+            return strtoupper($firstInitial . $secondInitial);
+        }
+
+        // If the user has only one name
+        return strtoupper(Str::substr($nameParts[0], 0, 1));
+    }
 }

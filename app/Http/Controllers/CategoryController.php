@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Article;
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Topic;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\View\View;
-use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
@@ -17,11 +18,11 @@ class CategoryController extends Controller
      */
     public function index(): View
     {
-        $title = "Créez des Catégories";
+        $title = "Create Categories";
         $services = Article::with('user')->latest()->get();
         $categories = Category::all();
-
-        return view('admin.category.index', compact('title', 'services', 'categories'));
+        $topics = Topic::all();
+        return view('admin.category.index', compact('title', 'services', 'topics', 'categories'));
     }
 
     /**
@@ -29,10 +30,10 @@ class CategoryController extends Controller
      */
     public function create(): View
     {
-        $title = "Créer Catégorie";
+        $title = "Create Category";
         $categories = Category::all();
-
-        return view('admin.category.create', compact('title', 'categories'));
+		  $topics = Topic::all();
+        return view('admin.category.create', compact('title', 'topics', 'categories'));
     }
 
     /**
@@ -40,6 +41,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+		 	$topics = Topic::all();
+			$categories = Category::all();
+
         $request->validate([
             'name' => 'required|string|max:20|unique:categories',
         ]);
@@ -49,7 +53,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name),
         ]);
 
-        return redirect()->route('category.index')->with('success', 'Category created successfully.');
+        return redirect()->route('category.index', compact('category', 'topics', 'categories'))->with('success', 'Category created successfully.');
     }
 
     /**
@@ -66,11 +70,11 @@ class CategoryController extends Controller
      */
     public function edit(Category $category): View
     {
-        $title = "Modifiez Catégorie";
+        $title = "Update Category";
         $articles = Article::with('user')->latest()->get();
         $categories = Category::all();
-
-        return view('admin.category.edit', compact('title', 'articles', 'categories', 'category'));
+		  $topics = Topic::all();
+        return view('admin.category.edit', compact('title', 'articles', 'topics', 'categories', 'category'));
     }
 
     /**

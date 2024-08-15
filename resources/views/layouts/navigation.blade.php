@@ -1,8 +1,8 @@
 <nav class="navbar content-layout">
     <div class="nav-logo">
         <a href="/" class="logo">
-			<img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
-			{{-- <h1>BitZenon</h1> --}}
+            <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
+            {{-- <h1>BitZenon</h1> --}}
         </a>
     </div>
     <div class="nav-cat-dropdown">
@@ -31,15 +31,16 @@
         @auth
             <div class="nav-user-auth mr-3 nav-cat-dropdown">
                 <button class="dropdown-link" onclick="event.preventDefault();">
-                    <span class="font-light">{{ auth()->user()->name }}</span> <i class="fa-solid fa-angle-down"></i>
+                    <div class="flex items-center justify-center font-normal">{{ auth()->user()->getInitials() }}</div> <i
+                        class="fa-solid fa-angle-down"></i>
                 </button>
                 <ul class="dropdown-content">
                     <div class="drop-user">
-                        <li><a href="/profile"
-                                class="mt-3 {{ request()->is('profile') ? ' custom-blue-color font-semibold' : '' }} ">Profile</a>
+                        <li><a href="/admin/profile"
+                                class="mt-3 {{ request()->is('admin/profile') ? ' text-blue-800 font-semibold' : '' }} ">Profile</a>
                         </li>
                         <li><a href="/dashboard"
-                                class="{{ request()->is('dashboard') ? ' custom-blue-color font-semibold' : '' }} ">Dashboard</a>
+                                class="{{ request()->is('dashboard') ? ' text-blue-700 font-semibold' : '' }} ">Dashboard</a>
                         </li>
                         <li>
                             <form id="logout-form" method="POST" action="{{ route('logout') }}">

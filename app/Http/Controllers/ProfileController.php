@@ -25,7 +25,7 @@ class ProfileController extends Controller
 			$categories = Category::all();
 			$topics = Topic::all();
 			$podcasts = Podcast::all();
-			return view('profile.edit', [
+			return view('admin.profile.edit', [
 					'user' => $request->user(),
 			], compact('title', 'articles', 'categories', 'topics', 'podcasts'));
     }
@@ -43,7 +43,7 @@ class ProfileController extends Controller
 
         $request->user()->save();
 
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return Redirect::route('admin.profile.edit')->with('status', 'profile-updated');
     }
 
     /**

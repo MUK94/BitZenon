@@ -3,7 +3,7 @@
 
 <head>
     @include('inc.head')
-    <title>Home | {{ config('app.name', 'BitZenon') }}</title>
+    <title>Home | BitZenon</title>
 
 </head>
 
