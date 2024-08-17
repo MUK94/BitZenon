@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer pt-8">
 	<div class="container content-layout">
 		 <div class="row pb-12">
 			  <div class="col">
@@ -57,7 +57,7 @@
 		 </div>
 	</div>
 	<div class="container content-layout">
-		 <div class="copyright">
+		 <div class="copyright border-t border-gray-700">
 			  <div class="text">
 					© 2024 BitZenon All Rights Reserved
 			  </div>

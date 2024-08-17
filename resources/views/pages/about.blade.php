@@ -1,14 +1,14 @@
 @extends('layouts.app')
-<title>{{ $title }} | Bonnafaire </title>
+<title>{{ $title }} | BitZenon </title>
 @section('content')
-	<div class="content-layout">
-		<div class="about">
-			<div class="raw">
-				<h1 class="title">About</h1>
-				<div class="slogan">
-
-				</div>
-			</div>
-		</div>
+<div class="content-layout">
+	<div class="container article-post">
+		 <div class="headings">
+			  <h2>About <span>Us</span></h2>
+		 </div>
+		 <div class="contact-container">
+		 </div>
 	</div>
+</div>
 @endsection
+

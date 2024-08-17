@@ -9,7 +9,7 @@
                     <div class="breadcumb">
                         <a href="/">Home </a>
                         <i class="fa-solid fa-angle-right"></i>
-                        <a href="/articles/">Articles </a>
+                        <a href="/blog/">Articles </a>
                         <i class="fa-solid fa-angle-right"></i>
                         <span>{{ $article->title }}</span>
                     </div>
@@ -20,7 +20,7 @@
                     <div class="headlines my-2 mx-1">
                         <span class="text-gray-600 pb-4">{{ $article->created_at->format('F j, Y') }} </span>
                         <div class="share-btns mx-4">
-                            <a href="/articles/{{ $article->slug }}">Share Article <i class="fa-solid fa-link"></i></a>
+                            <a href="/blog/{{ $article->slug }}">Share Article <i class="fa-solid fa-link"></i></a>
                         </div>
                     </div>
 

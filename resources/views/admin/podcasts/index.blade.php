@@ -9,12 +9,12 @@
             @csrf
 
             <div class="my-4 flex justify-between gap-3">
-                <div class="mb-1">
+                <div class="mb-4">
                     <label for="title" class="block mb-1">Titre</label>
                     <input type="text" name="title" required id="title"
                         class="mt-1 p-2 block focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-300 rounded-md w-80">
                 </div>
-                <div class="mb-1">
+                <div class="mb-4">
                     <label for="category_id" class="block mb-1">Categorie</label>
                     <select name="category_id" id="category_id"
                         class="w-full h-12 px-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700">
@@ -24,14 +24,14 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="mb-1">
+                <div class="mb-4">
                     <label for="cover_image" class="block mb-1">Image </label>
                     <input type="file" name="cover_image" id="cover_image"
                         class="h-12 px-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
                         required>
                 </div>
             </div>
-            <div class="mb-2">
+            <div class="mb-4">
                 <label for="description" class="block mb-1">Description</label>
                 <textarea name="description" id="description" class="w-full min-h-30 px-4 py-2  rounded-md"></textarea>
             </div>
@@ -45,7 +45,7 @@
 
         {{-- table  --}}
         <div class="py-6 my-6 w-full">
-            <h2 class="font-bold text-center text-xl">List of Posts</h2>
+            <h2 class="font-bold text-center text-xl">List of Podcasts</h2>
             <div class="flex flex-col mt-8">
                 <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                     <div

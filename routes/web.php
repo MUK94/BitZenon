@@ -9,6 +9,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TopicController;
 use App\Models\Category;
 use App\Models\Topic;
@@ -32,8 +33,9 @@ Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('pages.services');
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
-Route::get('/articles', [ArticleListingsController::class, 'index'])->name('articles.index');
-Route::get('/articles/{slug}', [ArticleListingsController::class, 'show'])->name('articles.detail');
+Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.index');
+Route::get('/blog', [ArticleListingsController::class, 'index'])->name('articles.index');
+Route::get('/blog/{slug}', [ArticleListingsController::class, 'show'])->name('articles.detail');
 
 // Category routes
 Route::get('/categories/{category:slug}', function (Category $category) {
@@ -64,35 +66,30 @@ Route::middleware('auth')->group(function () {
 		Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
 		Route::patch('/admin/profile', [ProfileController::class, 'update'])->name('admin.profile.update');
 		Route::delete('/admin/profile', [ProfileController::class, 'destroy'])->name('admin.profile.destroy');
-		// -------- @Articles ------
 		Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
+		// -------- @Articles ------
 		Route::get('/admin/articles/', [AdminPanelController::class, 'articles'])->name('admin.articles.index');
-
-		// Route::get('/admin/add-article', [ArticleListingsController::class, 'create'])->name('articles.create');
-
 		Route::resource('admin/articles', ArticleListingsController::class)->only(['store','update', 'edit', 'destroy']);
 
 		// --------@Podcasts -----------
-		Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.index');
 		Route::get('/admin/podcasts/', [AdminPanelController::class, 'podcasts'])->name('admin.podcasts.index');
 		Route::resource('admin/podcasts', PodcastController::class)->only(['store', 'update', 'edit', 'destroy']);
 
-		// -------@Podcasts Topics ------
-		Route::resource('admin/topic', TopicController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
+		// -------@Topics ------
+		Route::resource('admin/topics', TopicController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
+		// ------ @CRUD on Category
+		Route::resource('admin/categories', CategoryController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 
-		// CRUD on Category
-		Route::resource('admin/category', CategoryController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 
+		// -------@Services---------
+		Route::resource('admin/services', ServiceController::class);
 		// Reviews
 		// Route::post('/reviews', [CommentController::class, 'store']);
 		Route::resource('reviews', CommentController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 
 		// About
 		Route::get('/admin/about-section/', [AdminPanelController::class, 'about'])->name('admin.about.index');
-
-		// Services
-		Route::get('/admin/services/', [AdminPanelController::class, 'services'])->name('admin.services.index');
 
 		// Hero section
 		Route::get('/admin/about/', [AdminPanelController::class, 'hero-section'])->name('admin.home.index');

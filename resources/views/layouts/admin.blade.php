@@ -17,13 +17,13 @@
 				<div class="admin-navbar">
 					@include('layouts.nav-admin')
 				</div>
-				<div class="main-content">
+				<div class="bg-gray-100 p-8 main-content">
 					@yield('content')
 				</div>
 			 </main>
 		</div>
 	</div>
-    @include('inc.footer')
+    @include('inc.admin-footer')
 </body>
 
 </html>

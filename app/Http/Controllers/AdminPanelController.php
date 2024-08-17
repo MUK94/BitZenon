@@ -23,11 +23,33 @@ class AdminPanelController extends Controller
 	public function articles(): View
 	{
 		$title = "Manage Articles";
-		$articles = Article::with('user')->latest()->get();
+		$articles = Article::with('user')->latest()->paginate(10);
 		$categories = Category::all();
 		$topics = Topic::all();
 		$podcasts = Podcast::all();
 		return view('admin.articles.index', compact('title', 'topics', 'podcasts', 'articles', 'categories'));
+
+	}
+
+	public function podcasts(): View
+	{
+		$title = "Manage Podcasts";
+		$articles = Article::latest()->paginate(10);
+		$categories = Category::all();
+		$topics = Topic::all();
+		$podcasts = Podcast::latest()->paginate(10);
+		return view('admin.podcasts.index', compact('title', 'topics', 'podcasts', 'articles', 'categories'));
+
+	}
+
+	public function topics(): View
+	{
+		$title = "Manage Topics";
+		$articles = Article::all();
+		$categories = Category::all();
+		$topics = Topic::latest();
+		$podcasts = Podcast::all();
+		return view('admin.topics.index', compact('title', 'topics', 'podcasts', 'articles', 'categories'));
 
 	}
 }

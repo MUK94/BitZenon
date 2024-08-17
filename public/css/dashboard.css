@@ -51,10 +51,9 @@
 }
 
 .dashboard-container .admin-sidebar {
-	/* height: 120vh; */
 	overflow-y: auto;
 	overflow-x: hidden;
-	padding: 1rem 1rem 3rem;
+	padding: 1rem 1rem 2rem;
 	background-color: #090148;
 	color: var(--color6);
 	width: 18%;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Service;
 use App\Models\Topic;
 use Illuminate\View\View;
 
@@ -23,14 +24,15 @@ class PagesController extends Controller
         return view('home', compact('title', 'latestArticles', 'mostPopular', 'categories', 'topics'));
     }
 
-    //  public function about(): View
-    //  {
-    //      $title = 'About';
-    //      $articles = Article::all();
-    //      $categories = Category::all();
-    //       $topics = Topic::all();
-    //      return view('pages.about')->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
-    //  }
+     public function about(): View
+     {
+         $title = 'About';
+         $articles = Article::all();
+         $categories = Category::all();
+         $topics = Topic::all();
+			$services = Service::all();
+         return view('pages.about', compact('title','articles', 'categories', 'topics', 'services'))->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
+     }
 
     public function services(): View
     {

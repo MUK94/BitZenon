@@ -175,18 +175,18 @@
 
 /* ----------- Latest Posts ------------ */
 
-.content-layout .post {
+.content-layout .posts .post {
 	display: flex;
 	align-items: center;
 	margin: 2rem 0;
-	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 2px;
 	border-radius: 1.5rem;
+	background-color: var(--color8);
 }
 
 
 .content-layout .posts img{
-	width: 400px;
-	height: 230px;
+	width: 450px;
+	height: 250px;
 	object-fit: cover;
 }
 

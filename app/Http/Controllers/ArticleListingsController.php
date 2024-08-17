@@ -19,7 +19,7 @@ class ArticleListingsController extends Controller
 	 */
 	public function index(Request $request): View
 	{
-		$title = "Articles";
+		$title = "Blog";
 		$articles = Article::with('user')->latest()->paginate(10);
 		$topics = Topic::all();
 		$categories = Category::all();
@@ -117,7 +117,7 @@ class ArticleListingsController extends Controller
 		$article = Article::findOrFail($id);
 		$categories = Category::all();
 		$topics = Topic::all();
-		return view('articles.edit', compact('title', 'article', 'categories', 'topics'))->with(['article' => $article, 'categories' => $categories, 'title' => $title]);
+		return view('admin.articles.edit', compact('title', 'article', 'categories', 'topics'))->with(['article' => $article, 'categories' => $categories, 'title' => $title]);
 	}
 
 	/**
@@ -157,7 +157,7 @@ class ArticleListingsController extends Controller
 			$article->save();
 		}
 
-		return redirect('/articles')->with('success', 'Service ajouté avec succès');
+		return redirect('/admin/articles')->with('success', 'Service ajouté avec succès');
 
 
 	}
@@ -171,7 +171,7 @@ class ArticleListingsController extends Controller
 
 		$article->delete();
 
-		return redirect('/dashboard')->with('success', 'article deleted successfully');
+		return redirect('/admin/articles')->with('success', 'article deleted successfully');
 
 	}
 }

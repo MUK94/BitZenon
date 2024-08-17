@@ -18,7 +18,7 @@ class CategoryController extends Controller
      */
     public function index(): View
     {
-        $title = "Create Categories";
+        $title = "Add Category";
         $services = Article::with('user')->latest()->get();
         $categories = Category::all();
         $topics = Topic::all();
@@ -53,7 +53,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name),
         ]);
 
-        return redirect()->route('category.index', compact('category', 'topics', 'categories'))->with('success', 'Category created successfully.');
+        return redirect()->route('categories.index', compact('category', 'topics', 'categories'))->with('success', 'Category created successfully.');
     }
 
     /**
@@ -97,7 +97,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name),
         ]);
 
-        return redirect()->route('category.index')->with('success', 'Category updated successfully.');
+        return redirect()->route('categories.index')->with('success', 'Category updated successfully.');
     }
 
     /**
@@ -106,6 +106,6 @@ class CategoryController extends Controller
     public function destroy(Category $category): RedirectResponse
     {
         $category->delete();
-        return redirect()->route('category.index')->with('success', 'Category deleted successfully.');
+        return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
     }
 }
