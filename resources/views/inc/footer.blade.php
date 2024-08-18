@@ -72,5 +72,6 @@
 		 </div>
 	</div>
 </footer>
+
 <script src="{{ asset('js/scripts.js') }}"></script>
 <script src="{{ asset('js/graphs.js') }}"></script>

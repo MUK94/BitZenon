@@ -218,68 +218,54 @@
 
 
 /* ----------- Services ------------- */
-.content-layout .services-wrapper {
-	display: flex;
-	justify-content: center;
-	gap: 0.5rem;
-	/* flex-wrap: wrap; */
+
+.middle-card {
+	background-color: var(--color1);
 }
 
-.content-layout .services-wrapper .service-card {
-	width: 23.5rem;
-	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-	border-radius: 1rem;
-	padding: 2rem 0.5rem;
-	border: 1px solid var(--color1);
-	/* background-color: var(--color3); */
+.middle-card .card-item,
+.middle-card button,
+.middle-card .card-item svg {
+	color: var(--color6);
+	fill: var(--color6);
 }
 
-.content-layout .services-wrapper .service-card:hover {
-	background-color :var(--color3);
+.services-wrapper button {
+	background-color: var(--color1);
+	margin: 2rem 0;
+	color: var(--color6);
 }
 
-.services-wrapper .service-card .service-title {
-	margin-bottom: 2rem;
-	text-align: center;
-	font-size: 1.2rem;
+.services-wrapper svg {
+	height: 14px;
+	width: 14px;
+}
+
+.services-wrapper .service-cards svg{
+	margin-right: 0.65rem;
+}
+
+.middle-card button {
+	background-color: var(--color6);
+	color: var(--color1);
+}
+
+.services-wrapper button:hover {
+	background-color: var(--color9);
+}
+.services-wrapper button svg {
+	fill: var(--color6);
+}
+
+
+.middle-card button svg{
+	fill: var(--color1);
 }
 
 .services-wrapper .service-card p {
 	margin: 1rem 0;
 }
 
-.services-wrapper .service-card .pricing-options {
-	margin: 1rem 0;
-	height: 10rem;
-	line-height: 1.5rem;
+#keen-slider-next {
+	text-align: center;
 }
-
-
-.services-wrapper .service-card .included-title {
-	margin: 1rem 0;
-	font-size: 1rem;
-	color: var(--color1);
-}
-
-.services-wrapper .service-card .included-list{
-	margin-bottom: 1rem;
-	height: 10rem;
-}
-
-.services-wrapper .service-card .included-list i{
-	padding: 0.25rem;
-	color: var(--color1);
-}
-
-
-.services-wrapper .service-card .service-btn {
-	margin-top: 3rem;
-	display: flex;
-	justify-content: center;
-}
-
-
-.services-wrapper .service-card .service-btn a {
-	padding: 0.25rem 1rem;
-}
-

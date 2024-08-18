@@ -192,8 +192,12 @@ ul {
 .title h2 {
 	font-size: var(--font-heading-2);
 	text-align: center;
+	font: bolder;
 }
-
+h2 {
+	font: bolder;
+	font-size: var(--font-heading-2);
+}
 .tags {
 	display: flex;
 	gap: 1rem;
@@ -469,6 +473,9 @@ ul {
 .article-post .post-container .post .description h3:hover {
 	color: var(--color1);
 }
+
+
+/*  */
 
 /* ----------- Pagination ------------- */
 

@@ -1,3 +1,7 @@
+//
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 	var dropdowns = document.querySelectorAll(".nav-cat-dropdown");
 
@@ -116,4 +120,4 @@ document.getElementById('category').addEventListener('change', function() {
 
 
 
-// Admin Category
+// Testimonial slider
