@@ -3,8 +3,9 @@
 @section('content')
     <div class="content-layout">
         <div class="container article-post">
+            <h2>Choose Your <span>Favorite</span> Topic</h2>
             <div class="headings mb-8">
-                <h2>Choose Your <span>Favorite</span> Topic</h2>
+                <h3 class="text-xl custom-blue-color-1">Latest Posts</h3>
                 <select name="category" id="category" class="filter-per-cat" onchange="location = this.value;">
                     <option value="/articles/" {{ request()->is('articles') ? 'selected' : '' }}>All</option>
                     @foreach ($categories as $category)
@@ -15,31 +16,39 @@
                     @endforeach
                 </select>
             </div>
-            <div class="post-container">
-                @foreach ($articles as $article)
-                    <div class="post shadow-sm">
-                        <a href="/blog/{{ $article->slug }}">
-                            <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}">
-                        </a>
-                        <div class="description">
-                            <div class="tags">
-                                <a
-                                    href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
-                            </div>
-                            <div class="meta-data mb-2">
-                                <span class="">{{ $article->created_at->diffForHumans() }}</span>
-                                <span><i class="fa-regular fa-clock"></i> {{ $article->read_time }} min read</span>
-                                <span> <i class="fa-regular fa-eye"></i> {{ $article->view_count }}</span>
-                                <span> <i class="fa-regular fa-comment"></i> 45</span>
-                            </div>
-                            <div class="text">
-                                <a href="/blog/{{ $article->slug }}">
-                                    <h3>{{ $article->title }}</h3>
-                                </a>
+            <div>
+                @include('inc.latest-posts')
+            </div>
+            <div class="my-12 py-12">
+                <h3 class="text-2xl py-6 custom-blue-color-1">Posts You May Also Like</h3>
+                <div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5">
+                    @foreach ($articles as $article)
+                        <div class="old-post shadow-sm rounded-lg">
+                            <a href="/blog/{{ $article->slug }}">
+                                <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}"
+                                    class="max-w-full img-box">
+                            </a>
+                            <div class="description">
+                                <div class="tags px-3">
+                                    <a
+                                        href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
+                                </div>
+                                <div class="meta-data flex px-2  mb-2">
+                                    <span class="mr-2 text-gray-400">{{ $article->created_at->diffForHumans() }}</span>
+                                    <span class="mr-2 text-gray-400"><i class="text-gray-400 fa-regular fa-clock"></i>
+                                        {{ $article->read_time }} min read</span>
+                                    <span class="mr-2 text-gray-400"> <i class="text-gray-400 fa-regular fa-eye"></i>
+                                        {{ $article->view_count }}</span>
+                                </div>
+                                <div class="text px-2 pb-2">
+                                    <a href="/blog/{{ $article->slug }}">
+                                        <h3 class="text-xl">{{ $article->title }}</h3>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
         <div class="pagination">

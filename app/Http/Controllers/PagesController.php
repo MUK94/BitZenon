@@ -17,7 +17,7 @@ class PagesController extends Controller
     public function home(): View
     {
         $title = 'Home';
-        $latestArticles = Article::orderBy('created_at', 'desc')->take(4)->get();
+        $latestArticles = Article::orderBy('created_at', 'desc')->take(5)->get();
         $mostPopular = Article::orderBy('view_count', 'desc')->take(3)->get();
         $categories = Category::all();
         $topics = Topic::all();

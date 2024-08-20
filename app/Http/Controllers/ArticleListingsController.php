@@ -21,6 +21,7 @@ class ArticleListingsController extends Controller
 	{
 		$title = "Blog";
 		$articles = Article::with('user')->latest()->paginate(10);
+		$latestArticles = Article::orderBy('created_at', 'desc')->take(5)->get();
 		$topics = Topic::all();
 		$categories = Category::all();
 
@@ -31,7 +32,7 @@ class ArticleListingsController extends Controller
 		// 	->orderBy('articles.id', 'DESC');
 		// })->get();
 
-		return view('articles.index', compact('title', 'articles', 'topics', 'categories'));
+		return view('articles.index', compact('title', 'articles', 'latestArticles', 'topics', 'categories'));
 
 	}
 

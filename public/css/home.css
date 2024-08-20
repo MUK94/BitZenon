@@ -175,46 +175,6 @@
 
 /* ----------- Latest Posts ------------ */
 
-.content-layout .posts .post {
-	display: flex;
-	align-items: center;
-	margin: 2rem 0;
-	border-radius: 1.5rem;
-	background-color: var(--color8);
-}
-
-
-.content-layout .posts img{
-	width: 450px;
-	height: 250px;
-	object-fit: cover;
-}
-
-.content-layout .posts .description {
-	margin-left: 1rem;
-}
-
-.content-layout .posts .description h2 {
-	font-size: 1.7rem;
-	margin: 1rem 0;
-}
-
-.content-layout .posts .description h2:hover,
-.content-layout .posts .description .text span {
-	color: var(--color1);
-}
-
-.content-layout .posts .description .meta-data {
-	margin-top: 2rem;
-}
-.meta-data span{
-	margin-right: 0.5rem;
-	font-size: 0.75rem;
-}
-
-.meta-data i {
-	font-size: 0.8rem;
-}
 
 
 /* ----------- Services ------------- */
@@ -266,6 +226,4 @@
 	margin: 1rem 0;
 }
 
-#keen-slider-next {
-	text-align: center;
-}
+
