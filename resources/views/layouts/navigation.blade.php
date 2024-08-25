@@ -22,9 +22,9 @@
             <li><a href="/blog"
                     class="{{ request()->is('blog') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Blog</a>
             </li>
-            <li><a href="/podcasts"
+            {{-- <li><a href="/podcasts"
                     class="{{ request()->is('podcasts') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Podcasts</a>
-            </li>
+            </li> --}}
             <li><a href="/contact"
                     class="{{ request()->is('contact') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Contact</a>
             </li>

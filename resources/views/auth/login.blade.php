@@ -1,7 +1,6 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -33,11 +32,6 @@
         </div>
 
         <div class="flex items-center justify-between mt-4">
-			  <a class="underline text-sm text-gray-600 hover:text-blue-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-			  
-					href="{{ route('register') }}">
-					{{ __('New to BitZenon?') }}
-			  </a>
             @if (Route::has('password.request'))
                 <a class="underline text-sm text-gray-600 hover:text-blue-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     href="{{ route('password.request') }}">
@@ -49,5 +43,12 @@
                 {{ __('Login') }}
             </x-primary-button>
         </div>
-    </form>
+		</form>
+		<div class="flex items-center justify-center mt-4 py-4">
+			 <p class="text-gray-600 mr-4">Don't have an account?</p>
+			 <a class="underline text-sm text-blue-700 hover:text-blue-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				 href="{{ route('register') }}">
+				 {{ __('Register') }}
+				</a>
+		</div>
 </x-guest-layout>

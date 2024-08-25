@@ -45,7 +45,7 @@ class CategoryController extends Controller
 			$categories = Category::all();
 
         $request->validate([
-            'name' => 'required|string|max:20|unique:categories',
+            'name' => 'required|string|max:30|unique:categories',
         ]);
 
         $category = Category::create([
@@ -83,7 +83,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category): RedirectResponse
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:20|unique:categories,name,' . $category->id,
+            'name' => 'required|string|max:30|unique:categories,name,' . $category->id,
         ]);
 
         if ($validator->fails()) {

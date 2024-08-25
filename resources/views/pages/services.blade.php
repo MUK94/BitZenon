@@ -12,7 +12,6 @@
                 </p>
             </div>
 			</div>
-			@include('inc.services-section')
-
-    </div>
+		</div>
+		@include('inc.services-section')
 @endsection

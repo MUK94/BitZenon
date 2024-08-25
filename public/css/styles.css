@@ -22,7 +22,8 @@ h4,
 h5,
 h6,
 .tags span {
-	font-family: "Kanit", sans-serif;
+	/* font-family: "Kanit", sans-serif; */
+	font-family: "Space Grotesk", sans-serif;
 }
 
 i {
@@ -59,6 +60,9 @@ img {
 
 .custom-blue-color-1 {
 	color: var(--color1);
+}
+.dark-blue-color {
+	background-color: #040427f8;
 }
 
 
@@ -514,7 +518,7 @@ h2 {
 	position: relative;
 }
 
-.blog-old-post .old-post .tags {
+.blog-old-post .old-post .old-tag {
 	position: relative;
 	bottom: 0;
 	left: 0;

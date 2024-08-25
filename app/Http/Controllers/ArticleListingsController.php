@@ -82,7 +82,7 @@ class ArticleListingsController extends Controller
 			$article->save();
 		}
 
-		return redirect('/articles')->with('success', 'article ajouté avec succès');
+		return redirect('/blog')->with('success', 'article ajouté avec succès');
 	}
 
 	/**

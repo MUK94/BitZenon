@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AboutSectionController;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\ArticleListingsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HeroSectionController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\ProfileController;
@@ -33,7 +35,7 @@ Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('pages.services');
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
-Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.index');
+// Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.index');
 Route::get('/blog', [ArticleListingsController::class, 'index'])->name('articles.index');
 Route::get('/blog/{slug}', [ArticleListingsController::class, 'show'])->name('articles.detail');
 
@@ -50,16 +52,16 @@ Route::get('/categories/{category:slug}', function (Category $category) {
 		]);
 	});
 	// Podcast Topics routes
-	Route::get('/podcasts/{topic:slug}', function (Topic $topics) {
-		 // Paginate the podcasts associated with the Topic
-		 $podcasts = $topics->podcasts()->paginate(1);
+	// Route::get('/podcasts/{topic:slug}', function (Topic $topics) {
+	// 	 // Paginate the podcasts associated with the Topic
+	// 	 $podcasts = $topics->podcasts()->paginate(1);
 
-		 return view('podcasts.index', [
-			 'podcasts' => $podcasts,
-			 'title' => $topics->title,
-			 'topics' => Topic::all(),
-			]);
-		});
+	// 	 return view('podcasts.index', [
+	// 		 'podcasts' => $podcasts,
+	// 		 'title' => $topics->title,
+	// 		 'topics' => Topic::all(),
+	// 		]);
+	// 	});
 
 		// //////////-------- @Admin ---------////////////
 Route::middleware('auth')->group(function () {
@@ -73,34 +75,34 @@ Route::middleware('auth')->group(function () {
 		Route::resource('admin/articles', ArticleListingsController::class)->only(['store','update', 'edit', 'destroy']);
 
 		// --------@Podcasts -----------
-		Route::get('/admin/podcasts/', [AdminPanelController::class, 'podcasts'])->name('admin.podcasts.index');
-		Route::resource('admin/podcasts', PodcastController::class)->only(['store', 'update', 'edit', 'destroy']);
+		// Route::get('/admin/podcasts/', [AdminPanelController::class, 'podcasts'])->name('admin.podcasts.index');
+		// Route::resource('admin/podcasts', PodcastController::class)->only(['store', 'update', 'edit', 'destroy']);
 
 		// -------@Topics ------
-		Route::resource('admin/topics', TopicController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
+		// Route::resource('admin/topics', TopicController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 		// ------ @CRUD on Category
 		Route::resource('admin/categories', CategoryController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 
 
+		// ---- @Hero section
+		Route::get('/admin/hero-section/', [AdminPanelController::class, 'hero-section'])->name('admin.home.index');
+		Route::resource('admin/hero-section', HeroSectionController::class);
+
+		// ---- @About Section
+		Route::get('/admin/about-section/', [AdminPanelController::class, 'about'])->name('admin.about.index');
+		Route::resource('admin/about-section', AboutSectionController::class);
 		// -------@Services---------
 		Route::resource('admin/services', ServiceController::class);
 		// Reviews
 		// Route::post('/reviews', [CommentController::class, 'store']);
 		Route::resource('reviews', CommentController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 
-		// About
-		Route::get('/admin/about-section/', [AdminPanelController::class, 'about'])->name('admin.about.index');
-
-		// Hero section
-		Route::get('/admin/about/', [AdminPanelController::class, 'hero-section'])->name('admin.home.index');
 
 		// Testimonials
 		Route::get('/admin/testimonials/', [AdminPanelController::class, 'testimonials'])->name('admin.testimonials.index');
 
 		// Testimonials
 		Route::get('/admin/comments/', [AdminPanelController::class, 'comments'])->name('admin.comments.index');
-
-
 
 });
 
