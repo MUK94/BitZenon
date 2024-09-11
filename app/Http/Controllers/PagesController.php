@@ -31,11 +31,12 @@ class PagesController extends Controller
      public function about(): View
      {
          $title = 'About';
+			$aboutSection = AboutSection::all();
          $articles = Article::all();
          $categories = Category::all();
          $topics = Topic::all();
 			$services = Service::all();
-         return view('pages.about', compact('title','articles', 'categories', 'topics', 'services'))->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
+         return view('pages.about', compact('title','articles', 'aboutSection', 'categories', 'topics', 'services'))->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
      }
 
     public function services(): View

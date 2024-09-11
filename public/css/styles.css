@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6,
-.tags span {
+.tags span, .old-tag span {
 	/* font-family: "Kanit", sans-serif; */
 	font-family: "Space Grotesk", sans-serif;
 }
@@ -61,6 +61,7 @@ img {
 .custom-blue-color-1 {
 	color: var(--color1);
 }
+
 .dark-blue-color {
 	background-color: #040427f8;
 }
@@ -80,6 +81,10 @@ button {
 
 input {
 	height: 45px;
+}
+
+input[type=text] {
+	font-family: "Space Grotesk" sans-serif;
 }
 
 a {
@@ -113,7 +118,7 @@ a {
 .headings select {
 	padding: 0.2rem 1.5rem;
 	border-radius: 0.3rem;
-	font-family: "Kanit", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 
 	color: var(--color1);
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -152,15 +157,21 @@ header a:hover {
 
 .btn-booking a,
 .services-wrapper .service-card .service-btn a,
-.comment-btn {
+.comment-btn, .about-btn {
 	padding: 0.5rem 0.75rem;
 	border: 1px solid var(--color1);
 	border-radius: 1.75rem;
 }
 
+.about-btn {
+	background-color: var(--color1);
+	color: var(--color3);
+	padding: 0.1rem 1rem;
+}
+
 .btn-booking a:hover,
 .services-wrapper .service-card .service-btn a:hover,
-.comment-btn:hover {
+.comment-btn:hover{
 	background-color: var(--color1);
 	color: var(--color3);
 }
@@ -217,7 +228,8 @@ h2 {
 	color: var(--color1);
 }
 
-.tags span {
+.tags span,
+.old-tag span {
 	background-color: #ebeaea85;
 	color: var(--color1);
 	font-size: 0.85rem;
@@ -225,7 +237,8 @@ h2 {
 	border-radius: 0.5rem;
 }
 
-.tags span:hover {
+.tags span:hover,
+.old-tag span:hover {
 	background-color: var(--color1);
 	color: var(--color3);
 }
@@ -525,13 +538,14 @@ h2 {
 	top: -30px;
 }
 
-.meta-data span{
+.meta-data span {
 	font-size: 0.75rem;
 }
 
 .meta-data i {
 	font-size: 0.8rem;
 }
+
 /*----------- Testimonials ------------*/
 .testimonials svg {
 	fill: var(--color1);

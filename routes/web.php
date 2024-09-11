@@ -100,7 +100,7 @@ Route::middleware('auth')->group(function () {
 
 		// Testimonials
 		Route::get('/admin/testimonials/', [AdminPanelController::class, 'testimonials'])->name('admin.testimonials.index');
-
+		Route::resource('admin/testimonials', AboutSectionController::class);
 		// Testimonials
 		Route::get('/admin/comments/', [AdminPanelController::class, 'comments'])->name('admin.comments.index');
 

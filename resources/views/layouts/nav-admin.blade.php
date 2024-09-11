@@ -4,7 +4,7 @@
             <div class="nav-user flex justify-between items-center">
 					<div class="nav-notifications">
 						<a href="/" class="hover:text-blue-700 mx-3">
-							 <i class="hover:text-blue-700 {{ request()->is('/') ? 'custom-blue-color font-semibold' : '' }}   fa-solid fa-arrow-left"></i>
+							 <i class="hover:text-blue-700 {{ request()->is('/') ? 'custom-blue-color font-semibold' : '' }}   fa-solid fa-house"></i>
 						</a>
 					</div>
                 <div class="nav-notifications mr-2">

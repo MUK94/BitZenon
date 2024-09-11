@@ -184,231 +184,156 @@
 
     {{-- Testimonials --}}
     <div class="testimonials my-4">
-        <section class="dark-blue-color pt-12 pb-20">
-            <div
-                class="content-layout mx-auto max-w-[1340px] px-4 py-8 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
-                <div class="max-w-7xl items-center justify-between sm:flex sm:pe-6 lg:pe-8">
-                    <h2 class="tracking-tight text-4xl text-white">
-                        Read <span>trusted reviews</span> from <br> our customers
-                    </h2>
-                    <div class="flex gap-4">
-                        <button aria-label="Previous slide" id="keen-slider-previous"
-                            class="rounded-full p-3 hover:text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-                            </svg>
-                        </button>
-
-                        <button aria-label="Next slide" id="keen-slider-next" class="rounded-full p-3 hover:text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                            </svg>
-                        </button>
+        <div class="min-w-screen flex items-center justify-center">
+            <div class="w-full custom-blue-color border-t border-b border-gray-200 px-5 py-8 md:py-24 text-gray-800">
+                <div class="w-full max-w-6xl mx-auto">
+                    <div class="text-center max-w-xl mx-auto">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-5 text-white">What People <br>are Saying</h2>
+                        <h3 class="text-xl mb-5 font-light text-gray-100">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </h3>
+                        <div class="text-center mb-10">
+                            <span class="inline-block w-1 h-1 rounded-full bg-gray-100 ml-1"></span>
+                            <span class="inline-block w-3 h-1 rounded-full bg-gray-100 ml-1"></span>
+                            <span class="inline-block w-40 h-1 rounded-full bg-gray-100"></span>
+                            <span class="inline-block w-3 h-1 rounded-full bg-gray-100 ml-1"></span>
+                            <span class="inline-block w-1 h-1 rounded-full bg-gray-100 ml-1"></span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="-mx-6 mt-8 lg:col-span-2 lg:mx-0">
-                    <div id="keen-slider" class="keen-slider">
-                        <div class="keen-slider__slide">
-                            <div class="flex h-full flex-col justify-between bg-white p-4 shadow-lg">
-                                <div>
-                                    <div class="flex">
-                                        <div class="flex gap-0.5 text-green-500">
-                                            <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-
-                                            <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-
-                                            <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-
-                                            <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                        </div>
-                                        <div class="less-rating flex gap-0.5 text-green-500">
-                                            <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                        </div>
+                    <div class="-mx-3 md:flex items-start">
+                        <div class="px-3 md:w-1/3">
+                            <div
+                                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                <div class="w-full flex mb-4 items-center">
+                                    <div
+                                        class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                        <img src="https://i.pravatar.cc/100?img=1" alt="">
                                     </div>
-
-                                    <div class="mt-4">
-                                        <p class="mt-4 leading-relaxed text-gray-700">
-                                            No, Rose, they are not breathing. And they have no arms or legs … Where are
-                                            they?
-                                        </p>
+                                    <div class="flex-grow pl-3">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Kenzie Edgar.</h6>
                                     </div>
                                 </div>
-
-                                <div class="mt-8 text-sm flex items-center font-medium text-gray-700">
-                                    <img src="{{ asset('img/user.png') }}" alt="" class="h-14 w-18">
-                                    <div class="mx-1">
-                                        <span>Santosh Bhandari</span>
-                                        <h4 class="font-bold"><span>UNDP</span></h4>
+                                <div class="w-full">
+                                    <p class="text-sm leading-tight"><span
+                                            class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Quos sunt ratione dolor
+                                        exercitationem minima quas itaque saepe quasi architecto vel! Accusantium, vero
+                                        sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                                            class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                <div class="w-full flex mb-4 items-center">
+                                    <div
+                                        class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                        <img src="https://i.pravatar.cc/100?img=2" alt="">
                                     </div>
+                                    <div class="flex-grow pl-3">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Stevie Tifft.</h6>
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <p class="text-sm leading-tight"><span
+                                            class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
+                                        ipsum, dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus,
+                                        labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.<span
+                                            class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="keen-slider__slide">
-                            <div class="flex h-full flex-col justify-between bg-white p-4 shadow-lg">
-                                <div>
-                                    <div class="flex gap-0.5 text-green-500">
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
+                        <div class="px-3 md:w-1/3">
+                            <div
+                                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                <div class="w-full flex mb-4 items-center">
+                                    <div
+                                        class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                        <img src="https://i.pravatar.cc/100?img=3" alt="">
                                     </div>
-
-                                    <div class="mt-4">
-                                        <p class="mt-4 leading-relaxed text-gray-700">
-                                            No, Rose, they are not breathing. And they have no arms or legs … Where are
-                                            they?
-                                        </p>
+                                    <div class="flex-grow pl-3">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Tommie Ewart.</h6>
                                     </div>
                                 </div>
-
-                                <div class="mt-8 text-sm flex items-center font-medium text-gray-700">
-                                    <img src="{{ asset('img/user.png') }}" alt="" class="h-14 w-18">
-                                    <div class="mx-1">
-                                        <span>Santosh Bhandari</span>
-                                        <h4 class="font-bold"><span>UNDP</span></h4>
+                                <div class="w-full">
+                                    <p class="text-sm leading-tight"><span
+                                            class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam
+                                        excepturi dicta error deleniti sequi.<span
+                                            class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                <div class="w-full flex mb-4 items-center">
+                                    <div
+                                        class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                        <img src="https://i.pravatar.cc/100?img=4" alt="">
                                     </div>
+                                    <div class="flex-grow pl-3">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Charlie Howse.</h6>
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <p class="text-sm leading-tight"><span
+                                            class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore
+                                        voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque
+                                        reprehenderit natus, hic sequi itaque dicta nisi voluptatem! Culpa, iusto.<span
+                                            class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="keen-slider__slide">
-                            <div class="flex h-full flex-col justify-between bg-white p-4 shadow-lg">
-                                <div>
-                                    <div class="flex gap-0.5 text-green-500">
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-
-                                        <svg class="size-5" fill="none" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
+                        <div class="px-3 md:w-1/3">
+                            <div
+                                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                <div class="w-full flex mb-4 items-center">
+                                    <div
+                                        class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                        <img src="https://i.pravatar.cc/100?img=5" alt="">
                                     </div>
-
-                                    <div class="mt-4">
-                                        <p class="mt-4 leading-relaxed text-gray-700">
-                                            No, Rose, they are not breathing. And they have no arms or legs … Where are
-                                            they?
-                                        </p>
+                                    <div class="flex-grow pl-3">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Nevada Herbertson.</h6>
                                     </div>
                                 </div>
-
-                                <div class="mt-8 text-sm flex items-center font-medium text-gray-700">
-                                    <img src="{{ asset('img/user.png') }}" alt="" class="h-14 w-18">
-                                    <div class="mx-1">
-                                        <span>Santosh Bhandari</span>
-                                        <h4 class="font-bold"><span>UNDP</span></h4>
+                                <div class="w-full">
+                                    <p class="text-sm leading-tight"><span
+                                            class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatem porro
+                                        obcaecati dicta, quibusdam sunt ipsum, laboriosam nostrum facere exercitationem
+                                        pariatur deserunt tempora molestiae assumenda nesciunt alias eius? Illo,
+                                        autem!<span
+                                            class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                <div class="w-full flex mb-4 items-center">
+                                    <div
+                                        class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                        <img src="https://i.pravatar.cc/100?img=6" alt="">
                                     </div>
+                                    <div class="flex-grow pl-3">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Kris Stanton.</h6>
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <p class="text-sm leading-tight"><span
+                                            class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iusto, explicabo,
+                                        cupiditate quas totam!<span
+                                            class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 </div>
-
-<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
-
-<script type="module">
-    import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
-
-    const keenSlider = new KeenSlider(
-        '#keen-slider', {
-            loop: true,
-            slides: {
-                origin: 'center',
-                perView: 1.25,
-                spacing: 16,
-            },
-            breakpoints: {
-                '(min-width: 1024px)': {
-                    slides: {
-                        origin: 'auto',
-                        perView: 2.5,
-                        spacing: 32,
-                    },
-                },
-            },
-        },
-        []
-    )
-
-    const keenSliderPrevious = document.getElementById('keen-slider-previous')
-    const keenSliderNext = document.getElementById('keen-slider-next')
-
-    keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
-    keenSliderNext.addEventListener('click', () => keenSlider.next())
-</script>

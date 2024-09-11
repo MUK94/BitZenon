@@ -29,7 +29,7 @@
                                     class="max-w-full img-box">
                             </a>
                             <div class="description">
-                                <div class=" old-tag px-3">
+                                <div class="old-tag px-3 mb-1">
                                     <a
                                         href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
                                 </div>
