@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Article;
 use App\Models\Topic;
 use App\Models\Podcast;
+use App\Models\Testimonials;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -50,6 +51,18 @@ class AdminPanelController extends Controller
 		$topics = Topic::latest();
 		$podcasts = Podcast::all();
 		return view('admin.topics.index', compact('title', 'topics', 'podcasts', 'articles', 'categories'));
+
+	}
+
+	public function testimonials(): View
+	{
+		$title = "Manage Testimonials";
+		$articles = Article::all();
+		$categories = Category::all();
+		$topics = Topic::latest();
+		$podcasts = Podcast::all();
+		$podcasts = Testimonials::all();
+		return view('admin.testimonials.index', compact('title', 'testimonials', 'topics', 'podcasts', 'articles', 'categories'));
 
 	}
 }

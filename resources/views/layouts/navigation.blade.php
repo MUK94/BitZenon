@@ -35,7 +35,7 @@
             <div class="nav-user-auth mr-3 nav-cat-dropdown">
                 <button class="dropdown-link" onclick="event.preventDefault();">
                     <div class="flex items-center justify-center font-normal">{{ auth()->user()->getInitials() }}</div> <i
-                        class="fa-solid fa-angle-down"></i>
+                        class="text-sm fa-solid fa-angle-down"></i>
                 </button>
                 <ul class="dropdown-content">
                     <div class="drop-user">

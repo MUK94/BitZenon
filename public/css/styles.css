@@ -22,7 +22,7 @@ h4,
 h5,
 h6,
 .tags span, .old-tag span {
-	/* font-family: "Kanit", sans-serif; */
+
 	font-family: "Space Grotesk", sans-serif;
 }
 
@@ -32,9 +32,10 @@ i {
 
 body {
 	background-color: var(--color5);
+	font-family: "Kanit", sans-serif;
 	/* font-family: "Open Sans", sans-serif; */
 	/* font-family: 'Roboto', sans-serif; */
-	font-family: 'Lexend Deca', sans-serif;
+	/* font-family: 'Lexend Deca', sans-serif; */
 	font-size: var(--font_body);
 	font-weight: 300;
 }
@@ -83,8 +84,9 @@ input {
 	height: 45px;
 }
 
-input[type=text] {
+input, textarea {
 	font-family: "Space Grotesk" sans-serif;
+	font-weight: light;
 }
 
 a {
@@ -547,14 +549,22 @@ h2 {
 }
 
 /*----------- Testimonials ------------*/
-.testimonials svg {
-	fill: var(--color1);
+
+.testimonial-layout {
+	display: block;
+	column-count: 3;
+}
+.testimony-box {
+	break-inside: avoid;
+	cursor: pointer;
 }
 
-.testimonials .less-rating svg {
-	fill: #dde1fee2;
+.testimony-box:hover {
+	background-color: var(--color1);
+	color: var(--color6);
 }
 
+.testimony-box:hover
 /* ----------- Pagination ------------- */
 
 

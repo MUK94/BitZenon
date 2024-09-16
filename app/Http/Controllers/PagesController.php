@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Service;
 use App\Models\HeroSection;
 use App\Models\AboutSection;
+use App\Models\Testimonial;
 use App\Models\Topic;
 use Illuminate\View\View;
 
@@ -25,7 +26,8 @@ class PagesController extends Controller
         $mostPopular = Article::orderBy('view_count', 'desc')->take(3)->get();
         $categories = Category::all();
         $topics = Topic::all();
-        return view('home', compact('title', 'heroSection', 'aboutSection', 'latestArticles', 'mostPopular', 'categories', 'topics'));
+		  $testimonials = Testimonial::all();
+        return view('home', compact('title', 'heroSection', 'aboutSection', 'latestArticles', 'mostPopular', 'categories', 'testimonials'));
     }
 
      public function about(): View

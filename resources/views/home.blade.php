@@ -54,12 +54,12 @@
     </section>
 
     <section class="section-container mb-12">
-        <div class="content-layout">
+        <div class="content-layout custom-blue-color">
             <div class="title">
-                <h2>Our <span>Services</span></h2>
+                <h2>Our <span class="text-white">Services</span></h2>
             </div>
             <div class="service-desc py-2 text-center">
-                <p class="px-4 italic text-xl text-gray-700">
+                <p class="px-4 italic text-xl text-gray-100">
                     "Designed for projects of any scope and complexity, Build and enhance your web presence with tailored
                     solutions. Automate your business processes for efficiency, Turn your data into actionable insights."
                 </p>

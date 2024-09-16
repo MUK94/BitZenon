@@ -89,22 +89,22 @@
                                     <tr>
                                         <td class="px-2 pt-2 whitespace-no-wrap border-b border-gray-200">
                                             <div class="text-sm leading-5 text-gray-900">
-                                                {{ $about->intro }}
+                                                @excerpt($about->intro)
                                             </div>
                                         </td>
                                         <td class="px-2 pt-2 whitespace-no-wrap border-b border-gray-200">
                                             <div class="text-sm leading-5 text-gray-900">
-                                                {{ $about->mission }}
+                                                @excerpt($about->mission)
                                             </div>
                                         </td>
                                         <td class="px-2 pt-2 whitespace-no-wrap border-b border-gray-200">
                                             <div class="text-sm leading-5 text-gray-900">
-                                                {{ $about->expertise }}
+                                                @excerpt($about->expertise)
                                             </div>
                                         </td>
                                         <td class="px-2 pt-2 whitespace-no-wrap border-b border-gray-200">
                                             <div class="text-sm leading-5 text-gray-900">
-                                                {{ $about->goal }}
+                                                @excerpt($about->goal)
                                             </div>
                                         </td>
                                         <td

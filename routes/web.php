@@ -12,6 +12,7 @@ use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TopicController;
 use App\Models\Category;
 use App\Models\Topic;
@@ -98,9 +99,9 @@ Route::middleware('auth')->group(function () {
 		Route::resource('reviews', CommentController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 
 
-		// Testimonials
-		Route::get('/admin/testimonials/', [AdminPanelController::class, 'testimonials'])->name('admin.testimonials.index');
-		Route::resource('admin/testimonials', AboutSectionController::class);
+		// ---- @Testimonials
+		Route::resource('admin/testimonials', TestimonialController::class);
+
 		// Testimonials
 		Route::get('/admin/comments/', [AdminPanelController::class, 'comments'])->name('admin.comments.index');
 

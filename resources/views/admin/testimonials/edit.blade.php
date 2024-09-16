@@ -3,52 +3,56 @@
 @section('content')
     <div class="flex items-center flex-col my-8 mx-4">
         <h1 class="text-xl font-bold mb-4">{{ $title }}</h1>
-        <form method="POST" action="{{ route('articles.update', $article->id) }}" enctype="multipart/form-data"
-            class="w-full flex flex-col justify-betwen gap-2 bg-white shadow-sm rounded px-4 pt-6 pb-8 m-4">
+        <form method="POST" action="{{ route('testimonials.update', $testimonial->id) }}" enctype="multipart/form-data"
+            class="w-full flex flex-col justify-between gap-2 bg-white shadow-sm rounded px-4 pt-6 pb-8 m-4">
             @csrf
             @method('PATCH')
+            <div class="my-4 flex justify-between flex-wrap gap-3">
+                <!-- Name Input -->
+                <div class="mb-1">
+                    <label for="name" class="block mb-1">Name</label>
+                    <input type="text" name="name" required id="name"
+                        class="mt-1 p-2 block focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-300 rounded-md"
+                        value="{{ old('name', $testimonial->name) }}"> <!-- Pre-fill with existing name -->
+                </div>
 
-            <div class="my-4 flex justify-between gap-3">
-                <div class="mb-4">
-                    <label for="title" class="block mb-1">Titre</label>
-                    <input type="text" name="title" id="title" value="{{ old('title', $article->title) }}" required
-                        class="mt-1 p-2 block focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-300 rounded-md w-80">
-                    @error('title')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                    @enderror
+                <!-- Company Input -->
+                <div class="mb-1">
+                    <label for="company" class="block mb-1">Company</label>
+                    <input type="text" name="company" required id="company"
+                        class="mt-1 p-2 block focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-300 rounded-md"
+                        value="{{ old('company', $testimonial->company) }}"> <!-- Pre-fill with existing company -->
                 </div>
-                <div class="mb-4">
-                    <label for="category_id" class="block mb-1">Categorie</label>
-                    <select name="category_id" id="category_id"
-                        class="w-full h-12 px-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700">
-                        <option value="" class="text-gray-500">Select a category</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}"
-                                {{ old('category_id', $article->category_id) == $category->id ? 'selected' : '' }}>
-                                {{ $category->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                    @error('category_id')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                    @enderror
-                </div>
-                <div class="mb-4">
-                    <label for="cover_image" class="block mb-1">Image</label>
-                    <input type="file" name="cover_image" id="cover_image"
+
+					 <!-- LinkedIn Input -->
+                <div class="mb-1">
+						<label for="linkedin" class="block mb-1">LinkedIn Profile</label>
+						<input type="url" name="linkedin" required id="linkedin"
+							 class="mt-1 p-2 block focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-300 rounded-md"
+							 value="{{ old('linkedin', $testimonial->linkedin) }}"> <!-- Pre-fill with existing company -->
+				  </div>
+
+                <!-- Image Upload -->
+                <div class="mb-1">
+                    <label for="image" class="block mb-1">Profile Picture</label>
+                    <input type="file" name="image" id="image"
                         class="h-12 px-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700">
-                    @error('cover_image')
-                        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                    @enderror
+                    @if ($testimonial->image)
+                        <img src="{{ asset('storage/' . $testimonial->image) }}" alt="{{ $testimonial->name }}"
+                            class="w-16 mt-2">
+                    @endif
                 </div>
             </div>
-            <div class="mb-4">
+
+            <!-- Description Input -->
+            <div class="mb-2">
                 <label for="description" class="block mb-1">Description</label>
-                <textarea name="description" id="description" class="w-full min-h-30 px-4 py-2 border border-gray-300 rounded-md">{{ old('description', $article->description) }}</textarea>
-                @error('description')
-                    <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                @enderror
+                <textarea name="description" id="description" class="w-full min-h-30 px-4 py-2 border border-gray-300 rounded-md">
+					  {{ old('description', $testimonial->description) }}
+				 </textarea>
             </div>
+
+            <!-- Save Button -->
             <div>
                 <button type="submit"
                     class="px-4 py-2 text-white custom-blue-color rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
@@ -56,14 +60,6 @@
                 </button>
             </div>
         </form>
+
     </div>
-
-
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#description'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
 @endsection

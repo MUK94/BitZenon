@@ -16,7 +16,7 @@
 							  <p class="mb-6 text-white">Get the latest articles right in your inbox</p>
 
 							  <div class="company-address mt-8">
-									<ul>
+									<ul class="">
 										 <li><i class="fa-solid fa-map-location"></i> Conakry, Guinea</li>
 										 <li><i class="fa-solid fa-phone"></i> +224 621 14 94 77</li>
 										 <li><i class="fa-solid fa-envelope-open-text"></i> contact@bitzenon.com</li>
