@@ -44,6 +44,15 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+	 const ROLE_USER = 'user';
+    const ROLE_ADMIN = 'admin';
+
+    // Check if the user is an admin
+    public function isAdmin()
+    {
+        return $this->role === self::ROLE_ADMIN;
+    }
+
     public function articles(): HasMany
     {
         return $this->hasMany(Article::class);

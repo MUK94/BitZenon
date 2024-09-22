@@ -47,7 +47,8 @@ class PagesController extends Controller
         $articles = Article::all();
         $categories = Category::all();
         $topics = Topic::all();
-        return view('pages.services', compact('title', 'articles', 'categories', 'topics'));
+		  $testimonials =Testimonial::all();
+        return view('pages.services', compact('title', 'testimonials', 'articles', 'categories', 'topics'));
     }
 
     public function contact(): View

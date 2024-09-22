@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
 		Blade::directive('excerpt', function ($expression) {
-			return "<?php echo Str::limit($expression, 30, '...'); ?>";
+			return "<?php echo Str::limit($expression, 50, '...'); ?>";
 	  });
     }
 }

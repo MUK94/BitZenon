@@ -5,6 +5,7 @@
     @include('inc.head')
     <title>Home | BitZenon</title>
 
+	 @livewireStyles
 </head>
 
 <body>
@@ -16,6 +17,7 @@
     </main>
     <!-- Footer -->
     @include('inc.footer')
+	 @livewireScripts
 </body>
 
 </html>

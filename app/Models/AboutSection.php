@@ -13,6 +13,10 @@ class AboutSection extends Model
 		'intro',
 		'mission',
 		'goal',
-		'expertise'
+		'expertise',
+		'image',
+		'description',
+		'title',
+		'name',
 	 ];
 }

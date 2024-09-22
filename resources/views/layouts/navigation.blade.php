@@ -42,15 +42,17 @@
                         <li><a href="/admin/profile"
                                 class="mt-3 {{ request()->is('admin/profile') ? ' text-blue-800 font-semibold' : '' }} ">Profile</a>
                         </li>
-                        <li><a href="/dashboard"
-                                class="{{ request()->is('dashboard') ? ' text-blue-700 font-semibold' : '' }} ">Dashboard</a>
-                        </li>
+                        @if (Auth::user()->role == 'admin')
+                            <li><a href="/dashboard"
+                                    class="{{ request()->is('dashboard') ? ' text-blue-700 font-semibold' : '' }} ">Dashboard</a>
+                            </li>
+                        @endif
                         <li>
                             <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                                    class="font-light">
+                                    class="font-light pb-4">
                                     {{ __('Logout') }}
                                 </button>
                             </form>

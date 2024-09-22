@@ -19,7 +19,7 @@
         @endforeach
     </div>
     <div class="second-row grid grid-flow-row grid-cols-3 gap-6">
-        @foreach ($latestArticles->slice(2, 6) as $article)
+        @foreach ($latestArticles->slice(1, 6) as $article)
             <div class="post-blog shadow-sm rounded-lg">
                 <a href="/blog/{{ $article->slug }}" class="img-box">
                     <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}"  class="img-box">

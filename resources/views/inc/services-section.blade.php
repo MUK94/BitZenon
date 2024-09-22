@@ -1,6 +1,6 @@
 <div class="services-wrapper">
     {{-- Services --}}
-    <div class="content-layout custom-blue-color service-cards flex lg:flex-row flex-col lg:justify-center items-center p-4 bg-slate-100 min-h-screen">
+    <div class="content-layout  service-cards flex lg:flex-row flex-col lg:justify-center items-center bg-slate-100 min-h-screen">
         <div class="lg:w-[22rem] bg-white w-full border-2 lg:border-r-0 border-gray-200 p-5 rounded-2xl lg:rounded-r-none">
             <div class="pb-3 mb-5 border-b border-gray-200">
                 <div class="text-xs text-slate-800 mb-2">All BUSINESSES</div>
@@ -202,8 +202,7 @@
 										<div
 											class="testimony-box w-full mx-auto h-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
 											<div class="w-full flex mb-4 items-center">
-												<div
-														class="overflow-hidden rounded-full w-10 h-10 border border-gray-200">
+												<div class="overflow-hidden rounded-full w-10 h-10 border border-gray-200">
 														<img src="{{asset('storage/'.$testimony->image)}}" alt="{{$testimony->name}}" class="w-10 h-10 object-cover">
 												</div>
 												<div class="flex-grow pl-3">
@@ -212,7 +211,7 @@
 												</div>
 											</div>
 											<div class="w-full">
-												<p class="text-sm leading-tight">
+												<p class="leading-tight text-sm">
 													<span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
 														{{$testimony->description}}
 													<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>

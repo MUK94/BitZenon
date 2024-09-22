@@ -82,7 +82,6 @@
 
 .detail-container .detail-sidebar {
 	border-radius: 0.75rem;
-	padding: 1rem 0.5rem;
 	flex: 3;
 	justify-content: center;
 }
@@ -146,46 +145,4 @@
 	font-size: var(--font_icon);
 	color: var(--color5);
 	margin-right: 0.5rem;
-}
-
-/* User Review */
-
-.review-container .user {
-	display: flex;
-	align-items: center;
-}
-
-.review-container .review {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.review-container .user {
-	margin-right: 0.5rem;
-}
-
-.review-container .user img {
-	width: 60px;
-	height: 50px;
-	border-radius: 50%;
-}
-
-.review-container blockquote {
-	text-align: center;
-	font-weight: 300;
-	font-size: 1rem;
-}
-
-.similar-articles {
-	margin-top: 5rem;
-}
-
-.similar-articles .card {
-	width: 280px;
-}
-
-.similar-articles img {
-	max-width: 100%;
-	margin-bottom: 0.75rem;
 }

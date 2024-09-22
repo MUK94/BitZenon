@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -16,7 +17,8 @@ class ServiceController extends Controller
     {
         $title = "Manage Services";
         $services = Service::latest()->get();
-        return view('admin.services.index', compact('title', 'services'));
+		  $testimonials =Testimonial::all();
+        return view('admin.services.index', compact('title', 'services', 'testimonials'));
     }
 
     /**

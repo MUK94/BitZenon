@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutSection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AboutSectionController extends Controller
 {
@@ -12,10 +13,9 @@ class AboutSectionController extends Controller
      */
     public function index()
     {
-      $title = 'About Section';
-		$aboutSection = AboutSection::all();
-		return view('admin.about-section.index', compact('title', 'aboutSection'));
-
+        $title = 'About Section';
+        $aboutSection = AboutSection::all();
+        return view('admin.about-section.index', compact('title', 'aboutSection'));
     }
 
     /**
@@ -31,16 +31,33 @@ class AboutSectionController extends Controller
      */
     public function store(Request $request)
     {
-      $validated = $request->validate([
-			'intro'=> 'required',
-			'mission'=> 'required',
-			'expertise'=> 'required',
-			'goal'=> 'required',
-		]);
+        $validated = $request->validate([
+            'intro' => 'required',
+            'mission' => 'required',
+            'expertise' => 'required',
+            'goal' => 'required',
+            'description' => 'required',
+				'title' => 'required|string',
+            'name' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate image
+        ]);
 
-		AboutSection::create($validated);
+        $aboutSection = AboutSection::create($validated);
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $imageName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '_about_' . time() . '.' . $file->getClientOriginalExtension();
 
-		return redirect()->route('about-section.index')->with('success', 'About Section successfully added');
+            Storage::disk('public')->put(
+                $imageName,
+                file_get_contents($file->getRealPath())
+            );
+
+            $aboutSection->image = $imageName;
+            $aboutSection->save();
+        }
+
+        return redirect()->route('about-section.index')->with('success', 'About Section successfully added');
     }
 
     /**
@@ -56,8 +73,8 @@ class AboutSectionController extends Controller
      */
     public function edit(AboutSection $aboutSection)
     {
-		$title = 'Update About Section';
-		return view('admin.about-section.edit', compact('title', 'aboutSection'));
+        $title = 'Update About Section';
+        return view('admin.about-section.edit', compact('title', 'aboutSection'));
     }
 
     /**
@@ -65,17 +82,32 @@ class AboutSectionController extends Controller
      */
     public function update(Request $request, AboutSection $aboutSection)
     {
-		$validated = $request->validate([
-			'intro'=> 'required',
-			'mission'=> 'required',
-			'expertise'=> 'required',
-			'goal'=> 'required',
-		]);
+        $validated = $request->validate([
+            'intro' => 'required',
+            'mission' => 'required',
+            'expertise' => 'required',
+            'goal' => 'required',
+				'description' => 'required',
+				'title' => 'required|string',
+            'name' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate image
+        ]);
 
-		$aboutSection->update($validated);
+        $aboutSection->update($validated);
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $imageName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '_about_' . time() . '.' . $file->getClientOriginalExtension();
 
-		return redirect()->route('about-section.index')->with('success', 'About Section successfully updated');
+            Storage::disk('public')->put(
+                $imageName,
+                file_get_contents($file->getRealPath())
+            );
 
+            $aboutSection->image = $imageName;
+            $aboutSection->save();
+        }
+        return redirect()->route('about-section.index')->with('success', 'About Section successfully updated');
     }
 
     /**
@@ -83,7 +115,11 @@ class AboutSectionController extends Controller
      */
     public function destroy(AboutSection $aboutSection)
     {
+        if ($aboutSection->image) {
+            Storage::disk('public')->delete($aboutSection->image); // Delete the image from storage
+        }
+
         $aboutSection->delete();
-		  return redirect()->route('about-section.index')->with('success', 'About Section successfully removed');
+        return redirect()->route('about-section.index')->with('success', 'About Section successfully removed');
     }
 }

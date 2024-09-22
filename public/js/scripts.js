@@ -119,5 +119,5 @@ document.getElementById('category').addEventListener('change', function() {
 
 
 
+// Comment Dropdown
 
-// Testimonial slider

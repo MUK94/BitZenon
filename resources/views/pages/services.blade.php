@@ -6,12 +6,64 @@
             <div class="headings">
                 <h2>Browse our <span>Services</span></h2>
             </div>
-            <div class="service-desc mt-4 py-4 text-center">
-                <p class="pl-4 italic text-xl text-gray-700">
+            <div class="service-desc">
+                <p class="italic text-xl text-gray-700">
                     "Tailored to fit your digital needs, contact us and get a quote today"
                 </p>
             </div>
-			</div>
-		</div>
-		@include('inc.services-section')
+        </div>
+        <div class="service-card-container mb-16">
+            <div class="flex justify-between gap-1">
+                <div class="bg-gray-800 cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
+                    <div class="flex items-center space-x-1">
+                        <div class="custom-blue-color p-2 rounded-full">
+                            <i class="text-white fa-solid fa-pen-ruler"></i>
+                        </div>
+                        <h3 class="text-lg text-gray-50 font-bold">Custom Solutions</h3>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">Tailored to fit your unique business needs with precision.</p>
+                </div>
+
+                <div class="bg-gray-800 cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
+                    <div class="flex items-center space-x-1">
+                        <div class="bg-pink-500 p-2 rounded-full">
+                            <i class="text-white fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-gray-50 text-lg font-bold">Long-Term Partnerships</h3>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">
+                        Supporting your growth with reliable, ongoing collaboration.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
+                    <div class="flex items-center space-x-1">
+                        <div class="bg-gray-500 p-2 rounded-full">
+                            <i class="text-white fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-lg text-gray-50 font-bold">UI/UX Oriented</h3>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-300">
+                        Advanced technology paired with a personal, client-focused approach.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
+                    <div class="flex items-center space-x-1">
+                        <div class="bg-green-600 p-2 rounded-full">
+                            <i class="text-gray-50 fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-white text-lg font-bold">24/7 Support</h3>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">Always available, ensuring your business runs smoothly at all
+                        times.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div>
+        @include('inc.services-section')
+    </div>
 @endsection

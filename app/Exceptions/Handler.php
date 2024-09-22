@@ -3,7 +3,9 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Throwable;
+use App\Models\Category;
 
 class Handler extends ExceptionHandler
 {
@@ -26,5 +28,17 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof HttpExceptionInterface) {
+            if ($exception->getStatusCode() == 404) {
+					$categories = Category::all();
+                return response()->view('errors.404', compact('categories'), 404);
+            }
+        }
+
+        return parent::render($request, $exception);
     }
 }
