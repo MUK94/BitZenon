@@ -19,7 +19,7 @@
 				<div>
 
 					<div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5">
-						@foreach ($latestArticles->slice(1,4) as $article)
+						@foreach ($latestArticles->take(3) as $article)
 							 <div class="old-post shadow-sm rounded-lg">
 								  <a href="/blog/{{ $article->slug }}">
 										<img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}"
@@ -50,7 +50,7 @@
             <div class="my-12 py-12">
                 <h3 class="text-2xl py-6 custom-blue-color-1">Other Posts you May Like</h3>
                 <div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5">
-                    @foreach ($articles as $article)
+                    @foreach ($popularArticles as $article)
                         <div class="old-post shadow-sm rounded-lg">
                             <a href="/blog/{{ $article->slug }}">
                                 <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}"

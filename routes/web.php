@@ -43,13 +43,16 @@ Route::get('/categories/{category:slug}', function (Category $category) {
     // Paginate the articles associated with the category
     $articles = $category->articles()->paginate(10);
     $latestArticles = $category->articles()->paginate(10);
+	 $popularPosts =  Article::orderBy('view_count', 'desc')->take(6)->get();
+	 $popularArticles = $popularPosts->diff($latestArticles->take(3));
 
     return view('articles.index', [
         'articles' => $articles,
         'title' => $category->name,
         'categories' => Category::all(),
 		  'latestArticles'=> $latestArticles,
-		  'popularPosts'=> Article::orderBy('view_count', 'desc')->take(6)->get(),
+		  'popularPosts'=> $popularArticles,
+		  'popularArticles'=> $popularArticles,
         'topics' => Topic::all(),
     ]);
 });
@@ -79,7 +82,6 @@ Route::middleware('auth')->group(function () {
         // Articles
         Route::get('/admin/articles/', [AdminPanelController::class, 'articles'])->name('admin.articles.index');
         Route::resource('admin/articles', ArticleListingsController::class)->only(['store', 'update', 'edit', 'destroy']);
-
         // Categories
         Route::resource('admin/categories', CategoryController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
 

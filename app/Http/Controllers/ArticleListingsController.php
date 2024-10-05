@@ -22,6 +22,7 @@ class ArticleListingsController extends Controller
         $articles = Article::with('user')->latest()->paginate(10);
         $latestArticles = Article::orderBy('created_at', 'desc')->take(5)->get();
         $popularPosts = Article::orderBy('view_count', 'desc')->take(6)->get();
+		  $popularArticles = $popularPosts->diff($latestArticles->take(3));
         $topics = Topic::all();
         $categories = Category::all();
 
@@ -32,7 +33,7 @@ class ArticleListingsController extends Controller
         //     ->orderBy('articles.id', 'DESC');
         // })->get();
 
-        return view('articles.index', compact('title', 'popularPosts', 'articles', 'latestArticles', 'topics', 'categories'));
+        return view('articles.index', compact('title', 'popularPosts',  'popularArticles', 'articles', 'latestArticles', 'topics', 'categories'));
 
     }
 

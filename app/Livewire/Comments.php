@@ -9,7 +9,7 @@ use Livewire\Component;
 class Comments extends Component
 {
     public $body;
-    public $article;
+    public $articleId; // Renamed for clarity
     public $commentId; // For edit
     public $comments;
     public $commentCount;
@@ -19,16 +19,17 @@ class Comments extends Component
     ];
 
     // Load comments when the component is initialized
-    public function mount()
+    public function mount($articleId)
     {
+        $this->articleId = $articleId; // Corrected to use articleId
         $this->loadComments();
     }
 
     // Fetch the comments from the database
     public function loadComments()
     {
-        $this->comments = Comment::latest()->get(); // Adjust query as needed
-        $this->commentCount = Comment::count();
+        $this->comments = Comment::where('article_id', $this->articleId)->latest()->get(); // Corrected variable name
+        $this->commentCount = Comment::where('article_id', $this->articleId)->count(); // Corrected variable name
     }
 
     // Create a new comment
@@ -40,7 +41,7 @@ class Comments extends Component
         Comment::create([
             'body' => $this->body,
             'user_id' => Auth::id(),
-				'article_id'=> $this->article->article_id
+            'article_id' => $this->articleId // Corrected variable name
         ]);
 
         // Reset the input field and refresh comments
@@ -95,10 +96,12 @@ class Comments extends Component
             session()->flash('message', 'Comment deleted successfully!');
         }
     }
+
     public function render()
     {
-        $comments = Comment::all();
-        $commentCount = Comment::count();
-        return view('livewire.comments', compact('comments', 'commentCount'));
+        return view('livewire.comments', [
+            'comments' => $this->comments,
+            'commentCount' => $this->commentCount,
+        ]);
     }
 }

@@ -5,7 +5,7 @@
         <div class="detail-container">
             <div class="row">
                 <div class="detail-col">
-                    <div class="breadcumb">
+                    <div class="breadcumb bg-gray-100 px-2 py-1 text-sm">
                         <a href="/">Home </a>
                         <i class="fa-solid fa-angle-right"></i>
                         <a href="/blog/">Articles </a>
@@ -16,11 +16,12 @@
                         <a href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
                     </div>
                     <h2 class="my-2">{{ $article->title }}</h2>
-                    <div class="headlines flex items-center pb-4 mx-1">
+                    <div class="headlines flex items-center pb-6 mx-1">
                         <span class="text-gray-600 text-sm">{{ $article->created_at->format('F j, Y') }} </span>
                         <div class="share-btns text-sm mx-4 text-gray-600">
-                            <a href="/blog/{{ $article->slug }}" class="">Share Article <i
-                                    class="text-sm fa-solid fa-link"></i></a>
+                            <a href="/blog/{{ $article->slug }}" class="">
+										Share Article <i class="text-sm fa-solid fa-link"></i>
+									</a>
                         </div>
                     </div>
                     <div class="image-box">
@@ -33,7 +34,7 @@
                     {{-- Livewire Comment Component --}}
                     <div class="comments">
                         <div class=" bg-white rounded-lg shadow-sm py-6">
-									 <livewire:comments :article="$article" />
+									 <livewire:comments :articleId="$article->id" />
                         </div>
                     </div>
                 </div>

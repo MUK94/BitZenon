@@ -1,17 +1,18 @@
 <div class="services-wrapper">
     {{-- Services --}}
-    <div class="content-layout  service-cards flex lg:flex-row flex-col lg:justify-center items-center bg-slate-100 min-h-screen">
-        <div class="lg:w-[22rem] bg-white w-full border-2 lg:border-r-0 border-gray-200 p-5 rounded-2xl lg:rounded-r-none">
+    <div
+        class="content-layout  service-cards flex lg:flex-row flex-col lg:justify-center items-center bg-slate-100 min-h-screen">
+        <div
+            class="lg:w-[22rem] bg-white w-full border-2 lg:border-r-0 border-gray-200 p-5 rounded-2xl lg:rounded-r-none">
             <div class="pb-3 mb-5 border-b border-gray-200">
                 <div class="text-xs text-slate-800 mb-2">All BUSINESSES</div>
                 <h2 class="text-3xl m-0 custom-blue-color-1 ">Full-Stack Web Development</h2>
             </div>
             <div class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-
                     <path
                         d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Custom design: Laravel & Diango
+                </svg>Custom design: Laravel (TALL STACK)
             </div>
             <div class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -119,9 +120,11 @@
                             d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                     </svg>
                 </button>
-                <div class="text-xs mt-8 text-gray-300 line-height-2">Microsoft Power Platform empowers businesses to
+                <div class="text-xs mt-8 text-gray-300 line-height-2">
+                    Microsoft Power Platform empowers businesses to
                     achieve their true
-                    digital transformation</div>
+                    digital transformation
+                </div>
             </div>
         </div>
         <div
@@ -198,27 +201,33 @@
                     </div>
                     <div class="-mx-3 md:flex items-start">
                         <div class="px-3 testimonial-layout gap-2">
-									@foreach ($testimonials as $testimony)
-										<div
-											class="testimony-box w-full mx-auto h-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-											<div class="w-full flex mb-4 items-center">
-												<div class="overflow-hidden rounded-full w-10 h-10 border border-gray-200">
-														<img src="{{asset('storage/'.$testimony->image)}}" alt="{{$testimony->name}}" class="w-10 h-10 object-cover">
-												</div>
-												<div class="flex-grow pl-3">
-														<h6 class="font-bold text-sm uppercase text-gray-600">{{$testimony->name}}</h6>
-														<p><a href="{{$testimony->linkedin}}" target="_blank" class="custom-blue-color-1 font-semibold" >{{$testimony->company}}</a></p>
-												</div>
-											</div>
-											<div class="w-full">
-												<p class="leading-tight text-sm">
-													<span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
-														{{$testimony->description}}
-													<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
-												</p>
-											</div>
-										</div>
-									@endforeach
+                            @foreach ($testimonials as $testimony)
+                                <div
+                                    class="testimony-box w-full mx-auto h-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                                    <div class="w-full flex mb-4 items-center">
+                                        <div class="overflow-hidden rounded-full w-10 h-10 border border-gray-200">
+                                            <img src="{{ asset('storage/' . $testimony->image) }}"
+                                                alt="{{ $testimony->name }}" class="w-10 h-10 object-cover">
+                                        </div>
+                                        <div class="flex-grow pl-3">
+                                            <h6 class="font-bold text-sm uppercase text-gray-600">
+                                                {{ $testimony->name }}</h6>
+                                            <p><a href="{{ $testimony->linkedin }}" target="_blank"
+                                                    class="custom-blue-color-1 font-semibold">{{ $testimony->company }}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full">
+                                        <p class="leading-tight text-sm">
+                                            <span
+                                                class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>
+                                            {{ $testimony->description }}
+                                            <span
+                                                class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
 
                     </div>

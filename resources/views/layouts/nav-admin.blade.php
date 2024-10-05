@@ -24,10 +24,10 @@
                     @auth
                         <div class="nav-user-auth nav-cat-dropdown">
                             <button class="dropdown-link" onclick="event.preventDefault();">
-                                <div class="flex items-center justify-center font-normal">
+                                <div class="flex items-center ml-4 justify-center font-normal">
                                     {{ auth()->user()->getInitials() }}
                                 </div>
-                                <i class="fa-solid fa-angle-down"></i>
+                                <i class="text-sm fa-solid fa-angle-down"></i>
                             </button>
                             <div class="dropdown-content">
                                 <ul class="drop-user bg-white pb-4">
