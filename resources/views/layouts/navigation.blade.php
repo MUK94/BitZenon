@@ -73,7 +73,9 @@
         @endguest --}}
 
         <div class="btn-booking">
-            <a href="/booking" class=""><i class="fa-regular fa-calendar"></i> Book a Meeting</a>
+            <button wire:click.prevent="openForm" class="custom-blue-color px-4 shadow-sm hover:bg-blue-600 py-2 rounded flex items-center">
+                <i class="text-white pr-2 fa-solid fa-money-check-dollar"></i> Get a Quote
+            </button>
         </div>
 
     </div>
