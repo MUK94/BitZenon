@@ -1,17 +1,24 @@
 <div class="latest-container">
     <div class="first-row flex justify-between gap-4">
         @foreach ($latestArticles->take(2) as $article)
-            <div class="post-blog shadow-sm rounded-lg">
+            <div class="old-post shadow-sm rounded-lg">
                 <a href="/blog/{{ $article->slug }}">
-                    <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}" class="img-box">
+                    <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}" class="max-w-full img-box">
                 </a>
-					 <div class="tags my-4 mx-2">
-						  <a href="/categories/{{ $article->category->slug }}" class=""><span>{{ $article->category->name }}</span></a>
-					 </div>
-                <div class="description">
-                    <div class="text">
+                <div class="description mt-2">
+                    <div class="flex justify-between">
+                        <div class="old-tag px-3">
+                            <a href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
+                        </div>
+                        <div class="meta-data flex px-2  mb-2">
+                            <span class="mr-2 text-gray-400"> {{ $article->created_at->diffForHumans() }}</span>
+                            <span class="mr-2 text-gray-400"><i class="text-gray-400 fa-regular fa-clock"></i> {{ $article->read_time }} min read</span>
+                            <span class="mr-2 text-gray-400"> <i class="text-gray-400 fa-regular fa-eye"></i> {{ $article->view_count }}</span>
+                        </div>
+                    </div>
+                    <div class="text px-2 pb-2">
                         <a href="/blog/{{ $article->slug }}">
-                            <h3>{{ $article->title }}</h3>
+                            <h3 class="text-xl">{{ $article->title }}</h3>
                         </a>
                     </div>
                 </div>
@@ -19,18 +26,23 @@
         @endforeach
     </div>
     <div class="second-row grid grid-flow-row grid-cols-3 gap-6">
-        @foreach ($latestArticles->slice(1, 6) as $article)
-            <div class="post-blog shadow-sm rounded-lg">
-                <a href="/blog/{{ $article->slug }}" class="img-box">
-                    <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}"  class="img-box">
+        @foreach ($latestArticles->slice(2, 6) as $article)
+            <div class="old-post shadow-sm rounded-lg">
+                <a href="/blog/{{ $article->slug }}">
+                    <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}" class="max-w-full img-box">
                 </a>
-					 <div class="tags my-4 mx-2">
-						  <a href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
-					 </div>
-                <div class="description">
-                    <div class="text">
+                <div class="description mt-3">
+                    <div class="old-tag px-1 mb-1">
+                        <a href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
+                    </div>
+                    <div class="meta-data flex px-1  mb-2">
+                        <span class="mr-2 text-gray-400"> {{ $article->created_at->diffForHumans() }}</span>
+                        <span class="mr-2 text-gray-400"><i class="text-gray-400 fa-regular fa-clock"></i> {{ $article->read_time }} min read</span>
+                        <span class="mr-2 text-gray-400"><i class="text-gray-400 fa-regular fa-eye"></i> {{ $article->view_count }}</span>
+                    </div>
+                    <div class="text px-1 pb-2">
                         <a href="/blog/{{ $article->slug }}">
-                            <h3>{{ $article->title }}</h3>
+                            <h3 class="text-xl">{{ $article->title }}</h3>
                         </a>
                     </div>
                 </div>

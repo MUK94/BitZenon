@@ -2,13 +2,56 @@
 	display: flex;
 	margin-top: 2.5rem;
 	justify-content: space-between;
-	gap: 3.5rem;
+	gap:2rem;
+}
+
+/* ------------- Hero Image ----------------- */
+.hero-container {
+	position: relative;
+	display: inline-block;
+}
+
+.hero-container img {
+	width: 100%;
+	height: auto;
 }
 
 .landing .left h1 {
-	font-size: 1.75rem;
-	margin-bottom: 1rem;
-	color: var(--color1);
+	font-family:  "Space Grotesk", sans-serif;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 3.3rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	z-index: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 2px solid rgb(59, 81, 244);
+}
+/* Typing effect animation */
+.typing-effect {
+    width: 0;
+    animation: typing 5s steps(18, end), blink-caret 0.65s step-end infinite;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+/* Typing animation */
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    60% { border-color: rgb(4, 8, 243); }
 }
 
 .landing .left {
@@ -56,6 +99,8 @@
 .landing .right .side-articles p {
 	margin: 0.5rem 0;
 }
+
+
 
 
 /*--------------Sidebar Slider-------------*/
@@ -172,6 +217,11 @@
 	padding: 1.5rem;
 }
 
+/* Buttons */
+.about-container .btns i {
+	font-size: var(--font_icon);
+	color: var(--color5);
+}
 
 /* ----------- Latest Posts ------------ */
 

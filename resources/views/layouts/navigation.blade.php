@@ -1,8 +1,10 @@
 <nav class="navbar content-layout">
     <div class="nav-logo">
         <a href="/" class="logo">
-            <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo">
-            {{-- <h1>BitZenon</h1> --}}
+            {{-- <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo"> --}}
+            <div class="flex ">
+					<p class="font-bold text-3xl custom-blue-color-1">Badroufy</p>
+				</div>
         </a>
     </div>
     <div class="nav-cat-dropdown">
@@ -13,15 +15,16 @@
             <li><a href="/"
                     class="{{ request()->is('/') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Home</a>
             </li>
-            <li><a href="/about"
-                    class="{{ request()->is('about') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">About</a>
-            </li>
             <li><a href="/services"
-                    class="{{ request()->is('services') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Services</a>
+					class="{{ request()->is('services') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Services</a>
             </li>
+
             <li><a href="/blog"
-                    class="{{ request()->is('blog') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Blog</a>
+					class="{{ request()->is('blog') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Blog</a>
             </li>
+				{{-- <li><a href="/gallery"
+						  class="{{ request()->is('gallery') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Gallery</a>
+				</li> --}}
             {{-- <li><a href="/podcasts"
                     class="{{ request()->is('podcasts') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Podcasts</a>
             </li> --}}

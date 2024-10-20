@@ -20,7 +20,7 @@
 								  <p class="mb-2 mr-6">
 										{{ $about->description }}
 								  </p>
-								  <div class="btns flex gap-2">
+								  <div class="btns flex gap-1">
 										<button class="btn btn-primary about-btn my-4">Hire Me</button>
 										<button class="btn btn-secondary about-btn my-4">Download CV</button>
 										<button class="btn btn-secondary about-btn my-4">Book a Meeting</button>

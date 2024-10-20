@@ -33,6 +33,7 @@ Route::get('/articles/search', SearchController::class);
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('pages.services');
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
+Route::get('/gallery', [PagesController::class, 'gallery'])->name('pages.gallery');
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
 // Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.index');
 Route::get('/blog', [ArticleListingsController::class, 'index'])->name('articles.index');
@@ -54,6 +55,7 @@ Route::get('/categories/{category:slug}', function (Category $category) {
 		  'popularPosts'=> $popularArticles,
 		  'popularArticles'=> $popularArticles,
         'topics' => Topic::all(),
+		  'noPostsMessage' => $articles->isEmpty() ? 'No posts found for this category.' : null,
     ]);
 });
 // Podcast Topics routes

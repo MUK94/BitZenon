@@ -30,15 +30,26 @@ class PagesController extends Controller
         return view('home', compact('title', 'heroSection', 'aboutSection', 'latestArticles', 'mostPopular', 'categories', 'testimonials'));
     }
 
-     public function about(): View
+   //   public function about(): View
+   //   {
+   //       $title = 'About';
+	// 		$aboutSection = AboutSection::all();
+   //       $articles = Article::all();
+   //       $categories = Category::all();
+   //       $topics = Topic::all();
+	// 		$services = Service::all();
+   //       return view('pages.about', compact('title','articles', 'aboutSection', 'categories', 'topics', 'services'))->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
+   //   }
+
+	  public function gallery(): View
      {
-         $title = 'About';
+         $title = 'Gallery';
 			$aboutSection = AboutSection::all();
          $articles = Article::all();
          $categories = Category::all();
          $topics = Topic::all();
 			$services = Service::all();
-         return view('pages.about', compact('title','articles', 'aboutSection', 'categories', 'topics', 'services'))->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
+         return view('pages.gallery', compact('title','articles', 'aboutSection', 'categories', 'topics', 'services'))->with(['title' => $title, 'articles' => $articles, 'categories' => $categories]);
      }
 
     public function services(): View
