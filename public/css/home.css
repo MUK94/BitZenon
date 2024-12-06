@@ -6,10 +6,6 @@
 }
 
 /* ------------- Hero Image ----------------- */
-.hero-container {
-	position: relative;
-	display: inline-block;
-}
 
 .hero-container img {
 	width: 100%;
@@ -18,48 +14,16 @@
 
 .landing .left h1 {
 	font-family:  "Space Grotesk", sans-serif;
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	color: white;
-	font-size: 3.3rem;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-	z-index: 1;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 2px solid rgb(59, 81, 244);
-}
-/* Typing effect animation */
-.typing-effect {
-    width: 0;
-    animation: typing 5s steps(18, end), blink-caret 0.65s step-end infinite;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
 }
 
-/* Typing animation */
-@keyframes typing {
-    0% { width: 0; }
-    50% { width: 100%; }
-    50% { width: 100%; }
-    100% { width: 0; }
-}
-
-/* Blinking cursor animation */
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    60% { border-color: rgb(4, 8, 243); }
-}
 
 .landing .left {
-	flex: 7.2;
+	flex: 7;
 }
 
 .landing .right {
-	flex: 4.8;
+	flex: 5;
 }
 
 .landing  img {
@@ -260,7 +224,12 @@
 	color: var(--color1);
 }
 
-.services-wrapper button:hover {
+.middle-card button:hover {
+	background-color: var(--color6);
+	border: 1px solid var(--color1);
+}
+
+.services-wrapper .side-card button:hover {
 	background-color: var(--color9);
 }
 .services-wrapper button svg {

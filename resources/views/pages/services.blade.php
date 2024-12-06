@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>{{ $title }} | BitZenon </title>
+<title>{{ $title }} | {{ config('app.name') }} </title>
 @section('content')
     <div class="content-layout">
         <div class="container article-post">
@@ -27,7 +27,7 @@
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
                     <div class="flex items-center space-x-1">
                         <div class="bg-pink-500 p-2 rounded-full">
-									<i class="text-white fa-solid fa-people-roof"></i>
+                            <i class="text-white fa-solid fa-people-roof"></i>
                         </div>
                         <h3 class="text-lg font-bold">Partnerships</h3>
                     </div>
@@ -51,7 +51,7 @@
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
                     <div class="flex items-center space-x-1">
                         <div class="bg-green-600 p-2 rounded-full">
-                            <i class="fa-solid fa-headset"></i>
+                            <i class="text-white fa-solid fa-headset"></i>
                         </div>
                         <h3 class="text-lg font-bold">24/7 Support</h3>
                     </div>
@@ -62,8 +62,7 @@
             </div>
 
         </div>
-    </div>
-    <div>
         @include('inc.services-section')
+        @include('inc.testimonials')
     </div>
 @endsection

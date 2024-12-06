@@ -67,6 +67,10 @@ img {
 	color: var(--color1);
 }
 
+.secondary-color {
+	color: var(--color2);
+}
+
 .dark-blue-color {
 	background-color: #040427f8;
 }
@@ -392,6 +396,15 @@ h2 {
 		rgba(240, 238, 238, 0.06) 0px 0px 0px 1px;
 }
 
+
+/* HEADER */
+
+
+/* .header-container{
+	background-color: #f8f4ee;
+	background-color: #F4EBD0;
+} */
+
 /* Mid Nav & Heading */
 .banner {
 	display: flex;
@@ -563,13 +576,9 @@ h2 {
 }
 
 
-
-
-
 /* Footer  */
-
 .footer {
-	background-color: var(--color4);
+	background-color: var(--footer-bg);
 	padding-bottom: 0.5rem;
 }
 

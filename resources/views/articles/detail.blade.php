@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>{{ $title }} | BitZenon </title>
+<title>{{ $title }} | {{ config('app.name') }} </title>
 @section('content')
     <div class="listings-container content-layout">
         <div class="detail-container">
@@ -20,8 +20,8 @@
                         <span class="text-gray-600 text-sm">{{ $article->created_at->format('F j, Y') }} </span>
                         <div class="share-btns text-sm mx-4 text-gray-600">
                             <a href="/blog/{{ $article->slug }}" class="">
-										Share Article <i class="text-sm fa-solid fa-link"></i>
-									</a>
+                                Share Article <i class="text-sm fa-solid fa-link"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="image-box">
@@ -34,7 +34,7 @@
                     {{-- Livewire Comment Component --}}
                     <div class="comments">
                         <div class=" bg-white rounded-lg shadow-sm py-6">
-									 <livewire:comments :articleId="$article->id" />
+                            <livewire:comments :articleId="$article->id" />
                         </div>
                     </div>
                 </div>

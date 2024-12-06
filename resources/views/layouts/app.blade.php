@@ -3,7 +3,7 @@
 
 <head>
     @include('inc.head')
-    <title>Home | BitZenon</title>
+    <title>Home | {{ config('app.name') }}</title>
 
     @livewireStyles
 </head>
@@ -18,7 +18,7 @@
     <!-- Footer -->
     @include('inc.footer')
     @livewireScripts
-	 @livewire('quote-form')
+    @livewire('quote-form')
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     <div class="container about">
         <div class="box">
             <div class="heading">
-					<i class="fa-solid fa-graduation-cap"></i>
+                <i class="fa-solid fa-graduation-cap"></i>
                 <h3>Education</h3>
             </div>
             <p>
@@ -27,7 +27,7 @@
         <div class="box">
             <div class="heading">
                 <i class="fa-solid fa-asterisk"></i>
-                <h3> Why Badroufy ?</h3>
+                <h3> Why {{ config('app.name') }} ?</h3>
             </div>
             <p>
                 {{ $about->goal }}</p>

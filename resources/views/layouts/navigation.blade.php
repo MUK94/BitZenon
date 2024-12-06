@@ -3,7 +3,9 @@
         <a href="/" class="logo">
             {{-- <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo"> --}}
             <div class="flex ">
-					<p class="font-bold text-3xl custom-blue-color-1">Badroufy</p>
+					<p class="font-bold text-3xl custom-blue-color-1">
+						{{ config('app.name') }}
+					</p>
 				</div>
         </a>
     </div>
@@ -15,12 +17,11 @@
             <li><a href="/"
                     class="{{ request()->is('/') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Home</a>
             </li>
+				<li><a href="/blog"
+					class="{{ request()->is('blog') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Blog</a>
+            </li>
             <li><a href="/services"
 					class="{{ request()->is('services') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Services</a>
-            </li>
-
-            <li><a href="/blog"
-					class="{{ request()->is('blog') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Blog</a>
             </li>
 				{{-- <li><a href="/gallery"
 						  class="{{ request()->is('gallery') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Gallery</a>

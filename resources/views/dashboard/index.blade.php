@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-<title>{{ $title }} | BitZenon </title>
+<title>{{ $title }} | {{ config('app.name') }}  </title>
 @section('content')
     <div class="px-1">
         <div class="overflow-hidden shadow-sm sm:rounded-lg">

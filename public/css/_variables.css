@@ -1,22 +1,24 @@
 :root {
-	/* --color1: #0d5ac5; */
-	--color1: #110ec8;
-	--color2: #5f90cd;
-	--color3: #f5f5fe;
-	--color4: #17171a;
-	--color5: #fcfbfc;
-	--color6: #fffeff;
-	--color7: #0a1362;
-	--color8: #fdfbff;
-	--color9: #0f0da1;
+   /* --color1: #0d5ac5; */
+   --color1: #110ec8;
+   --color2: #5f90cd;
+   --color3: #f5f5fe;
+   --color4: #17171a;
+   --color5: #fcfbfc;
+   --color6: #fffeff;
+   --color7: #0a1362;
+   --color8: #fdfbff;
+   --color9: #0f0da1;
+
+	--footer-bg:#17171a;
 
 
 
-	--font_body: 1rem;
-	--article-font: 1rem;
+   --font_body: 1rem;
+   --article-font: 1rem;
 
-	--font_icon: 1.1rem;
-	--font-heading-1: 3.1rem;
-	--font-heading-2: 2.7rem;
-	--font-heading-3: 1.3rem;
+   --font_icon: 1.1rem;
+   --font-heading-1: 3.1rem;
+   --font-heading-2: 2.7rem;
+   --font-heading-3: 1.3rem;
 }
