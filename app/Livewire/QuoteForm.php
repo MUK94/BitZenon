@@ -7,17 +7,19 @@ use Livewire\Component;
 class QuoteForm extends Component
 {
     public $name;
-    public $projectType; // Type of Project
+    public $projectType;
     public $email;
-    public $scope; // Size of Project
+	 public $phone;
+    public $scope;
     public $description;
 
     // Validation rules
     protected $rules = [
         'name' => 'required|string|max:100',
-        'projectType' => 'required|in:8,9,1,6,2,3,5,7', // Only valid project types allowed
+        'projectType' => 'required|in:8,9,1,6,2,3,5,7',
         'email' => 'required|email',
-        'scope' => 'required|in:small,medium,large', // Only valid scopes allowed
+		  'phone' => 'required|tel',
+        'scope' => 'required|in:small,medium,large',
         'description' => 'required',
     ];
 

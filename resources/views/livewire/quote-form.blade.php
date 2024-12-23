@@ -2,8 +2,7 @@
     class="hidden fixed inset-0 bg-gray-600 bg-opacity-75 justify-center items-center z-50">
     <div class="bg-white p-8 rounded shadow-lg relative">
         <div class="flex mb-4 items-center flex-col justify-between">
-            <h2 class="mb-2 custom-blue-color-1">Get a Quote</h2>
-            <p class="mb-2 text-green-700 font-semibold">Have a project idea in mind? Describe it here and we'll bring it
+            <p class="mb-4 text-center text-3xl font-semibold custom-blue-color-1">Have a project idea in mind? <br> Describe it here and we'll bring it
                 to life!</p>
         </div>
 
@@ -17,7 +16,7 @@
             <!-- Your form fields here -->
             <div class="flex justify-between gap-2">
                 <div class="mb-4 flex flex-col">
-                    <label for="name" class="block text-sm text-gray-700">Name</label>
+                    <label for="name" class="block  text-gray-700">Name</label>
                     <input type="text" id="name" wire:model="name" placeholder="Your Name" required
                         class="w-72 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700 placeholder:text-sm">
                     @error('name')
@@ -26,18 +25,27 @@
                 </div>
 
                 <div class="mb-4 flex flex-col">
-                    <label for="email" class="block text-sm text-gray-700">Email</label>
+                    <label for="email" class="block  text-gray-700">Email</label>
                     <input type="email" id="email" wire:model="email" placeholder="Your Email" required
                         class="w-72 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700 placeholder:text-sm">
                     @error('email')
                         <span class="text-red-600 text-sm">{{ $message }}</span>
                     @enderror
                 </div>
+
+					 <div class="mb-4 flex flex-col">
+						<label for="phone" class="block  text-gray-700">Tel</label>
+						<input type="tel" id="phone" wire:model="phone" placeholder="Your phone" required
+							 class="w-72 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700 placeholder:text-sm">
+						@error('phone')
+							 <span class="text-red-600 text-sm">{{ $message }}</span>
+						@enderror
+				  </div>
             </div>
 
             <div class="flex justify-between gap-2">
                 <div class="mb-4 flex flex-col">
-                    <label for="projectType" class="block text-sm text-gray-700">Project Type</label>
+                    <label for="projectType" class="block text-gray-700">Project Type</label>
                     <select id="projectType" wire:model="projectType" required
                         class="w-72 text-sm border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700">
                         <option value="" class="text-gray-500">Select a project type</option>
@@ -55,11 +63,26 @@
                     @enderror
                 </div>
 
+					 <div class="mb-4 flex flex-col">
+						<label for="scope" class="block text-gray-700">Project State</label>
+						<select id="scope" wire:model="scope" required
+							 class="w-72 border text-sm border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700">
+							 <option value="" class="text-gray-500">Select Project State</option>
+							 <option value="initial" class="text-gray-900">From Scratch</option>
+							 <option value="intermediate" class="text-gray-900">Pre-existing but not live</option>
+							 <option value="online" class="text-gray-900">Pre-existing Online</option>
+							 <option value="noidea" class="text-gray-900">Not listed here</option>
+						</select>
+						@error('scope')
+							 <span class="text-red-600 text-sm">{{ $message }}</span>
+						@enderror
+				  </div>
+
                 <div class="mb-4 flex flex-col">
-                    <label for="scope" class="block text-sm text-gray-700">Scope</label>
+                    <label for="scope" class="block text-gray-700">Scope</label>
                     <select id="scope" wire:model="scope" required
                         class="w-72 border text-sm border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700">
-                        <option value="" class="text-gray-500">Select scope</option>
+                        <option value="" class="text-gray-500">Select Scope</option>
                         <option value="small" class="text-gray-900">Small</option>
                         <option value="medium" class="text-gray-900">Medium</option>
                         <option value="large" class="text-gray-900">Large</option>
@@ -71,7 +94,7 @@
             </div>
 
             <div class="mb-4 flex flex-col">
-                <label for="description" class="block text-sm text-gray-700">Message</label>
+                <label for="description" class="block text-gray-700">Message</label>
                 <textarea id="description" wire:model="description" placeholder="Your Message" required
                     class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-700 placeholder:text-sm"></textarea>
                 @error('description')

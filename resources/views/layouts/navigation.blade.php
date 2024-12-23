@@ -1,11 +1,11 @@
 <nav class="navbar content-layout">
     <div class="nav-logo">
         <a href="/" class="logo">
-            {{-- <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo"> --}}
+            <img class="logo_width" src="{{ asset('logo_mouctar_min.png') }}" alt="{{ config("app.name") }}">
             <div class="flex ">
-					<p class="font-bold text-3xl custom-blue-color-1">
+					{{-- <p class="font-bold text-3xl custom-blue-color-1">
 						{{ config('app.name') }}
-					</p>
+					</p> --}}
 				</div>
         </a>
     </div>
