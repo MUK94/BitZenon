@@ -35,10 +35,10 @@
                     <path
                         d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                 </svg>
-                Basic support (2 Months Free)
+                Basic support (<span class="emphasized">2 Months Free</span>)
             </div>
             <div class="mt-auto w-full">
-                <button
+                <button wire:click.prevent="openForm"
                     class="bg-white rounded-xl text cursor-pointer text-blue-700 py-2 border-none w-full flex items-center justify-between px-3">
                     Get Quote
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -96,7 +96,8 @@
                 </svg>Documentation & Support
             </div>
             <div class="mt-auto w-full">
-                <button class="rounded-xl cursor-pointe py-2 border-none w-full flex items-center justify-between px-3">
+                <button wire:click.prevent="openForm"
+                    class="rounded-xl cursor-pointe py-2 border-none w-full flex items-center justify-between px-3">
                     Get Quote
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
@@ -152,7 +153,7 @@
                 </svg>Documentation & Support
             </div>
             <div class="mt-auto w-full">
-                <button
+                <button wire:click.prevent="openForm"
                     class="bg-white rounded-xl cursor-pointer text-blue-700 py-2 border-none w-full flex items-center justify-between px-3">
                     Get Quote
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -166,7 +167,4 @@
             </div>
         </div>
     </div>
-
-
-
 </div>

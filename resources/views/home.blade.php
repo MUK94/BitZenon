@@ -81,11 +81,7 @@
                 </div>
             @endforeach
         </div>
-        @include('inc.about-section')
-        {{-- Certifications --}}
-        {{-- <div class="title">
-            <h2>My IT <span>Certifications</span></h2>
-        </div> --}}
+        {{-- @include('inc.about-section') --}}
     </section>
 
     <section class="section-container mb-12">

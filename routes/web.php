@@ -35,7 +35,7 @@ Route::get('/services', [PagesController::class, 'services'])->name('pages.servi
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
 Route::get('/gallery', [PagesController::class, 'gallery'])->name('pages.gallery');
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
-// Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.index');
+Route::post('/contact', [PagesController::class, 'submit'])->name('pages.submit');
 Route::get('/blog', [ArticleListingsController::class, 'index'])->name('articles.index');
 Route::get('/blog/{slug}', [ArticleListingsController::class, 'show'])->name('articles.detail');
 

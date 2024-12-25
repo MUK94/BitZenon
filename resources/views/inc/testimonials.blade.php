@@ -1,5 +1,5 @@
  {{-- Testimonials --}}
- <div class="testimonials my-4">
+ <div class="testimonials mt-4 mb-12">
      <div class="flex items-center justify-center">
          <div class="w-full py-8 text-gray-800">
              <div class="w-full">

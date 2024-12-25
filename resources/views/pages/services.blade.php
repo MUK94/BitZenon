@@ -21,7 +21,7 @@
                         </div>
                         <h3 class="text-lg font-bold">Custom Solutions</h3>
                     </div>
-                    <p class="mt-4 text-sm text-gray-800">Tailored to fit your unique business needs with precision.</p>
+                    <p class="mt-4 text-gray-800">Tailored to fit your unique business needs with precision.</p>
                 </div>
 
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
@@ -31,7 +31,7 @@
                         </div>
                         <h3 class="text-lg font-bold">Partnerships</h3>
                     </div>
-                    <p class="mt-4 text-sm text-gray-800">
+                    <p class="mt-4 text-gray-800">
                         Supporting your growth with reliable, ongoing collaboration.
                     </p>
                 </div>
@@ -43,7 +43,7 @@
                         </div>
                         <h3 class="text-lg font-bold">UI/UX Oriented</h3>
                     </div>
-                    <p class="mt-4 text-sm text-gray-800">
+                    <p class="mt-4 text-gray-800">
                         Advanced technology paired with a personal, client-focused approach.
                     </p>
                 </div>
@@ -55,7 +55,7 @@
                         </div>
                         <h3 class="text-lg font-bold">24/7 Support</h3>
                     </div>
-                    <p class="mt-4 text-sm text-gray-800">Always available, ensuring your business runs smoothly at all
+                    <p class="mt-4 text-gray-800">Always available, ensuring your business runs smoothly at all
                         times.</p>
                 </div>
 

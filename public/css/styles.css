@@ -21,11 +21,13 @@ h3,
 h4,
 h5,
 h6,
-.tags span, .old-tag span {
-	font-family: 'Roboto Mono', sans-serif;
+.tags span,
+.old-tag span {
+	/* font-family: 'Roboto Mono', sans-serif; */
+	/* font-family: "Exo 2", serif; */
 	/* font-family: "Kanit", sans-serif; */
 	/* font-family: 'Lexend Deca', sans-serif; */
-	/* font-family: "Space Grotesk", sans-serif; */
+	font-family: "Space Grotesk", sans-serif;
 }
 
 
@@ -36,7 +38,8 @@ i {
 body {
 	background-color: var(--color5);
 	/* font-family: "Kanit", sans-serif; */
-	font-family: "Space Grotesk", sans-serif;
+	font-family: "Exo 2", serif;
+	/* font-family: "Space Grotesk", sans-serif; */
 	/* font-family: "Open Sans", sans-serif; */
 	/* font-family: 'Roboto', sans-serif; */
 	/* font-family: 'Lexend Deca', sans-serif; */
@@ -53,8 +56,9 @@ img {
 	max-width: none;
 }
 
-.logo_width {
-	height: 100px;
+.primary-btn {
+	background-color: var(--color1);
+	color: var(--color6);
 }
 
 .custom-blue {
@@ -79,6 +83,10 @@ img {
 	background-color: #040427f8;
 }
 
+.field-required,
+.emphasized {
+	color: var(--accent);
+}
 
 button {
 	border: none;
@@ -96,7 +104,8 @@ input {
 	height: 45px;
 }
 
-input, textarea {
+input,
+textarea {
 	font-family: "Space Grotesk" sans-serif;
 	font-weight: light;
 }
@@ -161,8 +170,8 @@ header a:hover {
 }
 
 .navbar .nav-logo img {
-	height: 45px;
-	width: 45px;
+	height: 58px;
+	width: 58px;
 }
 
 .navbar .nav-logo a:hover {
@@ -175,7 +184,8 @@ header a:hover {
 
 .btn-booking a,
 .services-wrapper .service-card .service-btn a,
-.comment-btn, .about-btn {
+.comment-btn,
+.about-btn {
 	padding: 0.5rem 0.75rem;
 	border: 1px solid var(--color1);
 	border-radius: 1.75rem;
@@ -205,7 +215,7 @@ header a:hover {
 
 .btn-booking a:hover,
 .services-wrapper .service-card .service-btn a:hover,
-.comment-btn:hover{
+.comment-btn:hover {
 	background-color: var(--color1);
 	color: var(--color3);
 }
@@ -552,6 +562,7 @@ h2 {
 	display: block;
 	column-count: 3;
 }
+
 .testimony-box {
 	break-inside: avoid;
 	cursor: pointer;
@@ -569,13 +580,15 @@ h2 {
 	color: var(--color6);
 
 }
+
 /* ----------- Services Page ------------- */
 
 .service-box:hover {
 	background-color: var(--color1);
 }
 
-.service-box:hover h3, .service-box:hover p {
+.service-box:hover h3,
+.service-box:hover p {
 	color: var(--color5);
 }
 
@@ -644,6 +657,7 @@ footer .container .copyright .text {
 	padding: 0.25rem;
 	margin: unset;
 }
+
 .recommended-container .searchBar {
 	padding: 0 0.5rem 2rem;
 }

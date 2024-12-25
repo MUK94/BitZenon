@@ -37,7 +37,7 @@
             {{-- TO BE REPLACED BY THE LOGO --}}
             <a href="/" class="logo-guest">
                 <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo" class="logo">
-                <h1>BitZenon</h1>
+                <h1>{{ config('app.name') }}</h1>
             </a>
         </div>
 
