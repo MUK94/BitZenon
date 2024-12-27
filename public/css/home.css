@@ -2,7 +2,7 @@
 	display: flex;
 	margin-top: 2.5rem;
 	justify-content: space-between;
-	gap:2rem;
+	gap: 2rem;
 }
 
 /* ------------- Hero Image ----------------- */
@@ -13,10 +13,9 @@
 }
 
 .landing .left h1 {
-	font-family:  "Space Grotesk", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 	color: white;
 }
-
 
 .landing .left {
 	flex: 7;
@@ -26,7 +25,7 @@
 	flex: 5;
 }
 
-.landing  img {
+.landing img {
 	margin-bottom: 0.75rem;
 	max-width: 100%;
 }
@@ -35,12 +34,13 @@
 	background-color: var(--color3);
 	padding: 0.25rem 0.5rem;
 	border-radius: 0.5rem;
-	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+		rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .landing .left button:hover,
 .sidebar .slider__btn--left:hover,
-.sidebar .slider__btn--right:hover  {
+.sidebar .slider__btn--right:hover {
 	background-color: var(--color1);
 }
 
@@ -63,9 +63,6 @@
 .landing .right .side-articles p {
 	margin: 0.5rem 0;
 }
-
-
-
 
 /*--------------Sidebar Slider-------------*/
 
@@ -153,7 +150,8 @@
 	width: 48%;
 	border-radius: 0.25rem;
 	margin-bottom: 2rem;
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .content-layout .about .box:hover {
@@ -181,15 +179,8 @@
 	padding: 1.5rem;
 }
 
-/* Buttons */
-.about-container .btns i {
-	font-size: var(--font_icon);
-	color: var(--color5);
-}
 
 /* ----------- Latest Posts ------------ */
-
-
 
 /* ----------- Services ------------- */
 
@@ -215,7 +206,7 @@
 	width: 14px;
 }
 
-.services-wrapper .service-cards svg{
+.services-wrapper .service-cards svg {
 	margin-right: 0.65rem;
 }
 
@@ -236,13 +227,10 @@
 	fill: var(--color6);
 }
 
-
-.middle-card button svg{
+.middle-card button svg {
 	fill: var(--color1);
 }
 
 .services-wrapper .service-card p {
 	margin: 1rem 0;
 }
-
-

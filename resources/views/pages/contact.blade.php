@@ -4,7 +4,7 @@
     <div class="content-layout">
         <div class="container">
             <div class="headings">
-                <h2>Contact <span>Us</span></h2>
+                <h2>Contact <span>me</span></h2>
             </div>
             <div class="">
                 <div class="flex gap-2 items-center">
@@ -90,23 +90,28 @@
                                         class="mt-1 p-2 block focus:outline-none focus:ring-2 text-gray-600 focus:ring-blue-700 border border-gray-300 rounded-md w-full">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="phone" class="block mb-1">Phone</label>
-                                    <input type="tel" name="phone" id="phone" placeholder="Ex. +224 ..xxx.."
+                                    <label for="phone" class="block mb-1">Phone <span
+                                            class="field-required">*</span></label>
+                                    <input type="tel" name="phone" id="phone" required
+                                        placeholder="Ex. +224 ..xxx.."
                                         class="mt-1 p-2 block focus:outline-none focus:ring-2 text-gray-600 focus:ring-blue-700 border border-gray-300 rounded-md w-full">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="subject_id" class="block mb-1">Subject <span
+                                    <label for="subject" class="block mb-1">Subject <span
                                             class="field-required">*</span></label>
-                                    <select name="subject_id" id="subject_id"
+                                    <select name="subject" id="subject"
                                         class="w-full h-12 px-2 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 text-gray-600 focus:ring-blue-700"
                                         required>
-                                        <option value="1" class="text-gray-900">Web Development Project</option>
-                                        <option value="2" class="text-gray-900">PowerApps Project</option>
-                                        <option value="3" class="text-gray-900">Power Automate Project</option>
-                                        <option value="4" class="text-gray-900">Consultation</option>
-                                        <option value="5" class="text-gray-900">Power BI Project</option>
-                                        <option value="6" class="text-gray-900">Other Project</option>
-                                        <option value="7" class="text-gray-900">Collaboration</option>
+                                        <option value="Web Development Project" class="text-gray-600">Web Development
+                                            Project</option>
+                                        <option value="PowerApps Project" class="text-gray-600">PowerApps Project</option>
+                                        <option value="Power Automate Project" class="text-gray-600">Power Automate Project
+                                        </option>
+                                        <option value="Consultation" class="text-gray-600">Consultation</option>
+                                        <option value="Power BI Project" class="text-gray-600">Power BI Project</option>
+                                        <option value="Fabric Project" class="text-gray-600">Fabric Project</option>
+                                        <option value="Collaboration" class="text-gray-600">Collaboration</option>
+                                        <option value="Other" class="text-gray-600">Other</option>
                                     </select>
                                 </div>
                                 <div class="mb-4 flex flex-col">

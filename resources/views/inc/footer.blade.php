@@ -9,36 +9,49 @@
                                 class="text-2xl fa-solid fa-greater-than text-white"></i></span>
                     </a>
                     <p class="my-6 text-white">Empowering your Digital Journey with Bright Solutions!</p>
-                    <div class="newsletter">
-                        <div class="company-address mt-8">
-                            <ul class="social">
-                                <li><i class="fa-solid fa-map-location"></i> Mannheim, Germany</li>
-                                <li><i class="fa-solid fa-phone"></i> +49 1784608200</li>
-                                <li><i class="fa-solid fa-envelope-open-text"></i>
-                                    <a
-                                        href="mailto:{{ 'service@' . strtolower(config('app.name')) . '.com' }}">{{ 'service@' . strtolower(config('app.name')) . '.com' }}</a>
-                                </li>
-                            </ul>
-                        </div>
+
+                    <div class="company-address mt-8">
+                        <ul class="social font-extralight">
+                            <li><i class="fa-solid fa-map-location"></i><span class="text-gray-300 ml-1">Baden
+                                    Württemberg, Germany</span></li>
+                            <li><i class="fa-solid fa-phone"></i> <span class="text-gray-300 ml-1">+49 1784608200</span>
+                            </li>
+                            <li><i class="fa-solid fa-envelope-open-text"></i>
+                                <a class="ml-1 text-gray-300"
+                                    href="mailto:{{ 'service@' . strtolower(config('app.name')) . '.com' }}">{{ 'service@' . strtolower(config('app.name')) . '.com' }}</a>
+                            </li>
+                        </ul>
                     </div>
+
                 </div>
             </div>
 
             <div class="col ">
                 <ul class="box">
                     <h3>Main Services</h3>
-                    <li class="footer-link"><a href="/services" target="_blank">Process Automation</a></li>
-                    <li class="footer-link"><a href="/services" target="_blank">Dataviz & Analytics</a></li>
-                    <li class="footer-link"><a href="/services" target="_blank">Consultation & Training</a></li>
-                    <li class="footer-link"><a href="/services" target="_blank">Full-Stack Web Development</a></li>
-                    <li class="footer-link"><a href="/services" target="_blank">Business Apps Development </a></li>
+                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Process
+                            Automation</a>
+                    </li>
+                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Dataviz &
+                            Analytics</a>
+                    </li>
+                    <li class="footer-link font-extralight text-gray-300"><a href="/services"
+                            target="_blank">Consultation &
+                            Training</a></li>
+                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Full-Stack
+                            Web
+                            Development</a></li>
+                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Business
+                            Apps
+                            Development </a></li>
                 </ul>
             </div>
             <div class="col ">
                 <ul class="box">
                     <h3>Categories</h3>
                     @foreach ($categories as $category)
-                        <li><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></li>
+                        <li class="font-extralight text-gray-300"><a
+                                href="/categories/{{ $category->slug }}">{{ $category->name }}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -47,7 +60,7 @@
     <div class="container content-layout">
         <div class="copyright border-t border-gray-700">
             <div class="text">
-                {{ config('app.name') }} © 2024 All Rights Reserved
+                {{ config('app.name') }} © 2021 - 2024 All Rights Reserved
             </div>
             @include('inc.social-media')
         </div>

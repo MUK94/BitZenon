@@ -6,40 +6,26 @@
                 <h2 class="text-3xl m-0 custom-blue-color-1 ">Full-Stack Web Development</h2>
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Custom design: Laravel (TALL STACK)
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Custom design: Laravel (TALL
+                STACK)
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg> Admin Panel Management
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Admin Panel Management
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Responsive Design & SEO
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Responsive Design & SEO
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i>
                 Initial Content Upload
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i>
                 Basic support (<span class="emphasized">2 Months Free</span>)
             </div>
             <div class="mt-auto w-full">
-                <button wire:click.prevent="openForm"
-                    class="bg-white rounded-xl text cursor-pointer text-blue-700 py-2 border-none w-full flex items-center justify-between px-3">
+                <button
+                    class="quoteBtn bg-white rounded-xl text cursor-pointer text-blue-700 py-2 border-none w-full flex items-center justify-between px-3">
                     Get Quote
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
@@ -59,45 +45,27 @@
                 </div>
             </div>
             <div class="flex items-center card-item mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Requirements Gathering
+                <i class="fa-solid fa-check mr-2 text-gray-300 font-light text-sm"></i> Requirements Gathering
             </div>
             <div class="flex items-center mb-2 card-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Process Analysis
+                <i class="fa-solid fa-check mr-2 text-gray-300 font-light text-sm"></i> Process Analysis
             </div>
             <div class="flex items-center mb-2 card-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
+                <i class="fa-solid fa-check mr-2 text-gray-300 font-light text-sm"></i>
                 App Design and Development
             </div>
             <div class="flex items-center mb-2 card-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Solution Design
+                <i class="fa-solid fa-check mr-2 text-gray-300 font-light text-sm"></i> Solution Design
             </div>
             <div class="flex items-center mb-2 card-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Testing & Deployment
+                <i class="fa-solid fa-check mr-2 text-gray-300 font-light text-sm"></i> Testing & Deployment
             </div>
             <div class="flex items-center mb-2 card-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Documentation & Support
+                <i class="fa-solid fa-check mr-2 text-gray-300 font-light text-sm"></i> Documentation & Support
             </div>
             <div class="mt-auto w-full">
-                <button wire:click.prevent="openForm"
-                    class="rounded-xl cursor-pointe py-2 border-none w-full flex items-center justify-between px-3">
+                <button
+                    class="quoteBtn rounded-xl cursor-pointe py-2 border-none w-full flex items-center justify-between px-3">
                     Get Quote
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
@@ -120,41 +88,26 @@
                 </div>
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i>
                 Data collection and cleaning
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i>
                 Analysis and insights
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Custom visualizations
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Custom visualizations
             </div>
 
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Dynamic Reports & Dashboards
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Dynamic Reports & Dashboards
             </div>
             <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>Documentation & Support
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Documentation & Support
             </div>
             <div class="mt-auto w-full">
-                <button wire:click.prevent="openForm"
-                    class="bg-white rounded-xl cursor-pointer text-blue-700 py-2 border-none w-full flex items-center justify-between px-3">
+                <button
+                    class="quoteBtn bg-white rounded-xl cursor-pointer text-blue-700 py-2 border-none w-full flex items-center justify-between px-3">
                     Get Quote
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path

@@ -23,13 +23,9 @@ h5,
 h6,
 .tags span,
 .old-tag span {
-	/* font-family: 'Roboto Mono', sans-serif; */
-	/* font-family: "Exo 2", serif; */
-	/* font-family: "Kanit", sans-serif; */
-	/* font-family: 'Lexend Deca', sans-serif; */
-	font-family: "Space Grotesk", sans-serif;
+	font-family: "Exo 2", serif;
+	font-weight: 700;
 }
-
 
 i {
 	font-size: var(--font-heading-3);
@@ -37,12 +33,7 @@ i {
 
 body {
 	background-color: var(--color5);
-	/* font-family: "Kanit", sans-serif; */
-	font-family: "Exo 2", serif;
-	/* font-family: "Space Grotesk", sans-serif; */
-	/* font-family: "Open Sans", sans-serif; */
-	/* font-family: 'Roboto', sans-serif; */
-	/* font-family: 'Lexend Deca', sans-serif; */
+	font-family: "Space Grotesk", sans-serif;
 	font-size: var(--font_body);
 	font-weight: normal;
 }
@@ -332,7 +323,7 @@ h2 {
 	color: #110de0e0;
 }
 
-.nav-cat-dropdown .dropdown-link>i {
+.nav-cat-dropdown .dropdown-link > i {
 	padding: 0 0.1rem;
 }
 
@@ -410,9 +401,7 @@ h2 {
 		rgba(240, 238, 238, 0.06) 0px 0px 0px 1px;
 }
 
-
 /* HEADER */
-
 
 /* .header-container{
 	background-color: #f8f4ee;
@@ -534,7 +523,6 @@ h2 {
 	color: var(--color1);
 }
 
-
 /* Old Posts */
 .blog-old-post .old-post {
 	flex: 4;
@@ -578,7 +566,6 @@ h2 {
 .testimony-box:hover p,
 .testimony-box:hover span {
 	color: var(--color6);
-
 }
 
 /* ----------- Services Page ------------- */
@@ -591,7 +578,6 @@ h2 {
 .service-box:hover p {
 	color: var(--color5);
 }
-
 
 /* Footer  */
 .footer {
@@ -615,8 +601,7 @@ footer .container .box {
 	padding-bottom: 1.5rem;
 }
 
-footer .container .box li,
-footer .container .box li a {
+footer .container .box li {
 	color: var(--color5);
 	padding: 0.25rem 0;
 }

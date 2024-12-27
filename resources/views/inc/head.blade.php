@@ -5,7 +5,7 @@
 {{-- Tailwind --}}
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-<link rel="icon" type="image/x-icon" href="{{ asset('logo.mouctar.png') }}">
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
 
 {{-- Text Editor --}}
 <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>

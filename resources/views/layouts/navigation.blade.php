@@ -69,8 +69,8 @@
         <div class="btn-booking">
             <div>
                 <button wire:click.prevent="openForm" type="submit"
-                    class="px-4 py-2 text-white custom-blue-color  rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
-                    <i class="text-white pr-2 fa-solid fa-money-check-dollar"></i> Get a Quote
+                    class="quoteBtn px-4 py-2 text-white custom-blue-color  rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
+                    <i class=" text-white pr-2 fa-solid fa-money-check-dollar"></i> Get a Quote
                 </button>
             </div>
         </div>

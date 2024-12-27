@@ -17,8 +17,9 @@
     </main>
     <!-- Footer -->
     @include('inc.footer')
-    @livewireScripts
     @livewire('quote-form')
+    @livewire('success-message')
+    @livewireScripts
 </body>
 
 </html>
