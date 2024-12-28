@@ -8,7 +8,9 @@
             </div>
             <div class="service-desc">
                 <p class="italic text-xl text-gray-700">
-                    "Tailored to fit your digital needs, contact us and get a quote today"
+                    "Tailored to fit your digital needs, contact us and get your" <a href="#"
+                        class="underline quoteBtn">free
+                        quote today</a>
                 </p>
             </div>
         </div>

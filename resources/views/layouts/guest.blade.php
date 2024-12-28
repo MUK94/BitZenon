@@ -22,7 +22,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon-pro.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
 
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
@@ -36,8 +36,7 @@
         <div>
             {{-- TO BE REPLACED BY THE LOGO --}}
             <a href="/" class="logo-guest">
-                <img src="{{ asset('logo-blue-max.png') }}" alt="BitZenon Logo" class="logo">
-                <h1>{{ config('app.name') }}</h1>
+                <img src="{{ asset('favicon.png') }}" alt="{{ config('app.name') }} " class="logo">
             </a>
         </div>
 
@@ -48,7 +47,7 @@
 
     <div class="copyright my-2">
         <div class="text-center p-4">
-            ©2021 - 2024 BitZenon All Rights Reserved
+			{{ config('app.name') }} © 2021 - 2024 All Rights Reserved
         </div>
     </div>
 </body>

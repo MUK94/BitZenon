@@ -6,8 +6,7 @@
                 <h2 class="text-3xl m-0 custom-blue-color-1 ">Full-Stack Web Development</h2>
             </div>
             <div class="flex items-center mb-2">
-                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Custom design: Laravel (TALL
-                STACK)
+                <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Custom design: Laravel
             </div>
             <div class="flex items-center mb-2">
                 <i class="fa-solid fa-check mr-2 text-gray-700 font-light text-sm"></i> Admin Panel Management
@@ -37,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full lg:my-0 text-white my-4 border-2 border-gray-200 p-5 rounded-2xl lg:shadow-8 middle-card">
+        <div class="w-full text-white py-12 border-2 border-gray-200 p-5 rounded-2xl lg:shadow-8 middle-card">
             <div class="pb-3 mb-5 border-b border-gray-200">
                 <div class="text-xs text-gray-400 mb-2">ENTREPRISE</div>
                 <div class="flex items-center">

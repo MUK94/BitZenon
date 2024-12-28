@@ -3,9 +3,9 @@
 @section('content')
     <div class="listings-container content-layout">
         <div class="detail-container">
-            <div class="row">
+            <div class="row flex gap-12">
                 <div class="detail-col">
-                    <div class="breadcumb bg-gray-100 px-2 py-1 text-sm">
+                    <div class="breadcumb px-2 py-1 text-sm">
                         <a href="/">Home </a>
                         <i class="fa-solid fa-angle-right"></i>
                         <a href="/blog/">Articles </a>
@@ -43,14 +43,16 @@
                     <h3 class="text-xl font-semibold mx-4 text-center">Similar Articles</h3>
                     <div class="popular">
                         @foreach ($similarArticles as $article)
-                            <div class="detail mb-2 border-b bg-gray-100 shadow-sm p-1">
-                                <p class=" border-gray-300 text-gray-600 hover:text-blue-700">
+                            <div class="detail mb-2 border-b-2 shadow-sm rounded p-1">
+                                <p class=" border-gray-300 text-gray-900 font-semibold hover:text-blue-800">
                                     <a href="{{ route('articles.detail', ['slug' => $article->slug]) }}"
                                         class="">{{ $article->title }}</a>
                                 </p>
                             </div>
                         @endforeach
                     </div>
+                    {{-- Ads --}}
+                    <div class="ads"></div>
                 </div>
             </div>
         </div>

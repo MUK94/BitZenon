@@ -11,20 +11,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-	font-weight: 500;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
 h6,
 .tags span,
 .old-tag span {
 	font-family: "Exo 2", serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 i {
@@ -35,7 +26,7 @@ body {
 	background-color: var(--color5);
 	font-family: "Space Grotesk", sans-serif;
 	font-size: var(--font_body);
-	font-weight: normal;
+	/* font-weight: normal; */
 }
 
 h2 span {
@@ -55,6 +46,14 @@ img {
 .custom-blue {
 	color: var(--color1);
 	border-bottom: 2px solid var(--color1);
+}
+
+.custom-hover:hover {
+	background-color: var(--color1);
+}
+
+.border-custom-blue {
+	border-color: var(--color1);
 }
 
 .custom-blue-color {
@@ -116,9 +115,10 @@ a {
 }
 
 .logo-guest img {
-	width: 45px;
-	height: 45px;
+	width: 70px;
+	height: 60px;
 	margin-right: 0.25rem;
+	border-radius: unset;
 }
 
 .logo-guest h1 {
@@ -178,18 +178,7 @@ header a:hover {
 .comment-btn,
 .about-btn {
 	padding: 0.5rem 0.75rem;
-	border: 1px solid var(--color1);
 	border-radius: 1.75rem;
-}
-
-.about-btn {
-	padding: 0.1rem 1rem;
-	border: none;
-	color: var(--color5);
-}
-
-.about-btn:hover {
-	border: 1px solid;
 }
 
 .btn-primary {

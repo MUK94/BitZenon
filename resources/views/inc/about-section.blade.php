@@ -1,36 +1,39 @@
 @foreach ($aboutSection as $about)
-    <div class="container about">
-        <div class="box">
-            <div class="heading">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h3>Education</h3>
+    <div class="container mx-auto px-4 py-8">
+        <div class="relative"> <!-- Vertical Line -->
+            <div class="border-r-4 border-custom-blue absolute h-full left-1/2 transform -translate-x-1/2"></div>
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="order-1 w-5/12 px-1 py-4 center">
+                    <h3 class="font-semibold text-2xl mb-4 custom-blue-color-1"><i
+                            class="text-2xl mr-1 custom-blue-color-1 fa-solid fa-code"></i>
+                        Expertise</h3>
+                    <div class="text-white bg-gray-800 custom-hover cursor-pointer p-4 rounded shadow-xl inline-block">
+                        <p class="leading-snug p-2 text-white">{{ $about->expertise }}</p>
+                    </div>
+                </div>
             </div>
-            <p>
-                {{ $about->intro }}</p>
-        </div>
-        <div class="box">
-            <div class="heading">
-                <i class="fa-regular fa-lightbulb"></i>
-                <h3> Mission</h3>
+            <div class="mb-8 flex justify-between items-center w-full left-timeline">
+                <div class="order-1 w-5/12 px-1 py-4 text-left">
+                    <h3 class="font-semibold text-2xl mb-4 custom-blue-color-1 text-right"><i
+                            class="text-2xl mr-1 custom-blue-color-1 fa-solid fa-star-of-life"></i>Mission</h3>
+                    <div class="text-white bg-gray-800 custom-hover cursor-pointer p-4 rounded shadow-xl inline-block">
+                        <p class="leading-snug p-2 text-white"> {{ $about->mission }}</p>
+                    </div>
+                </div>
+                <div class="order-1 w-5/12"></div>
             </div>
-            <p>
-                {{ $about->mission }}</p>
-        </div>
-        <div class="box">
-            <div class="heading">
-                <i class="fa-solid fa-code"></i>
-                <h3>Expertise</h3>
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="order-1 w-5/12 px-1 py-4 center">
+                    <h3 class="font-semibold text-2xl mb-4 custom-blue-color-1"><i
+                            class="text-2xl mr-1 custom-blue-color-1 fa-solid fa-check-to-slot"></i>Why mouctar.com?
+                    </h3>
+                    <div class="text-white bg-gray-800 custom-hover cursor-pointer p-4 rounded shadow-xl inline-block">
+                        <p class="leading-snug p-2 text-white">{{ $about->goal }}</p>
+                    </div>
+                </div>
             </div>
-            <p>
-                {{ $about->expertise }}</p>
-        </div>
-        <div class="box">
-            <div class="heading">
-                <i class="fa-solid fa-asterisk"></i>
-                <h3> Why {{ config('app.name') }} ?</h3>
-            </div>
-            <p>
-                {{ $about->goal }}</p>
         </div>
     </div>
 @endforeach

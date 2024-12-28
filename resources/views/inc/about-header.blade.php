@@ -12,12 +12,15 @@
                     {{ $about->description }}
                 </p>
                 <div class="btns flex gap-2">
-                    <button class="btn btn-primary  about-btn my-4"><a class="px-2" href="/about">Read
-                            More <i class="ml-2 text-gray-200 fa-solid fa-arrow-up-right-from-square"></i></a></button>
-                    {{-- <button class="btn btn-primary  about-btn my-4"><a class="px-2"
-								href="https://linkedin.com/in/thierno-dev">Read
-								More <i class="ml-2  text-gray-200 fa-solid fa-arrow-up-right-from-square"></i></a></button> --}}
-                    <button class="btn btn-secondary  about-btn my-4"><a class="px-2" target="_blank"
+                    <button
+                        class="quoteBtn btn btn-primary  about-btn my-4
+						 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">Get
+                        your Free Quote<i
+                            class="ml-2 text-gray-200 fa-solid fa-arrow-up-right-from-square"></i></button>
+                    <button
+                        class="btn btn-secondary  about-btn my-4
+						 text-white rounded-md shadow-sm hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"><a
+                            class="px-2" target="_blank"
                             href="https://drive.google.com/file/d/1ldM2TtzMGCvjBn91vlrXjJtvgtF9hITk/view?usp=sharing">Download
                             CV <i class="ml-2 text-gray-200 fa-solid fa-cloud-arrow-down"></i></a></button>
                 </div>

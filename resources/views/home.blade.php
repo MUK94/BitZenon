@@ -48,13 +48,14 @@
         </div>
     </section>
 
-    <section class="section-container content-layout scrollable-content">
+    <section class="section-container content-layout">
         <div class="title">
             <h2>About <span>me</span></h2>
         </div>
         <div class="about-container pt-8 mb-12">
             @include('inc.about-header')
         </div>
+        @include('inc.testimonials')
     </section>
 
     <section class="section-container mb-12">
@@ -69,7 +70,6 @@
                 </p>
             </div>
             @include('inc.services-section')
-            @include('inc.testimonials')
         </div>
     </section>
 

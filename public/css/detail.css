@@ -1,6 +1,6 @@
 .detail-container {
-	margin: 1rem 0rem;
-	padding: 0.75rem;
+	margin: 1.75rem 0rem;
+	padding-top: 0.75rem;
 }
 
 .detail-container .info {
@@ -44,11 +44,6 @@
 	color: var(--color3);
 }
 
-.detail-container .row {
-	display: flex;
-	gap: 2.5rem;
-}
-
 .detail-container .row .detail-col {
 	flex: 9;
 }
@@ -83,14 +78,12 @@
 .detail-container .detail-sidebar {
 	border-radius: 0.75rem;
 	flex: 3;
-	justify-content: center;
 }
 
 .detail-sidebar .popular {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
 
 .detail-sidebar .popular img {

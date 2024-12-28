@@ -1,14 +1,14 @@
 <div id="quotePopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-75 justify-center items-center z-50">
     <div class="bg-white p-8 rounded shadow-lg relative">
-        <div class="flex mb-12 items-center flex-col justify-between">
+        <div class="flex mb-8 items-center flex-col justify-between">
             <p class="text-center text-3xl font-semibold custom-blue-color-1">Have a project idea in mind? <br>
-                Describe it here and get a <span class="text-red-600">"free"</span> quote today!
+                Describe it here and get a <span class="emphasized">"free"</span> quote today!
             </p>
         </div>
 
         <!-- Close Button -->
         <button id="closePopup" class="font-bold absolute top-2 right-4">
-            <i class="text-red-600 fa-solid fa-xmark"></i>
+            <i class="emphasized font-bold fa-solid fa-xmark"></i>
         </button>
 
         <form wire:submit.prevent="submit">
@@ -94,17 +94,18 @@
             <div class="mb-4 flex flex-col">
                 <label for="description" class="block text-gray-700">Message <span
                         class="field-required">*</span></label>
-                <textarea id="description" wire:model="description" rows="3" required
+                <textarea id="description" wire:model="description" rows="2" required
                     class="w-full border resize-none border-gray-300 p-2 rounded focus:outline-none"></textarea>
                 @error('description')
                     <span class="text-red-600">{{ $message }}</span>
                 @enderror
             </div>
-
+            <!-- Google Recaptcha Widget-->
+            {{-- <div class="g-recaptcha mt-4" data-sitekey={{ config('services.recaptcha.key') }}></div> --}}
             <div>
                 <button type="submit"
                     class="px-4 py-2 text-white custom-blue-color rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
-                    Get Quote
+                    Send
                 </button>
             </div>
         </form>

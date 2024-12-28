@@ -12,12 +12,12 @@
 
                     <div class="company-address mt-8">
                         <ul class="social font-extralight">
-                            <li><i class="fa-solid fa-map-location"></i><span class="text-gray-300 ml-1">Baden
+                            <li><i class="fa-solid fa-map-location"></i><span class="text-gray-400 ml-1">Baden
                                     Württemberg, Germany</span></li>
-                            <li><i class="fa-solid fa-phone"></i> <span class="text-gray-300 ml-1">+49 1784608200</span>
+                            <li><i class="fa-solid fa-phone"></i> <span class="text-gray-400 ml-1">+49 1784608200</span>
                             </li>
                             <li><i class="fa-solid fa-envelope-open-text"></i>
-                                <a class="ml-1 text-gray-300"
+                                <a class="ml-1 text-gray-400"
                                     href="mailto:{{ 'service@' . strtolower(config('app.name')) . '.com' }}">{{ 'service@' . strtolower(config('app.name')) . '.com' }}</a>
                             </li>
                         </ul>
@@ -29,19 +29,23 @@
             <div class="col ">
                 <ul class="box">
                     <h3>Main Services</h3>
-                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Process
+                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
+                            target="_blank">Process
                             Automation</a>
                     </li>
-                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Dataviz &
+                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
+                            target="_blank">Dataviz &
                             Analytics</a>
                     </li>
-                    <li class="footer-link font-extralight text-gray-300"><a href="/services"
+                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
                             target="_blank">Consultation &
                             Training</a></li>
-                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Full-Stack
+                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
+                            target="_blank">Full-Stack
                             Web
                             Development</a></li>
-                    <li class="footer-link font-extralight text-gray-300"><a href="/services" target="_blank">Business
+                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
+                            target="_blank">Business
                             Apps
                             Development </a></li>
                 </ul>
@@ -50,7 +54,7 @@
                 <ul class="box">
                     <h3>Categories</h3>
                     @foreach ($categories as $category)
-                        <li class="font-extralight text-gray-300"><a
+                        <li><a class="font-extralight text-gray-400"
                                 href="/categories/{{ $category->slug }}">{{ $category->name }}</a></li>
                     @endforeach
                 </ul>
