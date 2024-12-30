@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Comment extends Model
+class Clap extends Model
 {
 	use HasFactory;
-
 	protected $fillable = [
-		"body",
-		"user_id",
-		"article_id"
+		'claps_count',
+		'user_id',
+		'article_id'
 	];
 
 	public function user(): BelongsTo
@@ -26,5 +25,4 @@ class Comment extends Model
 	{
 		return $this->belongsTo(Article::class);
 	}
-
 }

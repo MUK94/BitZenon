@@ -10,8 +10,8 @@ use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-  use HasFactory;
-  use Searchable;
+	use HasFactory;
+	use Searchable;
 
 	protected $fillable = [
 		'title',
@@ -25,7 +25,6 @@ class Article extends Model
 		return $this->belongsTo(User::class);
 	}
 
-
 	public function category(): BelongsTo
 	{
 		return $this->belongsTo(Category::class);
@@ -33,7 +32,12 @@ class Article extends Model
 
 	public function comments(): HasMany
 	{
-		 return $this->hasMany(Comment::class);
+		return $this->hasMany(Comment::class);
+	}
+
+	public function claps(): HasMany
+	{
+		return $this->hasMany(Clap::class);
 	}
 
 	public function toSearchableArray()
@@ -51,9 +55,8 @@ class Article extends Model
 		$wordCount = str_word_count(strip_tags($this->description));
 		$wordsPerMinute = 200;
 
-		$readTime = ceil($wordCount/$wordsPerMinute);
+		$readTime = ceil($wordCount / $wordsPerMinute);
 
 		return $readTime;
 	}
-
 }

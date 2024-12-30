@@ -34,7 +34,6 @@
 <body class="font-sans text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <div>
-            {{-- TO BE REPLACED BY THE LOGO --}}
             <a href="/" class="logo-guest">
                 <img src="{{ asset('favicon.png') }}" alt="{{ config('app.name') }} " class="logo">
             </a>
@@ -47,7 +46,7 @@
 
     <div class="copyright my-2">
         <div class="text-center p-4">
-			{{ config('app.name') }} © 2021 - 2024 All Rights Reserved
+            {{ config('app.name') }} © 2021 - 2024 All Rights Reserved
         </div>
     </div>
 </body>

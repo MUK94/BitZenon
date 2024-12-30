@@ -31,7 +31,7 @@
                             d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                     </svg>
                 </button>
-                <div class="text-xs mt-3 text-slate-600 line-height-2">
+                <div class="text-xs mt-3 text-gray-500 line-height-2">
                     Every detail counts, you think it, We Web it for you.
                 </div>
             </div>
@@ -71,7 +71,7 @@
                             d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                     </svg>
                 </button>
-                <div class="text-xs mt-8 text-gray-300 line-height-2">
+                <div class="text-xs mt-8 text-gray-400 line-height-2">
                     Microsoft Power Platform empowers businesses to
                     achieve their true
                     digital transformation

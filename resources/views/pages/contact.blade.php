@@ -29,7 +29,7 @@
                                     Address
                                 </h3>
                                 <p class="text-gray-200">
-                                    Mannheim, Germany
+                                    Baden Württemberg, Germany
                                 </p>
                             </div>
                         </div>
