@@ -3,12 +3,11 @@
         <div class="row py-12">
             <div class="col">
                 <div class="box ">
-                    <a href="/" class="font-bold text-4xl text-white border-2 border-white py-1 px-2">
-                        <span class="font-bold text-4xl"><i class="text-2xl fa-solid fa-less-than text-white"></i><span
-                                class="text-white text-4xl">&#47;</span></span>M <span class="font-bold text-4xl"><i
-                                class="text-2xl fa-solid fa-greater-than text-white"></i></span>
-                    </a>
-                    <p class="my-6 text-white">Empowering your Digital Journey with Bright Solutions!</p>
+                    <div class="footer-logo flex items-start">
+                        <a href="/" class="font-bold text-4xl mt-1 text-white border-2 border-white px-1">M</a>
+                        <h3 class="text-white ml-3"><a href="/">Empowering your Digital Journey with <br> Bright
+                                Solutions!</a></h3>
+                    </div>
 
                     <div class="company-address mt-8">
                         <ul class="social font-extralight">
@@ -30,24 +29,17 @@
                 <ul class="box">
                     <h3>Main Services</h3>
                     <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
-                            target="_blank">Process
-                            Automation</a>
+                            target="_blank">Full-Stack Web Development</a></li>
+                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
+                            target="_blank">Process Automation</a>
                     </li>
                     <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
-                            target="_blank">Dataviz &
-                            Analytics</a>
+                            target="_blank">Data Analytics</a>
                     </li>
                     <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
-                            target="_blank">Consultation &
-                            Training</a></li>
+                            target="_blank">Consultation & Training</a></li>
                     <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
-                            target="_blank">Full-Stack
-                            Web
-                            Development</a></li>
-                    <li class="footer-link"><a href="/services" class="font-extralight text-gray-400"
-                            target="_blank">Business
-                            Apps
-                            Development </a></li>
+                            target="_blank">Business Apps Development </a></li>
                 </ul>
             </div>
             <div class="col ">
@@ -63,7 +55,7 @@
     </div>
     <div class="container content-layout">
         <div class="copyright border-t border-gray-700">
-            <div class="text">
+            <div class="text-gray-400 text-sm">
                 {{ config('app.name') }} © 2021 - 2024 All Rights Reserved
             </div>
             @include('inc.social-media')
@@ -72,4 +64,3 @@
 </footer>
 
 <script src="{{ asset('js/scripts.js') }}"></script>
-<script src="{{ asset('js/graphs.js') }}"></script>

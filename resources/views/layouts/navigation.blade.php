@@ -1,16 +1,8 @@
 <nav class="navbar content-layout">
     <div class="nav-logo pt-1">
         <a href="/" class="logo">
-            {{-- <img src="{{ asset('logo_mouctar_circular.png') }}" alt="{{ config('app.name') }}"> --}}
             <div class="flex desktop">
-                <p class="font-bold text-4xl custom-blue-color-1 border-2 border-blue-700 px-1">
-                    <span class="font-bold"><i class="text-2xl fa-solid fa-less-than custom-blue-color-1"></i><span
-                            class="custom-blue-color-1 text-4xl">&#47;</span></span>M <span class="font-bold"><i
-                            class="text-2xl fa-solid fa-greater-than custom-blue-color-1"></i></span>
-                </p>
-            </div>
-            <div class="mobile-logo">
-                {{-- <img src="{{ asset('mobile-logo.png') }}" alt="{{ config('app.name') }}"> --}}
+                <p class="font-bold text-4xl custom-blue-color-1 border-logo px-1">M</p>
             </div>
         </a>
     </div>

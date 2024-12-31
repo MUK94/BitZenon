@@ -20,6 +20,7 @@
     @livewire('quote-form')
     @livewire('success-message')
     @livewireScripts
+
 </body>
 
 </html>

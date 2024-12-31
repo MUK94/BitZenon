@@ -21,9 +21,7 @@ class ClapButton extends Component
 		$this->clapCount = Clap::where('article_id', $this->articleId)->count();
 
 		// Check if the authenticated user has already clapped for this article
-		$this->hasClapped = Clap::where('article_id', $this->articleId)
-			->where('user_id', Auth::id())
-			->exists();
+		$this->hasClapped = Clap::where('article_id', $this->articleId)->where('user_id', Auth::id())->exists();
 	}
 
 	public function toggleClap()
@@ -32,12 +30,11 @@ class ClapButton extends Component
 
 		if (!$user) {
 			// $this->dispatch('showSuccessMessage', 'You must be logged in to clap.');
+			session(['url.after_login' => url()->current()]);
 			return redirect('/login');
 		}
 
-		$existingClap = Clap::where('article_id', $this->articleId)
-			->where('user_id', $user->id)
-			->first();
+		$existingClap = Clap::where('article_id', $this->articleId)->where('user_id', $user->id)->first();
 
 		if ($existingClap) {
 			// If the user has clapped, remove the clap
