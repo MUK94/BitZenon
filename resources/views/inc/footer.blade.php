@@ -1,6 +1,6 @@
 <footer class="footer pt-8">
     <div class="container content-layout">
-        <div class="row py-12">
+        <div class="row py-12 mobile">
             <div class="col">
                 <div class="box ">
                     <div class="footer-logo flex items-start">
@@ -54,11 +54,13 @@
         </div>
     </div>
     <div class="container content-layout">
-        <div class="copyright border-t border-gray-700">
+        <div class="copyright border-t border-gray-700 mobile">
             <div class="text-gray-400 text-sm">
                 {{ config('app.name') }} © 2021 - 2024 All Rights Reserved
             </div>
-            @include('inc.social-media')
+            <div class="footer-social">
+                @include('inc.social-media')
+            </div>
         </div>
     </div>
 </footer>

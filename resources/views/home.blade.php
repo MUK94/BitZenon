@@ -3,14 +3,10 @@
 @section('content')
     <section class="content-layout header-container">
         <div class="landing pt-6">
-            <div class="left">
+            <div class="left desktop-hidden">
                 @foreach ($heroSection as $hero)
-                    {{-- <h1 class="hero-title">{{ $hero->title }}</h1> --}}
                     <div class="hero-container">
                         <img src="{{ asset('storage/' . $hero->image) }}" alt="{{ $hero->title }}">
-                        {{-- <button class="btn-angle-down" onclick="scrollToBottom()">
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button> --}}
                     </div>
                 @endforeach
             </div>
@@ -64,7 +60,7 @@
                 <h2>My<span> Services</span></h2>
             </div>
             <div class="service-desc text-center">
-                <p class="px-4 italic text-xl">
+                <p class="px-4 italic text-xl ">
                     "Designed for projects of any scope and complexity, Build and enhance your web presence with tailored
                     solutions. Automate your business processes for efficiency, Turn your data into actionable insights."
                 </p>
@@ -78,7 +74,6 @@
             <h2> Latest <span>Posts</span></h2>
         </div>
         <div class="container posts">
-
             @include('inc.latest-posts')
         </div>
     </section>

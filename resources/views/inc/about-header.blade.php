@@ -1,5 +1,5 @@
 @foreach ($aboutSection as $about)
-    <div class="pt-8 pb-16 w-full flex justify-between items-center gap-8 relative">
+    <div class="mobile pt-8 pb-16 w-full flex justify-between items-center gap-8 relative">
         <img class="w-1/2 h-96 object-cover" src="{{ asset('storage/' . $about->image) }}" alt="{{ $about->name }}">
         <div class="w-1/2 flex flex-col">
             <div class="flex flex-col">

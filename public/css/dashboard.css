@@ -1,10 +1,23 @@
 /* ----- Navbar ------ */
+.admin-layout {
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.nav-content {
+	width: 100%;
+}
+
+.nav-notifications a {
+	padding: unset;
+}
+
 .nav-user button {
 	display: flex;
 	align-items: center;
 }
 
-.nav-user button img{
+.nav-user button img {
 	height: 45px;
 	width: 45px;
 }
@@ -37,7 +50,6 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 0.25rem;
-
 }
 /* ---- Bar Chart ---- */
 .charts {
@@ -63,5 +75,3 @@
 .dashboard-container .admin-content {
 	width: 82%;
 }
-
-

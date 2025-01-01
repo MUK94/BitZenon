@@ -1,12 +1,12 @@
 <nav class="navbar content-layout">
     <div class="nav-logo pt-1">
         <a href="/" class="logo">
-            <div class="flex desktop">
-                <p class="font-bold text-4xl custom-blue-color-1 border-logo px-1">M</p>
+            <div class="flex">
+                <span class="font-bold text-4xl custom-blue-color-1 border-logo px-1">M</span>
             </div>
         </a>
     </div>
-    <div class="nav-container">
+    <div class="nav-container desktop-hidden">
         <ul class="nav-links">
             <li><a href="/"
                     class="{{ request()->is('/') ? 'border-b-2 custom-blue font-semibold' : '' }} hover:border-b-2 hover:border-blue-700">Home</a>
@@ -25,7 +25,7 @@
             </li>
         </ul>
     </div>
-    <div class="nav-user">
+    <div class="nav-user desktop-hidden">
         @auth
             <div class="nav-user-auth mr-3 nav-cat-dropdown">
                 <button class="dropdown-link" onclick="event.preventDefault();">
