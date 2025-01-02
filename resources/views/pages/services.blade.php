@@ -14,10 +14,10 @@
                 </p>
             </div>
         </div>
-        <div class="service-card-container mb-16">
-            <div class="flex justify-between gap-1">
+        <div class="service-card-container mb-16 ">
+            <div class="flex justify-between gap-1 mobile">
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
-                    <div class="flex items-center space-x-1">
+                    <div class="service-header flex items-center space-x-1">
                         <div class="custom-blue-color p-2 rounded-full">
                             <i class="text-white fa-solid fa-pen-ruler"></i>
                         </div>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
-                    <div class="flex items-center space-x-1">
+                    <div class="service-header flex items-center space-x-1">
                         <div class="bg-pink-500 p-2 rounded-full">
                             <i class="text-white fa-solid fa-people-roof"></i>
                         </div>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
-                    <div class="flex items-center space-x-1">
+                    <div class="service-header flex items-center space-x-1">
                         <div class="bg-gray-500 p-2 rounded-full">
                             <i class="text-white fa-solid fa-user-tie"></i>
                         </div>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="service-box cursor-pointer rounded-lg shadow-sm p-3 border border-gray-200">
-                    <div class="flex items-center space-x-1">
+                    <div class="service-header flex items-center space-x-1">
                         <div class="bg-green-600 p-2 rounded-full">
                             <i class="text-white fa-solid fa-headset"></i>
                         </div>

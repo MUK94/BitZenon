@@ -9,18 +9,6 @@
                     </a>
                 </div>
                 <div class="nav-notifications flex items-center mr-2">
-                    {{-- @if (Auth::user()->role == 'admin')
-                        <a href="/admin/messages/" class="flex items-center hover:text-blue-700 mx-3">
-                            <span class="mx-1">Inbox</span>
-                            <i
-                                class="hover:text-blue-700 {{ request()->is('admin/messages') ? 'custom-blue-color font-semibold' : '' }}   fa-regular fa-envelope"></i>
-                        </a>
-                        <a href="/admin/comments/" class="flex items-center hover:text-blue-700 mx-3">
-                            <span class="mx-1">Comments</span>
-                            <i
-                                class="hover:text-blue-700 {{ request()->is('admin/comments') ? 'custom-blue-color font-semibold' : '' }}   fa-regular fa-comment"></i>
-                        </a>
-                    @endif --}}
                     @auth
                         <div class="nav-user-auth nav-cat-dropdown">
                             <button class="dropdown-link" onclick="event.preventDefault();">

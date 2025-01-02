@@ -18,7 +18,7 @@
             </div>
             <div>
 
-                <div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5">
+                <div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5 mobile">
                     @if ($latestArticles->isEmpty())
                         <div class="alert alert-info">
                             <p class="text-red-600">No posts found for this category.</p>
@@ -55,7 +55,7 @@
             </div>
             <div class="my-12 py-12">
                 <h3 class="text-2xl py-6 custom-blue-color-1">Other Posts you May Like</h3>
-                <div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5">
+                <div class="blog-old-post grid grid-flow-row grid-cols-3 gap-5 mobile">
                     @if ($popularArticles->isEmpty())
                         <div class="alert alert-info">
                             <p class="text-red-600">No posts found for this category.</p>

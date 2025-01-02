@@ -5,7 +5,11 @@
                 <div class="box ">
                     <div class="footer-logo flex items-start">
                         <a href="/" class="font-bold text-4xl mt-1 text-white border-2 border-white px-1">M</a>
-                        <h3 class="text-white ml-3"><a href="/">Empowering your Digital Journey with <br> Bright
+                        <h3 class="large-screen-hidden text-white ml-3"><a href="/">Empowering your Digital Journey
+                                with Bright
+                                Solutions!</a></h3>
+                        <h3 class="large-screen-visible text-white ml-3"><a href="/">Empowering your Digital
+                                Journey with <br> Bright
                                 Solutions!</a></h3>
                     </div>
 
@@ -66,3 +70,6 @@
 </footer>
 
 <script src="{{ asset('js/scripts.js') }}"></script>
+
+<a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by Royyan Wijaya -
+    Flaticon</a>

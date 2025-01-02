@@ -1,7 +1,7 @@
 <div id="quotePopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-75 justify-center items-center z-50">
     <div class="bg-white p-8 rounded shadow-lg relative">
         <div class="flex mb-8 items-center flex-col justify-between">
-            <p class="text-center text-3xl font-semibold custom-blue-color-1">Have a project idea in mind? <br>
+            <p class="text-center mobile-paragraph text-3xl font-semibold custom-blue-color-1">Have a project idea in mind? <br>
                 Describe it here and get a <span class="emphasized">"free"</span> quote today!
             </p>
         </div>
@@ -12,7 +12,7 @@
         </button>
 
         <form wire:submit.prevent="submit">
-            <div class="flex justify-between gap-2">
+            <div class="flex justify-between gap-2 mobile">
                 <div class="mb-4 flex flex-col">
                     <label for="name" class="block text-gray-700">Name <span class="field-required">*</span></label>
                     <input type="text" id="name" wire:model="name" required placeholder="Your Name"
@@ -42,11 +42,11 @@
                 </div>
             </div>
 
-            <div class="flex justify-between gap-2">
+            <div class="flex justify-between gap-2 mobile">
                 <div class="mb-4 flex flex-col">
                     <label for="projectType" class="block">Project Type <span class="field-required">*</span></label>
                     <select id="projectType" wire:model="projectType" required
-                        class="w-72 border border-gray-300 p-2 rounded focus:outline-none">
+                        class="w-72 border border-gray-300 p-2 rounded focus:outline-none ">
                         <option value="" class="text-gray-600">-- Select --</option>
                         <option value="Consultation" class="text-gray-600">Consultation</option>
                         <option value="Web Development Project" class="text-gray-600">Web Development Project</option>

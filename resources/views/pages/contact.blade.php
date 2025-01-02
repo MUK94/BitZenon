@@ -3,12 +3,12 @@
 @section('content')
     <div class="content-layout">
         <div class="container">
-            <div class="headings">
+            <div class="headings ">
                 <h2>Contact <span>me</span></h2>
             </div>
-            <div class="">
-                <div class="flex gap-2 items-center">
-                    <div class="my-8  w-full">
+            <div class="contact-section mt-4">
+                <div class="flex mobile-gap gap-2 items-center mobile">
+                    <div class="mb-4 w-full">
                         <div class="custom-blue-color rounded p-4 flex items-center flex-col ">
                             <i class="mb-2 text-3xl text-white fa-solid fa-phone"></i>
                             <div class="flex flex-col items-center">
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="my-8 w-full ">
+                    <div class="mb-4 w-full ">
                         <div class="custom-blue-color rounded p-4 flex items-center flex-col">
                             <i class="mb-2 text-3xl text-white fa-solid fa-map-location"></i>
                             <div class="flex flex-col items-center">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="my-8 w-full ">
+                    <div class="mb-4 w-full ">
                         <div class="custom-blue-color rounded p-4 flex items-center flex-col">
                             <i class="mb-2 text-3xl text-white fa-solid fa-envelope-open-text"></i>
                             <div class="flex flex-col items-center ">
@@ -50,7 +50,7 @@
             </div>
             <div class="container my-4 mx-auto">
                 <section class="mb-4">
-                    <div class="flex justify-between gap-16">
+                    <div class="flex justify-between gap-16 mobile">
                         <div class="form-details w-1/2">
                             <h3 class="text-left text-3xl custom-blue-color-1">Message me</h3>
                             <p class="mt-2">
@@ -133,7 +133,6 @@
                                 </div>
                             </form>
                         </div>
-
                     </div>
                 </section>
             </div>

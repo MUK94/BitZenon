@@ -1,4 +1,4 @@
-<aside class="admin-sidebar ">
+<aside class="admin-sidebar w-1/5">
     <div class="nav-logo ">
         <a href="/dashboard" class="logo flex items-center mb-10">
             <svg class="fill-sidebar-svg mr-2" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

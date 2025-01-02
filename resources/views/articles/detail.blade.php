@@ -3,7 +3,7 @@
 @section('content')
     <div class="listings-container content-layout">
         <div class="detail-container">
-            <div class="row flex gap-12">
+            <div class="row flex gap-12 mobile">
                 <div class="detail-col pb-12">
                     <div class="breadcumb px-2 py-1">
                         <a href="/">Home </a>
@@ -16,11 +16,11 @@
                         <a href="/categories/{{ $article->category->slug }}"><span>{{ $article->category->name }}</span></a>
                     </div>
                     <h2 class="my-2">{{ $article->title }}</h2>
-                    <div class="headlines flex items-center pb-6 mx-1">
+                    <div class="headlines flex items-center pb-6 mx-1 mobile">
                         <span class="text-gray-600 "> {{ $article->created_at->format('F j, Y') }} </span>
-                        <div class="mx-4 text-gray-600">
+                        <span class="mx-4 text-gray-600">
                             @livewire('copy-url-button', ['url' => url()->current()])
-                        </div>
+                        </span>
                     </div>
                     <div class="image-box">
                         <img src="{{ asset('storage/' . $article->cover_image) }}" alt="{{ $article->title }}">
@@ -28,7 +28,7 @@
                     <article>
                         {!! $article->description !!}
                     </article>
-                    {{-- Livewire Comment Component --}}
+              
                     <div class="claps rounded">
                         <livewire:clap-button :articleId="$article->id" />
                     </div>

@@ -34,7 +34,7 @@ h2 span {
 
 img {
 	border-radius: 1rem;
-	max-width: none;
+	/* max-width: none; */
 }
 
 .primary-btn {
@@ -220,7 +220,6 @@ ul {
 }
 
 h2 {
-	font: bolder;
 	font-size: var(--font-heading-2);
 }
 
@@ -1127,13 +1126,32 @@ footer .container .copyright .text {
 	color: var(--color2);
 }
 
-/* //////////------ RESPONSIVE ----///////////// */
+.large-screen-hidden {
+	display: none;
+}
 
+/* ////////////------ RESPONSIVE ------///////////// */
 @media (max-width: 900px) {
+	.logo span {
+		margin-left: 1.5rem;
+	}
+	.btn-booking button {
+		font-size: 0.75rem;
+		padding: 0.35rem 0.5rem;
+	}
+	.menu-button img {
+		height: 35px;
+		width: 40px;
+	}
+	.mobile-paragraph {
+		font-size: 1.3rem;
+	}
 	.content-layout {
 		padding: 0.25rem 2.5rem;
 	}
-
+	.content-layout .container {
+		padding: 1.75rem 0 2rem;
+	}
 	.desktop-hidden {
 		display: none;
 	}
@@ -1148,24 +1166,22 @@ footer .container .copyright .text {
 	.mobile div {
 		width: 100%;
 	}
-
+	.mobile .service-box div {
+		width: unset;
+	}
 	.mobile img {
 		width: 100%;
 	}
-
 	.mobile .img-testimony {
 		width: 3rem;
 		height: 3rem;
 	}
-
 	.mobile .testimony-box div {
 		width: initial;
 	}
-
 	.mobile .footer-social {
 		margin-top: 1rem;
 	}
-
 	.mobile .footer-social i {
 		font-size: 0.75rem;
 	}
@@ -1175,9 +1191,29 @@ footer .container .copyright .text {
 	.footer .col {
 		margin-bottom: 1rem;
 	}
+	.large-screen-hidden {
+		display: flex;
+	}
+	.large-screen-visible {
+		display: none;
+	}
+	.dashboard-container aside {
+		display: none;
+		width: unset;
+	}
+	.dashboard-container main {
+		width: 100%;
+	}
+	.mobile-gap {
+		gap: unset;
+		margin-bottom: 0.25rem;
+	}
+	.detail-container .row .detail-col {
+		flex: unset;
+	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 470px) {
 	.content-layout {
 		padding: 0.25rem 0.5rem;
 	}
@@ -1186,6 +1222,17 @@ footer .container .copyright .text {
 	}
 	.mobile .old-tag {
 		margin-bottom: 0.5rem;
+	}
+	h2 {
+		font-size: 1.95rem;
+		margin-bottom: 1rem;
+	}
+	.container .contact-container {
+		padding-top: 0;
+	}
+
+	.breadcumb {
+		font-size: 0.75rem;
 	}
 
 	/* .desktop-hidden {
