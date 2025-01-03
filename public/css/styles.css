@@ -34,7 +34,6 @@ h2 span {
 
 img {
 	border-radius: 1rem;
-	/* max-width: none; */
 }
 
 .primary-btn {
@@ -1133,7 +1132,7 @@ footer .container .copyright .text {
 /* ////////////------ RESPONSIVE ------///////////// */
 @media (max-width: 900px) {
 	.logo span {
-		margin-left: 1.5rem;
+		margin-left: 2.2rem;
 	}
 	.btn-booking button {
 		font-size: 0.75rem;

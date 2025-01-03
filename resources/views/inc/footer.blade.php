@@ -70,6 +70,3 @@
 </footer>
 
 <script src="{{ asset('js/scripts.js') }}"></script>
-
-<a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by Royyan Wijaya -
-    Flaticon</a>
